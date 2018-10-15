@@ -1,0 +1,7 @@
+{
+    "main": "conspect",
+    "meta": {
+	"descr": "Алгебра",
+	"tags": ["term1", "algebra"]
+    }
+}

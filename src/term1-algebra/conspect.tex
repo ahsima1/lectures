@@ -1,0 +1,32 @@
+% !TeX program = xelatex
+\input{core}
+\usepackage{tabularx}
+\usepackage{systeme}
+\usepackage{subcaption}
+\usepackage{centernot}
+\usepackage{dsfont}
+
+\enablemath
+\newcommand\exersize{\noindent\textbf{Упражнение:~}}
+
+% Дополнительные мат. команды
+% (слишком редкие, чтобы выносить в core
+\DeclareMathOperator\Ker{Ker}
+\DeclareMathOperator\ord{ord}
+\DeclareMathOperator\Char{Char}
+\DeclareMathOperator\sign{sign}
+\DeclareMathOperator\Quot{Quot}
+
+\begin{document}
+\gdef\CourseName{Алгебра}
+\author{Печин Михаил\\\small По лекциям и \emph{упражнениям} Всемирнова Максима Александровича}
+
+\makegood
+
+\Section{Введение}{Печин Михаил}
+\input{lecture_1}
+\input{lecture_4}
+\input{lecture_5}
+\input{lecture_6}
+
+\end{document}

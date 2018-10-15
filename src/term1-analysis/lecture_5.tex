@@ -1,0 +1,183 @@
+
+7-адический показатель \\
+$ v_7\left( 7^b \dfrac{p}{l} \right) $ \\
+$ v_7 \left( \dfrac{3}{14} \right)  = -1 $ \\
+7-адическое расстояние \\
+$ \rho (a, b) = 7  \ \ \ -v_7(a - b) $ \\
+$ \rho (a, a) = 0 $ \\
+$ a_i - $ последовательность Коши \\
+$ \forall \varepsilon > 0, \exists N \in \mathbb{N}, \forall i,j > N, v_7(a, b) < \varepsilon$ \\
+$ M \setminus \sim = \mathbb{Q}_2 $ \\
+\Section{Верхние и нижние пределы. Частичные пределы}
+
+\begin{definition}
+$ x_k - $ ограничено \\
+$ y_n = \sup\limits_{k \geq n} x_k \in \mathbb{R} $ \\
+$ y_1 \geq y_2 \geq y_3 ...$\\
+$ y_n - $ ограничено \\
+$ x_k \geq C \Rightarrow \forall n : y_n \geq C $ \\
+$ \lim y_n = \varlimsup\limits_{n \rightarrow \infty} x_n = \lim\sup\limits_{n \rightarrow \infty} x_n  - $ верхний предел посл. $ x_n $ \\
+$ x_n $ не огр. сверху $ \Rightarrow \varlimsup x_n = -\infty $\\
+$ x_n $ огр сверху, но не огр. снизу $ \Rightarrow \varlimsup \in \mathbb{N} \cup -\infty $ \\
+$ z_n = \inf\limits_{k \geq n} x_k $ \\
+$ z_1 \leq z_2 ... $\\
+$ \lim z_n = \varliminf x_n = \lim\inf x_n $ - нижний предел 
+\end{definition}
+Прежлож . Пусть $x_n$ - произв. послед \\
+$ \varliminf \leq \varlimsup $\\
+$ y_n \leq z_n \Rightarrow \lim y_n \leq \lim z_n $ \\
+
+\begin{definition}
+	Пусть $ x_n $ посл-ть, $ a \in \mathbb{R} $ \\
+	$ a $ - частичный предел $ x_n $, если в $ x_n $ есть подпосл-ть, стремящаяся к $ a $ \\
+	\begin{theorem}
+		$ x_n $ - посл-ть \\
+		1. Её верхний предел - наибольший частичный предел \\
+		2. Её нижний предел - наименьший частичный предел \\
+		3. $ \exists \lim x_n \Leftrightarrow \varlimsup x_n = \varliminf x_n $ \\
+		$  \lim x_n =  \varlimsup x_n = \varliminf x_n $ 
+		\begin{proof}
+			Пусть $ A = \varlimsup x_n $ Предположим $ A \in \mathbb{R} $\\
+			$ u_n = \left( A - \dfrac{1}{n}, A + \dfrac{1}{n} \right) $ \\
+			$ x_{m_1} \in u_1, x_{m_2} \in u_2 $ \\
+			$ y_n = \sup\limits_{k \geq n} x_k $ \\
+			Предпол. $ x_1 \notin u_1 $ % --pic3,4 
+			
+			Предп $ \exists A' > A : A' - $ частичный предел $ x_n $, т.е. $ \exists x_{m_k} \rightarrow A' $ \\
+			$ \varepsilon = (A' - A) / 2 $ \\
+			% pic5
+		\end{proof}
+		\begin{proof}
+			Пусть $ \exists \lim x_n = A \Rightarrow $ любой частичный предел равен $ A $  \\
+			$ \varliminf x_n = \varlimsup x_n = A $\\
+			Пусть $ \varliminf x_n = \varlimsup x_n = A $ \\
+			$ A \in \mathbb{R} $ \\
+			$ \varliminf x_n = A \Rightarrow \exists N_1 \forall n \geq N_1 : z_n \in  $ \\% pic6]
+		\end{proof}
+	\end{theorem}
+\end{definition}
+Предл. Пусть $ \forall n \in \mathbb{N} : a_n \leq b_n $ Тогда $\varlimsup a_n \leq \varlimsup b_n, \varliminf a_n \leq \varliminf b_n $ \\
+\begin{theorem}
+	1. $ A = \varliminf x_n  \Leftrightarrow \left\{ \begin{matrix}
+	\forall \varepsilon > 0 \  \exists N, \forall n \geq N, x_n > a - \varepsilon \\
+	\forall \varepsilon > 0 \  \forall N, \exists n \geq N , x_n  < a + \varepsilon 
+	\end{matrix}  \right. $\\
+	2. $ A = \varlimsup x_n  \Leftrightarrow \left\{ \begin{matrix}
+	\forall \varepsilon > 0 \ \forall N, \exists n \geq N, x_n > a - \varepsilon \\
+	\forall \varepsilon > 0 \  \exists N, \forall n \geq N , x_n  < a + \varepsilon 
+	\end{matrix} \right.  $ \\
+	\begin{proof}
+		$ \Rightarrow x_n \geq z_n \rightarrow a (z_n  \inf\limits_{k \geq n} x_k) $\\
+		$ \exists N_0 \forall n \geq N_0 : z_n < a + \varepsilon  $ \\
+		т. е. $ \exists k \geq n : x_k < a + \varepsilon $ \\
+		$ \Leftarrow \varepsilon > 0, \exists n \forall n \geq N : z_n \in u_{\varepsilon}(a) $\\
+		$ z_n > a - \varepsilon $ \\
+		По (1) $ \exists N_1 \forall n \geq N_1 : x_n > a - \frac{\varepsilon}{2} \Rightarrow \forall n \geq N_1 : z_n \geq a - \frac{\varepsilon }{2} > a - \varepsilon $ \\
+		$ \forall n \in \mathbb{N} : z_n = \inf\limits_{k \geq n} x_k < a + \varepsilon $ (при нек. k) \\
+		Т.е. $ z_n \rightarrow k $
+		% pic7
+	\end{proof}
+\end{theorem} 
+Предложение. Пусть $ a_n b_n $ последовательности
+\begin{enumerate}
+	\item $ \varliminf(a_n + b_n) \geq \varliminf a_n + \varliminf b_n $ 
+	\begin{proof}
+		$ \inf\limits_{k \geq n} (a_k + b_k) \geq  \inf\limits_{k \geq n} a_k +  \inf\limits_{k \geq n} b_k $ \\
+		$ \forall k \geq n : a_k + b_k \geq  \inf\limits_{k \geq n} a_k +  \inf\limits_{k \geq n} b_k \Rightarrow \lim\inf\limits_{k \geq n} (a_k + b_k ) \geq \lim( \inf\limits_{k \geq n} a_k +  \inf\limits_{k \geq n} b_k) $\\
+	\end{proof}
+	\item $ \varlimsup(a_n+b_n) \leq \varlimsup a_n + \varlimsup b_n $ 
+\end{enumerate}
+
+\section{Ряды}
+
+\begin{definition}
+	$ \sum_{k=1}^{\infty} a_k $\\
+	Говорят, что сумма ряда $  \sum_{k=1}^{\infty} a_k $ равна  $ b \in \mathbb{R} $ если $ S_n \rightarrow b, $ где $ S_n =  \sum_{k=1}^{n} a_k$
+	Посл-ть частичных сумм ряда $  \sum_{k=1}^{\infty} a_k$ \\
+	$ (c_n) a_n = \left\{ \begin{matrix}
+		c_1, n = 1 \\
+		c_n - c_1, n > 1 
+	\end{matrix} \right. $ 
+	Если $  \sum_{k=1}^{\infty} a_k = b \in \mathnbb{R}, $ говорят, что ряд сходится.
+\end{definition}
+Предл. Пусть $  \sum_{k=1}^{\infty} a_k $ сходится, тогда $ a_k \rightarrow 0 $ 
+Д-во $ a_k = S_k - S_k-1 = b - b = 0$\\
+\begin{example}
+	 $ \sum_{k=1}^{\infty} q^n $\\
+	 $ s_k = \dfrac{q - q^n}{1 - q} $ \\
+	 $ |q | > 1\ \ S_k \rightarrow \infty $ \\
+	 $ q = 1 \ \ S_k = k \rightarrow \infty $ \\
+	 $ | q | < 1, S_k \rightarrow \dfrac{q}{1- q} $ \\
+\end{example}
+\begin{example}
+	$  \sum_{k=1}^{\infty} \dfrac{1}{k} = +\infty $ \\
+\end{example}
+\begin{properties}
+	1. $ \sum(a_k + b_k) = \sum a_k + \sum b_k $ если $a_k $ $ b_k $ сходятся.\\
+	2. $ \sum (c \cdot a_k ) = c \cdot \sum a_k $ \\
+	3. Если ряд сходится, то сходится и имеет ту же самую сумму ряд, полученный расстановкой скобок. \\
+	
+\end{properties}
+\begin{theorem} Теорема Штольца \\
+	Пусть $ y_1 < y_2, \lim y_n =  +\infty $ \\
+	$ x_n, \lim \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} = l \in \mathbb{R} \Rightarrow \dfrac{x_n}{y_n} = l $
+	\begin{proof}
+		1. $ l = 0, \varepsilon_n = \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} $ \\
+		$ \varepsilon > 0, \exists m \forall n \geq m |\varepsilon_n | < \varepsilon $ \\
+		$ x_n - x_m = $
+		%pic8,9,10
+	\end{proof}
+\end{theorem}
+$ \lim\limits_{n \rightarrow \infty} \dfrac{1}{n^{m+1}} \sum_{k=1}^{n} k^m $ \\
+$ y_n = n^{m+1} $ \\
+$ x_n = \sum_{k=1}^{n} k^m $ \\
+$ \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} = \dfrac{n^m}{n^{m+1}- (n-1)^{m+1}} = \dfrac{n^m}{n^{m+1} - (n^{m+1} - (m+1)n^m) + \frac{(m+1)m}{2} n^{m-1}} = \dfrac{n^m}{(m+1) n^m - \frac{(m+1)m}{2} n^{m-1} } = \dfrac{1}{m+1} $ \\
+	
+	
+\begin{theorem}
+	$ y_1 > y_2 > ... > 0 $ \\
+	$ \lim x_n = \lim y_n = 0 $ \\
+	$ \lim \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} = l \in \mathbb{R} $ \\
+	$ \lim \dfrac{x_n}{y_n} = l $ \\
+	\begin{proof}
+		1. $l = 0 \ \ \ | \varepsilon_k | < \varepsilon $ при $ k \geq m $ \\
+		$ | x_n - x_m | \leq \varepsilon (y_m - y_n) $ \\
+		2. $ l \in \mathbb{R} $ сводится к п.1
+		3. $ l = + \infty $ \\
+		$ \dfrac{ x_k - x_{k-1}}{y_k - y_{k-1}} > 1 \Rightarrow x_k \leq x_{k-1} $\\
+		$ x_k \searrow, x_k \rightarrow 0 \Rightarrow x_k > 0$ начиная с нек. $k$ \\
+		$ \dfrac{y_k - y_{k-1}}{x_k - x_{k-1}} \rightarrow 0 \Rightarrow \dfrac{y_k}{x_k} \Rightarrow 0 \Rightarrow \dfrac{x_k}{y_k} \rightarrow +\infty $\\
+		4. 
+ 	\end{proof}
+\end{theorem}
+
+\section{Пределы функций}
+
+\subsection{Предельные точки множеств}
+
+$ E \subset \mathbb{R} $ \\
+$ a \in \mathbb{R} - $ предельная точка мн-ва E \\
+$ \forall \varepsilon > 0 \exists x \in E : \left\{ \begin{matrix}
+|x-a| < \varepsilon \\
+x \neq a 
+\end{matrix}\right. 
+$\\
+1. $ (a, b') = [a, b] $ \\
+2. $ \mathbb{Q}' =  \mathbb{R} $\\
+3. $\dfrac{1}{\mathbb{R}}' = {0} $ \\
+Предл. След 3 условия эквивалентны
+1. а предельная точка Е \\
+2. В любой окресности а есть бесконечно много точек Е \\
+3. Сущ посл-ть $(x_n), \forall n : x_n$
+\begin{proof}
+	$ 1 \Rightarrow 2 $ \\
+	Пусть $ \dot{u}_{\varepsilon} (a) \cap = {x_1 .. x_n} $ \\
+	Пусть $ \varepsilon' = \min (\varepsilon, |x_i - a | ) $\\
+	$ \dot{u}_{\varepsilon'} (a) \cap E = \emptyset $ \\
+\end{proof}
+\Subsection{Предел функции}
+Пусть $ E \subset \mathbb{R} $ \\
+$ f : E \rightarrow \mathbb{R} $ \\
+a - пред. точка \\
+Говорят, предел $ f $ в а равен $y$ 
+Если $ \forall $ окресн. $ U_{\varepsilon} (y) $ сущ $ \delta > 0 $ \\

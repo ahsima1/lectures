@@ -1,0 +1,18 @@
+.localconfig
+pdf/
+tmp/
+*~
+
+# in case of somebody being inaccurate
+*.gz
+*.out
+*.toc
+src/*/*.gz
+src/*/*.toc
+src/*/*.out
+*.aux
+*.log
+*.pdf
+src/*/*.aux
+src/*/*.log
+src/*/*.pdf

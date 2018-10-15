@@ -1,0 +1,242 @@
+\Section{Матрицы и операции над ними}
+
+R - кольцо\\
+$ \begin{pmatrix}
+	a_{11} & ... & a_{1m} \\
+	...& ...& ... \\
+	a_{n1} & ... & a_{nm}
+\end{pmatrix}\\
+Mat(R, n, m) \\
+A = (a_{ij})$\\
+$ R \times Mat(R, n, m) \rightarrow Mat(R, n, m) $\\
+$ a \times A =  \begin{pmatrix}
+a\cdot a_{11} & ... & a\cdot  a_{1m} \\
+...& ...& ... \\
+a\cdot  a_{n1} & ... & a\cdot a_{nm}
+\end{pmatrix}$ \\
+$ A + B = (a_{ij} + b_{ij})  \forall i < n, j < m$ \\
+$ + : Mat(R, n, m) \times Mat(R, n, m) \rightarrow Mat(R, n, m) $\\
+$ \cdot : Mat(R, n, m) \times Mat(R, m, l) \rightarrow Mat(R, n, l) $ \\
+$ A (i, j), B(j, k) $ \\
+$ AB = C = (c_{i k}) $ \\
+$ c_{ik} = \sum_{j=1}^{m} a_{ij} b_{jk} $ \\
+$ \begin{pmatrix}
+	a_{i1} & ... & a_{im} \\
+\end{pmatrix}  \begin{pmatrix}
+	b_{1k}  \\
+	...  \\
+	b_{mk}
+\end{pmatrix} = (c_{ik})\\$
+$A - n \times m, B - m \times l $\\
+$ x_1, ..., x_e $ \\
+$y_1, ..., y_m $ \\
+$z_1, ..., z_m $ \\
+Линейное преобразование $ f(ax) = a \cdot f(x) $\\ 
+y линейно зависит от х \\
+z линейно зависит от y\\
+$ y_1 = b_{11} x_1 + ... + b_{1l}x_l $ \\
+$ \vdots ---- $\\
+$ y_m = b_{m1}x_1 + ...+ b_{ml} x_l$
+
+$ z_i = \sum_{r=1}^m a_{ir} y_r = \sum_{r=1}^{m} a_{ir}(\sum_{j=1}^{l} b_r x_j )  = \sum_{r=1}^{m} \sum_{j=1}^{l} a_{ir}b{rj}x_j =\\=  \sum_{i=1}^{l} \sum_{j=1}^{m} a_{ir}b{rj}x_j = \sum_{i=1}^{l}  (\sum_{r=1}^{m}a_{ir}b_{rj})x_j $ \\
+Матрицы с одним столбцом называются векторами-столбцами, с 1 строкой - векторами-строками.
+ 
+$ X =\begin{pmatrix}
+X_1 \\
+\vdots \\
+X_l
+\end{pmatrix}  Y=\begin{pmatrix}
+Y_1 \\
+\vdots \\
+Y_m
+\end{pmatrix}X =\begin{pmatrix}
+Z_1 \\
+\vdots \\
+Z_n
+\end{pmatrix}$\\
+$ Y = B \cdot X, Z = A \cdot Y, Z = (A\cdot B) \cdot X $\\
+$ A \in M(n,m,R)\\
+B \in M(m,l,R)\\
+C \in M(l,k,R)\\
+(AB)C = A(BC) $\\
+$ ((AB)C)_{ij} = \sum_{s=1}^{l} (AB)_{ij} C_{sj} $\\
+$ \sum_{s=1}^{l} (\sum_{r=1}^{m} (A_{ir} B{rs} )) = \sum_{r=1}^{m} \sum_{s=1}^{l} A_{ir} (B_{rs} C_{sj}) = \sum_{r=1}^{m} A_{ir} (\sum_{s=1}^{l} B_{rs} C_{sj}) = \sum_{r=1}^{m} A_{ir} (BC)_{rj}  = (A(BC))_{ij}$\\
+$ A \in M(n,m,R)\\
+B,C \in M(m,l,R)$\\
+$ D \in M(l,k,R) $ \\
+Тогда $ A(B+C) = AB+AC$\\
+$ (B+C)D = BC+CD $ - доказать упражнение \\
+
+$ a\in R, B,C  - $ матрицы одного размера \\
+1. $ a(B+C) = aB + aC $\\
+2. $ a(BC) = (aB)C $\\
+3. Если R -коммутативно \\
+$ a(BC) = B(aC) $\\
+
+Матричное умножение некоммутативно \\
+$ A - n \times m$\\
+$ B m \times l $ \\
+$ AB, l \neq m \Rightarrow BA $ не определено \\
+$ l = m $\\
+$ AB - n \times n, BA - m \times m $\\
+Если $ n \neq n $ то размеры получающихся матриц не совпадают
+$ l = m = n $ \\
+$ n = 1, R $- коммутативно, $ M(1,1,R) $ - коммутативно \\
+$ n \geq 2 - $ не коммутативно.\\
+$ A = \begin{pmatrix}
+0 & 1\\
+0 & 0 
+\end{pmatrix}
+B = \begin{pmatrix}
+0 & 0 \\
+1 & 0
+\end{pmatrix} \\
+AB = \begin{pmatrix}
+1 & 0 \\
+0 & 0 
+\end{pmatrix}
+BA = \begin{pmatrix}
+0 & 0\\
+0 & 1
+\end{pmatrix} AB \neq BA$
+\begin{theorem}
+	R - кольцо с 1\\
+	$ M_n (R) = M(n,n,R) - $ кольцо с 1, если $ n \geq 2 $ то не коммутативн\\
+	$ \overline{M_n} (R)  $ - кольцо матриц размера n под кольцом R \\
+	Для сложения свойства очевидны. 
+	$ \mathds{O} = \begin{pmatrix}
+		0 & ... & 0 \\
+		\vdots & ... & \vdots \\
+		0 & ... & 0
+	\end{pmatrix} $\\
+	 $ A = (a_{ij}) \\
+	 -A = (-a_{ij}) $
+	 $ \mathds{1} = \begin{pmatrix}
+	 1 & ... & 0 \\
+	 \vdots & 1 & \vdots \\
+	 0 & ... & 1
+	 \end{pmatrix} $\\
+	 Если $ n \geq 2, $  в $ M_n(R) $ есть нетривиальные делители нуля - не всякий элемент обратим \\
+	 $ A = \begin{pmatrix}
+	 	0 & 1\\
+	 	0 & 0 
+	 \end{pmatrix} \neq \mathds{0} $ \\
+	 $ A^2 = \begin{pmatrix}
+	 0 & 1\\
+	 0 & 0 
+	 \end{pmatrix} \begin{pmatrix}
+	 0 & 1\\
+	 0 & 0 
+	 \end{pmatrix} = \begin{pmatrix}
+	 0 & 0\\
+	 0 & 0 
+	 \end{pmatrix} 
+	 A^2 = 0 \Rightarrow A - $ необратим
+ \end{theorem}
+
+\subsection{Ещё раз о комплексных числах}
+
+\begin{definition}
+	R - кольцо \\
+	$ \emptyset \neq R_1 \subseteq R $\\
+	$ R_1 - $ подкольцо в R если оно является кольцом отностительно тех же операций, что и в R \\
+	$ + : R \times R \rightarrow R $ \\
+	$ + : R_1 \times R_1 \rightarrow R_1 $ \\
+	Говорят, что $ R_1 $ замкнуто относительно сложения (умножения)
+\end{definition}
+Предложение $ \emptyset \neq R_1 \subseteq R $ является подкольцом если оно замкнуто по сложению, взятию обратного по сложению и умножения. 
+$ a, b \in R_1, a+b \in R_1, -a \in R_1, ab \in R_1 $ \\
+Рассмотрим $ M_2(\mathbb{R}) $ \\
+$\left\{  \begin{pmatrix}
+a & -b\\
+b & a 
+\end{pmatrix} \top a,b \in \mathbb{R} \right\} = C$ \\
+$  \begin{pmatrix}
+a & -b\\
+b & a 
+\end{pmatrix} +  \begin{pmatrix}
+c & -d\\
+d & c 
+\end{pmatrix} =  \begin{pmatrix}
+a+c & -(b+d)\\
+b+d & a+c 
+\end{pmatrix} \in C $ \\
+$  \begin{pmatrix}
+a &- b\\
+b & a 
+\end{pmatrix}  \begin{pmatrix}
+c & -d\\
+d & c 
+\end{pmatrix} =  \begin{pmatrix}
+ac-bd & -(ad+bc)\\
+bc+ad & -bd+ac 
+\end{pmatrix} \in C $ \\
+$ \begin{pmatrix}
+c & -d\\
+d & c 
+\end{pmatrix}  \begin{pmatrix}
+a &- b\\
+b & a 
+\end{pmatrix} = 
+ \begin{pmatrix}
+ca-db & -(cb+da)\\
+da+cb & -db+ca
+\end{pmatrix} =  \begin{pmatrix}
+a &- b\\
+b & a 
+\end{pmatrix}  \begin{pmatrix}
+c & -d\\
+d & c 
+\end{pmatrix} $
+C - коммутативное кольцо\\
+$ (a,b) \neq (0,0) $ \\
+$  \begin{pmatrix}
+a &- b\\
+b & a 
+\end{pmatrix}  \cdot \dfrac{1}{a^2+b^2}  \begin{pmatrix}
+a & b\\
+-b & a 
+\end{pmatrix} = \dfrac{1}{a^2+b^2} \begin{pmatrix}
+a^2+b^2 & ab-ba\\
+ba-ab & b^2+a^2
+\end{pmatrix}   = \begin{pmatrix}
+1 & 0\\
+0 & 1 
+\end{pmatrix}   \Rightarrow C - $ поле \\
+Изоморфизм $ \mathbb{C} $ и C \\
+$ (a, b) \rightarrow 
+ \begin{pmatrix}
+a & -b\\
+b & a 
+\end{pmatrix} $\\
+$ \phi : \mathbb{C} \rightarrow C $ \\
+$ z_1 = a+bi = (a,b) \\
+z_2 = c + di = (c,d) $\\
+$ z_1 + z_2 = a + c + (b+d)i $ \
+$ \phi(z_1+z_2) = \phi(z_1) + \phi (z_2) $\\
+$ z_1 z_2 = ac - bd + (ad + bc)i $ \\
+$ \phi(z_1 z_2) = \phi(z_1) \phi(z_2) $\\
+$ \mathbb{C} \cong C $
+
+\subsection{Тело кватернионов}
+
+$ M_2 (\mathbb{C}) $ \\
+$ \mathcal{H} =\left\{ \begin{pmatrix}
+z_1 & - \overline{z_2} \\
+z_2 &  \overline{z_1}
+\end{pmatrix}, z_1,z_2 \in \mathbb{C} \right\}$\\
+$  -\begin{pmatrix}
+z_1 & - \overline{z_2} \\
+z_2 &  \overline{z_1}
+\end{pmatrix} =  \begin{pmatrix}
+-z_1 & -\overline{z_2} \\
+-z_2 &  -\overline{z_1}
+\end{pmatrix} \in \mathcal{H} $\\
+$ -\overline{(z_2)} = \overline{z_2}$ \\
+%pic2,3
+$ \mathcal{H} $ - тело, но не поле \\
+
+
+
+
+

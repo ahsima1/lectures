@@ -1,0 +1,153 @@
+\Subsection{Основные обозначения и определения, функции}
+
+\begin{center}
+  \renewcommand{\arraystretch}{1.7}
+  \large
+  \begin{tabular}{| c | c | c |}
+    \hline
+    \textbf{Символ} & \textbf{Определение} & \textbf{Описание}\\
+    \hline
+    {\Large $\cap$} & $A \cap B = \{ x \mid x \in A \land x \in B\}$ & Пересечение множеств\\
+    \hline
+    {\Large $\cup$} & $A \cup B = \{ x \mid x \in A \lor x \in B\}$ & Объединение множеств\\
+    \hline
+    {\Large $\setminus$} & $A \setminus B = \{ x \mid x \in A \land x \notin B\}$ & Разность множеств\\
+    \hline
+    {\Large $\times$} & $A \times B = \{ (x,\,y) \mid x \in A, y \in B\}$ & Произведение множеств\\
+    \hline
+    {\Large $\forall x\colon$} & Выражение верно для любого (всех) $x$ & Квантор всеобщности\\
+    \hline
+    {\Large $\exists x\colon$} & Существует $x$, такой что & Квантор существования\\
+    \hline
+    {\Large $\exists!\, x\colon$} & Существует ровно один $x$, такой что & Квантор существования\\
+    \hline
+    {\Large $\emptyset$} & $\forall x\colon x \notin \emptyset$ & Пустое множество\\
+    \hline
+    {\Large $\sqcup$} & $A \sqcup B = A \cup B$, при этом $A \cap B = \emptyset$ & Дизъюнктное объединение\\
+    \hline
+    {\Large $\subset$} & $A \subset B \iff x \in A\implies x\in B$ & $A$ ~--- подмножество $B$\\
+    \hline
+  \end{tabular}
+\end{center}
+\bigskip
+\begin{remark}
+  В данном конспекте $\subset$ и $\subseteq$ означают одно и то же, но иногда запись $\subset$ используется для того, чтобы подчеркнуть, что подмножество не совпадает со всем множеством (также как $\sqcup$ используется, чтобы подчеркнтуь пустоту пересечения у операндов).
+\end{remark}
+
+\begin{definition}\label{def:intro-set}
+  Множество~--- аксиоматическое понятие, не имеющее определения.
+\end{definition}
+
+\begin{definition}\label{def:intro-func}
+  Функция~--- это упорядоченная тройка $(X,\,Y,\,\Gamma)$, где $X$, $Y$~--- множества, а $\Gamma$~--- подмножество $X \times Y$, такое что $\forall x \in X\colon \exists!\,y\in Y\colon (x,\,y) \in \Gamma$.
+\end{definition}
+
+\begin{definition}\label{def:intro-func2}
+  Множество $X$ из предыдущего определения называется областью определения функции, множество $Y$~--- \textbf{областью} значений, а $\Gamma$~--- графиком функции.
+\end{definition}
+
+\begin{definition}\label{def:intro-funchealth}\slashn
+  \begin{itemize}
+  \item Запись $f\colon X \to Y$ означает, что $f$~--- функция из $X$ в $Y$.
+  \item Запись $f(x) = y$, означает, что $(x,\,y) \in \Gamma_f$.
+  \end{itemize}
+\end{definition}
+
+\begin{definition}\label{def:intro-funcim}
+  Образом функции $f$ (\textbf{множеством} значений, обозначается как $\Im f$) называется множество $y \in Y$, таких что $\exists x \in X\colon f(x) = y$.
+\end{definition}
+
+\begin{definition}\label{def:intro-funcpreim}
+  Прообразом точки $y$ у отображения $f$ (записывается как $f^{-1}(y)$) называется множество таких $x$, что $f(x) = y$.
+\end{definition}
+
+\begin{definition}\label{def:intro-funcpreim2}
+  Прообразом множества $\hat{y}$ у отображения $f$ (записывается как $f^{-1}(\hat{y}$) называется множество таких $x$, что $f(x) \in \hat{y}$.
+\end{definition}
+
+\exersize Докажите, что $f^{-1}(\hat{y}) = \bigcup\limits_{y \in \hat{y}} f^{-1}(y)$.
+
+\begin{definition}\label{def:intro-funcnarrow}
+  Пусть $f\colon X \to Y$ и $Z \subset X$. Тогда функцию $f$ можно сузить на множество $Z$ (записывается как $f|_Z$), где $f|_{Z}(x) := f(x)$.
+\end{definition}
+
+\begin{definition}\label{def:intro-funccompose}
+  Пусть $f\colon X \to Y,~g\colon Y \to Z$, определим композицию функций $g \circ f\colon X \to Z$:
+
+  $(g \circ f)(x) := g(f(x))$
+\end{definition}
+
+\begin{definition}\label{def:intro-funcid}
+  Отображение $id_X$ из $X$ в $X$, такое что $\forall x\colon id_X(x) = x$ называется тождественным отображением.
+\end{definition}
+
+\begin{definition}\label{def:intro-funceq}
+  Две функции называются равными, если они равны на всей области определения.
+\end{definition}
+
+\begin{definition}\label{def:intro-funcinv}
+  Пусть $f\colon X \to Y$. Отображение $y\colon Y \to X$ называется:
+  \begin{compactitem}
+  \item Обратным к $f$ слева, если $f \circ g = id_Y$
+  \item Обратным к $f$ справа, если $g \circ f = id_X$.
+  \item Обратным к $f$, если оно обратно к $f$ слева и справа.
+  \end{compactitem}
+\end{definition}
+
+\begin{definition}\label{def:intro-funcinj}
+  Функция $f$ называется инъекцией (вложением), если
+  \begin{compactitem}
+    \item $\forall x, y\colon f(x) = f(y) \implies x = y$
+  \end{compactitem}
+\end{definition}
+
+\begin{definition}\label{def:intro-funcsur}
+  Функция $f$ называется сюръекцией, если \hyperref[def:intro-funcim]{образ функции} совпадает с \hyperref[def:intro-func2]{областью значений}.
+  \begin{compactitem}
+    \item $\forall y \in Y\colon \exists x \in X\colon f(x) = y$
+  \end{compactitem}
+\end{definition}
+
+\begin{definition}\label{def:intro-funcbi}
+  Функция называется биекцией, если она одновременно является и инъекцией, и сюръекцией.
+\end{definition}
+
+\begin{theorem}\label{thm:intro-bi} Пусть $g\colon X \to Y$. Следующие условия экивалентны:$\slashn$
+  \begin{enumerate}
+  \item $g$~--- биекция.
+  \item $\exists g'\colon Y \to X$: $g \circ g' = id_Y$, $g' \circ g = id_X$.
+  \item $\exists f, h\colon Y \to X$: $g \circ f = id_Y$, $h \circ g = id_X$.
+  \end{enumerate}
+\end{theorem}
+
+\begin{proof}\slashn
+  \begin{itemize}
+  \item ``1'' $\implies$ ``2''. Рассмотрим функцию $g' = (Y,\, X,\, \Gamma_{g'})$, где $\Gamma_{g'} = \{(y,\,x) \mid (x,\,y) \in \Gamma_{g}\}$.
+
+    Так как $f$~--- биекция, то график задан корректно: для каждого $y$ найдётся (так как выполнена сюръекция) ровно один (так как выполнена биекция) $x$, такой что $(y,\,x) \in \Gamma_{g'}$
+
+    Показать \hyperref[def:intro-funcid]{тождественность} композиций остаётся в качестве упражнения для читателя.
+    
+  \item ``2'' $\implies$ ``3''. Просто возьмём $f := g', h := g'$.
+
+  \item ``3'' $\implies$ ``2''. $f = id_X \circ f = (h \circ g) \circ f = h \circ (g \circ f) = h \circ id_Y = h$, тем самым $f = h$.
+
+
+  \item ``2'' $\implies$ ``1'':
+    \begin{itemize}
+      \item Верна инъективность:
+
+        $g(x) = g(y) \implies g'(g(x)) = g'(g(y)) \implies (g' \circ g)(x) =  (g' \circ g)(y) \implies id_X(x) = id_X(y) \implies x = y$.
+      \item Верна сюръективность:
+
+        Сюръективность $\iff \forall y\colon g^{-1}(y) \ne \emptyset$ (см \ref{def:intro-funcpreim}).
+        
+        Покажем, что $g'(y) \in g^{-1}(y)$, тем самым последнее не пусто.
+
+        И действительно $g(g'(y)) = (g \circ g')(y) = id_Y(y) = y$. \qedhere
+    \end{itemize}
+  \end{itemize}
+\end{proof}
+
+\begin{remark} Тем самым мы показали, что функция является биекцией тогда и только тогда, когда она обратима (см пункты $1$ и $2$ теоремы).
+\end{remark}

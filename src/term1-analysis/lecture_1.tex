@@ -1,0 +1,314 @@
+
+
+\Subsection{Язык теории множеств}
+
+
+\begin{definition}
+	Конечные множества \\
+	$ \{ 3, 1, 17 \} $ \\
+	$ A = \{ 1, 2, 3... 100 \} $ \\
+	$ \{ n^2 \mid n = 1, 2, ..., 50 \} $ \\
+	$ \{ n \in A \mid n \divby 3 \} $  \\
+	
+\end{definition}
+
+\begin{definition}Подмножество \\ 
+	$ B \subset A \Leftrightarrow \forall b \in B : b \subset A $ \\
+\end{definition}
+
+\begin{definition} P - предикат \\
+	$ A = \rm \mathbb{Z} $ \\
+	$ P(n) - n^2 \leq 10 $ \\
+	Множество А, Р - предикат на А \\
+	$ \forall x \in A : P(x) $  \\
+	$ \exists x \in A : P(x) $ \\
+\end{definition}
+
+\begin{definition} Квантор \\
+	Квантор всеобщности: $ \forall $ \\
+	Квантор существования: $ \exists $ \\
+\end{definition}
+\begin{definition} Операции над множествами \\ 
+	$ A, B $ - множества \\
+	$ A \cap B = \{ a \in A \mid a \in B \} $\\
+	$ A \cup B = \{ a \in M \mid a \in A,  a \in B \} $ \\
+	$ A \setminus B = \{a \in A \mid a \notin B \}  $ \\
+	$ A \oplus B = ( A \setminus B ) \cup ( B \setminus A ) $ \\
+	$ A \times B = { (a, b) \mid a \in A, b \in B } $ \\
+\end{definition}
+
+\begin{definition}
+	Отношения \\
+	$ a, b \in \mathbb{Z} $ \\
+	$ a \divby b $ \\
+	$ a \divbynot b $ \\
+	Отношение делимости\\
+\end{definition}
+
+\begin{definition} Декартов квадрат \\
+	$ M = \{1, 2, 3, 4\} $\\
+	$ |M \times M | = 16 $ - декартов квадрат (произведение множества на себя)\\
+	$ |x| $ - Мощность мн-ва Х (кол-во элементов в конечном мн-ве)\\
+	$ \divby R \subset M \times M $\\
+	$ R =  \{ (1, 1), (2, 1), (2, 2), (3, 1), (3, 3), (4, 1), (4, 2), (4, 4) \}$ \\
+	$ |M| = n \rightarrow |2^M| = 2^n $ - количество подмножеств на множестве
+	$ 2^{(n^2)} $ - количество отношений на множестве \\
+\end{definition}
+
+\noindent
+$ \mathbb{N} $ - Натуральные числа\\
+$ \mathbb{Z} $ - Целые числа\\
+$ \mathbb{Q} = \{ \frac{a}{b} \mid a \in \mathbb{Z}, b \in \mathbb{N} \} $ - Рациональные числа\\
+$ \mathbb{R} $ - Вещественные числа\\
+$ \mathbb{C} $ - Комплексные числа\\
+
+\subsection{Отображения}
+
+\begin{definition} Отображение \\
+X, Y - множества\\
+$ f: X \rightarrow Y $ f - отображение из X в Y \\
+Каждому $ х \in X $ сопоставлен $ y \in Y $ \\
+$ X = \{ x_1, ..., x_n \} $ \\
+$\hspace*{11mm} y_1, ..., y_n $\\
+$ |X| = 3, |Y| = 5 $\\
+$ f: X \rightarrow Y $\\
+Количество отображений f - $ Y^X = 5^3 $ \\
+$ X = Y = \mathbb{N} $ \\
+$ f(x) = 3x + 5 $ \\
+$ \mathbb{N} \Rightarrow \mathbb{N} $ \\
+$ x \Rightarrow 3x+5 $ 
+$ f(x) = |\{ d \in \mathbb{N} \mid x \divby d \}| $ 
+\end{definition}
+
+\begin{definition}
+Пусть задано $ f : X \Rightarrow Y $ \\
+$ X_0 \subset X $ \\
+$ f(X_0) = \{ f(x) \mid x \in X_0 \} \in Y $ - образ подмножества \\
+$ f^{-1}(y) = \{ x \in  X \mid f(x) = y \} $ - прообраз элемента \\
+$ f^{-1}(Y_0) = \{ x \in X \mid f(x) \in Y_0 \} $  - прообраз множества 
+\begin{example}
+	$ f: \mathbb{Z} \Rightarrow \mathbb{Z} $ \\
+	$ a \Rightarrow a^2 $ \\
+	$ f( \{ -1, 0, 1, 2 \} ) = \{ 0, 1, 4 \} $ \\
+	$ f^{-1} (1)= \{-1, 1\}$ \\
+    $ f^{-1} (0)= \{0\}$ \\
+	$ f^{-1} (2)= \varnothing$ \\
+	$ f^{-1} (\{0,1\})= \{-1, 0, 1\}$ 
+\end{example}
+\end{definition}
+
+
+
+\begin{definition}
+Отображение $ f: X \Rightarrow Y $ называется сюръективным (сюръекцией), если $ f(X) = Y $ $ \forall y \in Y \exists x \in X : f(x) = y $ \\
+f сюръекция $ \Leftrightarrow  \forall y \in Y |f^{-1}(y)| \geq 1 $ \\
+\end{definition}
+\begin{definition}
+Отображение $ f: X \rightarrow Y $ называется инъективным (инъекцией), если $ \forall x_1, x_2 \in X : x_1 \neq x_2 \rightarrow f(x_1) \neq f(x_2) $ \\
+f инъекция $ \Leftrightarrow  \forall y \in Y |f^{-1}(y)| \leq 1 $ 
+\end{definition}
+\begin{definition}
+Отображение $ f: X \rightarrow Y $ называется биективным (биекцией), если оно сюръективно и инъективно 
+\end{definition}
+
+\begin{definition}
+Пусть X, Y, Z - мн-ва, $f: X \rightarrow Y $ и $ g: Y \rightarrow Z $ \\
+Композиция отображений $ g \circ f $ $ x \mapsto g(f(x)) $ 
+\end{definition}
+
+\begin{definition}
+Тождественное отображение \\$ id_x : X \rightarrow X $ \\
+$\hspace*{10mm} x \mapsto x $
+\end{definition}
+
+\begin{properties}
+1. Композиция инъективных отображений инъективна\\
+2. Композиция сюръективных предложений сюръективна\\
+3. Композиция биективных отображений биективна
+\begin{proof}
+1.\\
+$ f: X \rightarrow Y $\\
+$ g: Y \rightarrow Z $\\
+Нужно $x_1 \neq x_2 \Rightarrow (g \circ f)(x_1) \neq (g\circ f) x_2 $\\
+$ x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2) \Rightarrow g(f(x_1)) \neq g(f(x_2))  $
+\end{proof}
+\begin{proof}
+2. $ \forall z \in Z $\\
+$g$ сюръективно $ \Rightarrow \exists y \in Y : g(y) = z $\\
+$f$ сюръективно $ \Rightarrow \exists x \in X : f(x) = y $\\
+$ (g \circ f)(x) = g(y) = z $ 
+\end{proof}
+\end{properties}
+\begin{definition}
+Классы множеств:
+Два множества принадлежат одному классу если между ними есть биекция
+\end{definition}
+\begin{definition}
+Обратное отображение \\ $ f : Y \rightarrow Y $ \\ 
+$ g: Y \rightarrow X $ называется обратным, если $ g \circ f = id_x, f \circ g = id_y $ \\
+Если у отображения $ f $ cуществует обратное отображение $ f^{-1} $, то оно единственное
+$ f^{-1} (y) = {x} $ - прообраз \\
+$ f^{-1} (y) = x $ - обратное отображение
+\end{definition}
+
+\begin{theorem}
+Пусть $ f : X \rightarrow Y $ отображение, то есть обратное отображение $g$ $ \Leftrightarrow $ $f$ - биекция 
+\begin{proof}
+$\Rightarrow$ - Пусть $x_1, x_2 \in X, f(x_1) = f(x_2) \Rightarrow g(f(x_1)) = g(f(x_2))$ - $f$ - инъективно\\
+Пусть $ y \in Y $ тогда $ y = f(g(y)) \in f(X) $ тк $f \circ g = id_y $
+$f$ - сюръективно\\
+$\Leftarrow$ - Построим отображение $g$. Пусть $y \in Y$, тогда $f^{-1}(y) = \{x\}  g(y) = x$, следовательно $f \circ g = id_y, g \circ f = id_x$
+\end{proof}
+\end{theorem}
+
+\section{Аксиомы вещественных чисел}
+\subsection{Аксиомы поля}
+\begin{definition}
+Бинарные операции \\
+$ M \times M \rightarrow M $ \\
+$ \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z} $ 
+\end{definition}
+
+Мы будем рассматривать множество $\mathbb{R}$ с бинарными операциями $+$ и $-$ и отношением $\leq$, для которых выполняются следующие условия
+\begin{enumerate}
+	\item $ \forall x, y \in \mathbb{R} : x + y = y + x $ 
+	\item $ \forall x, y, z \in \mathbb{R} (x + y) + z = x + (y + z) $ 
+	\item $ \exists 0 in \mathbb{R}, \forall x \in \mathbb{R}: x+0 = x $ 
+	\item $ \forall x \in \mathbb{R} \exists x' \in R x + x' = 0 $ 
+	\begin{lemma}
+		0 - единственный 
+		\begin{proof}
+			Пусть $0' , 0 = 0 + 0' = 0, 0' + 0 = 0'$
+		\end{proof} 
+	\end{lemma}
+	\begin{lemma}
+	У любого элемента есть единственный противоположный
+	\begin{proof}
+		Пусть $0' , 0 = 0 + 0' = 0, 0' + 0 = 0'$
+	\end{proof} 
+\end{lemma}
+	\item $ \forall x, y \in \mathbb{R} : x \cdot y = y \cdot x $ 
+    \item $ \forall x, y, z \in \mathbb{R} (x \cdot y) + z = x + (y \cdot z) $ 
+	\item $ \exists 1 \in \mathbb{R} \setminus \{0\}, \forall x \in \mathbb{R}: x \cdot 1 = x $ 
+	\item  $ \forall x \in \mathbb{R} \setminus \{0\} \exists x' \in R x \cdot x' = 1 $
+	\item $ \forall x, y, z \in \mathbb{R} x(y+z) = xy + xz $ 
+\end{enumerate}
+
+\begin{example}
+	Примеры полей
+	\begin{enumerate}
+		\item $\mathbb{Q}$ 
+		\item  $\mathbb{R}$ 
+		\item  $\mathbb{C}$ 
+		\item  $\mathbb{Q}(\sqrt{2}) = \{a + b \cdot \sqrt{2} \mid a, b \in \mathbb{Q} \}$ 
+		\item  $ {0, 1} = \mathbb{F}_2 $ 
+	\end{enumerate}
+
+\end{example}
+
+\begin{lemma}
+	$ \forall x \in R 0 \cdot x = 0$ 
+	\begin{proof}
+		$ 0 + 0 = 0 $ \\
+		$ (0+0) \cdot x = 0 \cdot x = $ \\
+		$ 0 \cdot x + 0 \cdot x $ \\
+		$ 0 \cdot x + \underbrace{0\cdot x + (-0 \cdot x)}_0 = \underbrace{0\cdot x + (-0 \cdot x)}_0 $ 
+	\end{proof}
+\end{lemma}
+
+\subsection{Аксиомы порядка}
+\noindent
+Аксиомы порядка $ \ \ $ 
+$\left\{
+\begin{tabular}{p{.8\textwidth}}
+\begin{enumerate}
+	\item $ \forall x \in \mathbb{R} : x \leq x $ - рефлексивность 
+	\item $ \forall x, y in \mathbb{R} : x \leq y \and y \leq x \Rightarrow x = y $ антисимметричность 
+	\item $ \forall x, y, z \in \mathbb{R}, x \leq y, y \leq z \Rightarrow x \leq z $ Транзитивность.
+\end{enumerate}
+\end{tabular}
+\right.$
+Линейный порядок
+$\left\{
+\begin{tabular}{p{.8\textwidth}}
+\begin{enumerate}[4.]
+	\item $ \forall x, y \in \mathbb{R}, x \leq y $ или  $  y \leq x $ 
+\end{enumerate}
+	\end{tabular}
+\right.$
+
+\subsection{Аксиома полноты}
+Пусть $ X, Y \subset R, \forall x \in X \forall y \in Y x /leq y $ \\
+Тогда $ \exists c \in R $ 
+\begin{enumerate}
+\item $ \forall x \in X : x \leq c $ 
+\item $ \forall y \in Y c \leq y $
+\end{enumerate}
+
+\section{Ограниченные множества}
+
+$ a, b \in R, a < b $ \\
+Отрезок $ [a, b] = \{ x \in R \mid a \leq x \leq b \} $
+$ x < y \Leftrightarrow x \leq y x \neq y $ \\
+$ [a, b) $,
+$ (a, b] $,
+$ (a, b) $\\
+\begin{definition}
+	Множество называется ограниченным сверху, если $ \exists c \in R \forall x \in M x \leq c $ \\
+	Множество называется ограниченным снизу, если $ \exists c \in R \forall x \in M x \geq c $ 
+\end{definition}
+
+\begin{definition}
+	Если $ \forall x \in M, x \leq c$, то $c$ называется вехней границей \\
+	Если $ \forall x \in M, x \geq c$, то $c$ называется нижней границей 
+\end{definition}
+\begin{definition}
+	$ c \in R $ называется точной верхней гранью или супремумом множества $M$, если
+	\begin{enumerate}
+		\item $c$ - верхняя граница
+		\item Для любой верхней границы $c'$ мноества $M$ выполняется $ c \leq c'$
+	\end{enumerate}
+\end{definition}
+\begin{definition}
+Опр. $ c \in R $ называется точной нижней гранью или инфимумом множества $M$, если 
+\begin{enumerate}
+	\item $c$ - нижняя граница
+	\item Для любой нижней границы $c'$ мноества $M$ выполняется $ c \geq c'$ 
+\end{enumerate}
+\end{definition}
+Из определения очевидно, что у множества может быть не более одного супремума и одного инфимума 
+\begin{theorem}
+	Пусть $ M \subset R, M \neq \emptyset $ 
+	\begin{enumerate}
+		\item Если M ограничено сверху, то у M есть супремум
+		\item Если M ограничено снизу, то у M есть инфимум
+
+	\end{enumerate}
+	\begin{proof}
+		1. $ B = \{ b \in R \mid  \} $
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}
+	Пусть $ X, Y \in \mathbb{R} $ ограниченные сверху мн-ва\\
+	Тогда $sup(X+Y) = sup(X) + sup(Y)$ \\
+	$ X + Y = \{ x + y \mid x \in X, y \in Y \} $
+	\begin{consequence}
+		Пусть $ a \in \mathbb{R} $  Тогда  $\exists n \in \mathbb{N} n > a $ 
+		\begin{proof}
+			Пусть это не так \\
+			$ \forall n \in \mathbb{N} : n \leq a $ , т.е. $ \mathbb{N} $ ограничено сверху. \\
+			$ \exists c = sup(\mathbb{N}) $ \\
+			$ c - 1 < sup (\mathbb{N}) $ 
+		\end{proof}
+	\end{consequence}
+\end{theorem}
+
+
+
+
+
+
+
+
+

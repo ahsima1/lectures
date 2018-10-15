@@ -1,0 +1,126 @@
+\Section{Предел Функции}
+
+$ E \in \mathbb{R} $ \\
+$ f : E \rightarrow \mathbb{R } $\\
+a - пред точка \\	
+$ \lim\limits_{x \rightarrow a} f(x) = y \in \mathbb{R}$ \\
+$ \forall \varepsilon > 0 \exists \delta > 0 f(\dot{U}_{\delta} (a) \cap E) \subset U_{\varepsilon} (y) $ \\
+$ \lim\limits_{x \rightarrow a} f(x) = \infty $\\
+$ U(\infty), U(-\infty), U(+\infty) $ \\
+$ U(y) = (y-\varepsilon, y+\varepsilon) $ \\
+$ U(+\infty) = (N, +\infty), U(-\infty) = (-\infty, N) $ \\
+
+\begin{theorem}
+Теорема: а - предельная точка  $ E \subset \mathbb{R} $ \\
+$ f : E \setminus \{a\} \rightarrow \mathbb{R}, y \in \overline{\mathbb{R}}$
+1. $ \lim\limits_{x \rightarrow a} f(x) = y $ \\
+2. Для любой последовательности $(x_n)$ т.ч $\forall n : x_n \in E \setminus \{a\} $ и $ x_n \rightarrow a  \lim f(x_n) = y $ - определение предела по Гейне.
+В условии 2 достаточно брать последовательности с доп. свойством $ | x_n - a | $ монотонно убывает $ |x_{n+1} - a | < | x_n - a | $ 
+\begin{proof}
+	$ \Rightarrow $ Пусть $(x_n)$ посл-ть как в ф-ке \\
+	Пусть $ U(y) - $ какая либо окресность y \\
+	По определению предела ф-ции $ \exists \delta > 0 : f(\dot{U}_{\delta} (a) \cap E)  \in U(y) $ \\
+	$ x_n \rightarrow a \Rightarrow \exists N, \forall n \geq N, x_n \in U_{\delta} (a)$ \\
+	$ x_n \in E \setminus \{a\} \Rightarrow \forall n \geq N, x_n \in \dot{U}_{\delta} (a) \cap E$ \\
+	$ \Rightarrow \forall n \geq $
+	$ 2 \Rightarrow 1 $ \\
+	Предположим, $ \exists U(y) $ окрестность у точки $ y$ \\
+	$ \forall \delta > 0 f(\dot{U}_{\delta} (a) \cap E)  !\subset U(y)$\\\
+	$ \delta = \dfrac{1}{n}, \exists x_n \in \dot{U_1} (a) \cap E : f(x_n) \notin U(y) $ \\
+	$ x_n \in \dot{U_{\frac{1}{n}}} (a) \Rightarrow x_n \rightarrow a $ \\
+	$ \lim(f(x_n)) = y \Rightarrow \exists N', \forall n \geq N : f(x_n) \in U(y) $ \\
+	
+\end{proof}
+%pic1
+\end{theorem}
+
+\subsection{Свойства предела функции}
+\begin{enumerate}
+	\item Единственность \\
+	$ \lim\limits_{x \rightarrow a} f(x) = y_1, \lim\limits_{x \rightarrow a} f(x) = y_2 \Rightarrow y_1 = y_2 $ \\
+	% pic2
+	\item Локальная ограниченность \\
+	Пусть $  \lim\limits_{x \rightarrow a} f(x) = y \in \mathbb{R} $ \\
+	Тогда $ \exists C > 0 \exists \delta > 0 \forall x \in U_{\delta} (a) \cap E : |f(x)| < C $ \\ % pic3
+	\item Стабилизация знака \\
+	Пусть  $ \lim\limits_{x \rightarrow a} f(x)  = y \in \overline{\mathbb{R}}, y >0$ \\
+	Тогда $ \exists \delta > 0 \forall x \in \dot{U_\delta} (a) \cap E f(x) > 0 $
+	Док-во Взять $ U(y) \subset (0, +\infty) $
+	\item Предельный преход в неравенстве
+	$ f, g : E \rightarrow \mathbb{R}$\\
+	a - пред точка E \\
+	$   \lim\limits_{x \rightarrow a} f(x) = y_1 \in \overline{R},  \lim\limits_{x \rightarrow a} f(x) = y_2 $ \\
+	Пусть $ \forall x \in E : f(x) \leq g(x) $\\
+	Тогда $ y_1 \leq y_2 $\\ % pic4
+	\item Теорема о зажатой функции \\
+	Пусть a  предельная точка E $ f,g,h : E \rightarrow \mathbb{R} $\\
+	$  \lim\limits_{x \rightarrow a} f(x) =  \lim\limits_{x \rightarrow a} h(x) \in \mathbb{R} $ \\
+	Пусть $ \forall x \in E, f(x) < g(x) < h(x) $ \\
+	Тогда $  \lim\limits_{x \rightarrow a} g(x)  $ существует и равен y \\
+	\begin{proof}
+		$ x_n \rightarrow x, x_n \in E \setminus \{a\} $ \\
+		$ \forall n, f(x_n) \leq g(x_n) \leq h(x_n) $ \\
+		$ \lim f(x_n) = \lim(g(x_n)) = lim(h(x_n)) = y$\\
+		По теореме о зажатой последовательности $ \lim g(x_n) = y \Rightarrow  \lim\limits_{x \rightarrow a} g(x) = y $ 
+	\end{proof}
+	
+\end{enumerate}
+\subsection{Односторонние пределы}
+
+$ f : E \rightarrow \mathbb{R} $ \\
+a - пред точка $E_- = E \cap (-\infty, a) $\\
+$  \lim\limits_{x \rightarrow a_-} f(x) = y $ если $ \lim f(x) = y $ x ограничен $ E_- $ - левый предел \\
+$  \lim\limits_{x \rightarrow a_+} f(x) = y $ если $ \lim f(x) = y $ x ограничен $ E_+ = E \cap (a, +\infty)$  \\
+Предложения
+1. Пусть $ f:E\rightarrow \mathbb{R} ,a - $ пред точка Е \\
+$ \exists \lim\limits_{x \rightarrow a} = y \in \mathbb{R} $ \\
+Тогда $  \lim\limits_{x \rightarrow a_-} f(x)  =  \lim\limits_{x \rightarrow a_+} f(x)= y$
+2. Пусть $ f : E \rightarrow \mathbb{R} a - $ пред точка $ E_-, E_+ $\\
+$ \exists  \lim\limits_{x \rightarrow a_-} f(x) = y_1,  \lim\limits_{x \rightarrow a_+} f(x) = y_2, y_1 = y_2 \Rightarrow  \lim\limits_{x \rightarrow a} f(x) = y $ \\
+1. $ \exists \delta > 0 f(\dot{U_{\delta}}(x) \cap E ) \subset U(y)  \Rightarrow  f(\dot{U_{\delta}}(x) \cap E_- ) \subset U(y)   $
+2. %pic6
+
+\begin{definition}
+	 $ f : E \Rightarrow \mathbb{R} $ называется монотонно возрастающей если $ \forall x, y \in E, x \leq y \Rightarrow f(x) \leq f(y)$
+	 $ f : E \Rightarrow \mathbb{R} $ называется cтрого монотонно возрастающей если $ \forall x, y \in E, x < y \Rightarrow f(x) < f(y)$
+\end{definition}
+
+Пусть $ f : E \rightarrow \mathbb{R}, a $ пред точка Е\\
+1. Если $ f $ возрастающая и ограниченная сверху, то $ \exists \lim\limits_{x \rightarrow a_- } f(x) $ \\
+2. Если $ f $ убывающая и ограниченная снизу, то $ \exists \lim\limits_{x \rightarrow a_- } f(x) $ \\
+Упражнение: сформлировать и доказать аналогичные утверждения для пределов справа.
+\begin{proof}
+	1. $ (x_n), x_n \in E_-, x_n \rightarrow a, x_n - $ не убывающая $ (\forall n, x_n > x_n{-1}) \Rightarrow \forall n : f(x_n) \geq f(x_n-1) $\\
+	$ \exists C, \forall x \in E, f(x) < C$
+	$ f(x_n) $ не убывающ, огранич сверху $ \Rightarrow$ есть предел\\
+	Пусть $ x_n, x_n' - $ две посл-ти с заданными условиями \\
+	$ \widetilde{x_n} $ посл-ть, в которой $ x_n, x_n' $ расположены по возрастанию.\\
+	Предположим, что не все члены $ x_n $ войдут в новую посл-ть \\
+	$ x_N $ - не войдёт $ \Rightarrow \forall i \in \mathbb{N}, x_i' < x_N \Rightarrow \lim x_n (=a) \leq x_N \in E_- $\\
+	$ (x_n)(x_n') - $ подпол-ти $ \widetilde{x_n} $\\
+	$ \Rightarrow \lim f(x_n) = \lim f(\widetilde{x_n}) = \lim f(x_n') $ \\
+	$x_n $ не убыв $\Leftrightarrow |x-a| $ не возратает $ \Leftrightarrow$\\
+	Мы доказали, что есть общий предел у всех посл-тей $ f(x_n) $ таких, что $ x_n \in E_-, x_n \rightarrow a, x_n $ не убывает.$ \Rightarrow $ в т.ч. для всех $ x_n $ т.ч. $ |x_n - c| $ убывает \\	
+	Тогда $ \lim\limits_{x_n \rightarrow a_-} f(x) = y $
+ \end{proof}
+
+\subsection{Критерий Коши для пределов ф-ций}B
+
+\begin{theorem}
+	Пусть $ a $ предельная точка E, $ f : E \rightarrow \mathbb{R} $ \\
+	Предположим $ \forall \varepsilon > 0 \exists \delta > 0, \forall x_1, x_2 \in E \setminus \{a\} $ \\
+	$ x_1, x_2 \in U_{\delta} (a) \Rightarrow |f(x_1) - f(x_2)| < \varepsilon $ \\
+	Тогда $\exists \lim\limits_{x \rightarrow a} f(x) \subset \mathbb{R} $ \\
+	\begin{proof}
+		Пусть	$ x_n \rightarrow a, x_n \in E \setminus \{a\}$ \\
+		Пусть $ \varepsilon > 0, \exists \delta > 0, x, x' \in E \setminus \{a\}, x, x' \in U_{\delta} (a) \Rightarrow |f(x) - f(x')| < \varepsilon $ \\
+		$ \exists N \in \mathbb{N}, \exists n \geq N : x_n \in U_{\delta} (a) \Rightarrow \\
+		\forall m, n \geq N : |f(x_m) - f(x_n)| < \varepsilon  $ \\
+		То $ f(x(n)) $ Посл-ть Коши \\
+		$ \Rightarrow \lim f(x) \in \mathbb{R}$
+		Таким образом $ \exists \lim\limits_{x \rightarrow a} f(x) \in \mathbb{R} $
+	\end{proof}
+\end{theorem}
+
+
+

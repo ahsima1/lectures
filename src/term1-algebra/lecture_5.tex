@@ -1,0 +1,180 @@
+\subsection{Кольцо многочленов}
+
+\begin{definition}
+	$ R $ - кольцо \\
+	$ R[x] = \{ (a_0, a_1, a_2, ...) \}  \mid a_i \in R $ Все, кроме конечного числа равны 0 \\
+	Все, кроме конечного числа $ \equiv $ почти все \\
+	$ (a_0, a_1, a_2, ... ) + \\
+	(b_0, b_1, b_2, ...) = \\
+	(a_0 + b_0, a_1 + b_1, a_2+b_2, ...) $ \\
+	$ (a_0, a_1, a_2, ... ) \cdot \\
+	(b_0, b_1, b_2, ...) = \\
+	(c_0,c_1, c_2, ...) $ \\
+	$ c_n = \sum_{i=0}^{n} a_i b_{n-i} = \sum_{i+j=n} a_i b_j $ \\
+	$ +, \cdot : R[x] \rightarrow R[x] $
+\end{definition}
+\begin{theorem}
+	1. $ +, \cdot - $ операции на мн-ве $ R(x)$ \\
+	2. $ R[x], +, \cdot $ - кольцо 
+	Если R - коммутативно, то $ R[x] $ - коммутативно \\
+	Если R c 1, то $ R[x] $ c 1
+	\begin{proof}
+		$ \exists N, \forall n > N, a_n = 0 $ \\
+		$ \exists M, \forall m > M, b_m = 0 $ \\
+		$ i > max(M, N), a_i = 0, b_i = 0 \Rightarrow a_i + b_i = 0 $\\
+		
+		$ S > M+N $ \\
+		$ a_s = \sum_{i=0}^{n} a_i b_{s-i} $ \\
+		$ i > N, a_i = 0 $ \\
+		$ i \leq N, s-i > M + N - N = M : b_{s-i} = 0 $ \\
+		$ a_s = 0 $ \\
+		Ассоц и коммут сложения - упражнение
+		$ 0 = (0, 0, 0, 0) $ \\
+		$ -(a_0, ...) = (-a_0, ...) $ \\
+		$ A = (a_0, a_1, ...), B= (b_0, b_1, ...), C = (c_0, c_1, ...) $ \\
+		$ AB = D = (d_0, d_1, ...) $\\
+		$(AB)D = E = (e_0, e_1, ...) $ \\
+		$ d_n = \sum_{i=0}^{n} a_i b_{n-i} $ \\
+		$ e_n = \sum_{i=0}^{n} d_i c_{n-i} $ \\
+		$ BC = F = (f_0, f_1, ...) $ \\
+		$ A(BC) = H = (h_0, h_1, ...) $ \\
+		$ f_n = \sum_{i=0}^{n} b_i c_{n-i} $ \\
+		$ h_n = \sum_{i=0}^{n} a_i f_{n-1} $ \\
+		$ e_n = \sum_{i=0}^{n} ( \sum_{j=0}^{i}) a_j b_{i-j} ) c_{n-j} = \sum_{i=0}^{n} \sum_{j=0}^{i} a_j b_{i-j} c_{n-i}  = \sum_{j=0}^{n} \sum_{i=j}^{n} a_j b_{i-j} c_{n-i} =  \sum_{j=0}^{n} a_j \sum_{i=j}^{n} b_{i-j} c_{n-i}$ 
+		$
+		k = i - j  \\
+		k = 0, ... n - j  \\
+       c_{n-j} = c_{n-k-j}  \\$ \\
+		$ = \sum_{j=0}^{n} a_j \sum_{o}^{n-j} b_k c_{n-j-k} = \sum_{j=0}^{n} a_j f_{n-j}= \sum_{i=0}^{n} a_i f_{n-i} = h_n $  
+		 
+		 R - кольцо с 1 \\
+		 $ 1 = (1, 0, 0, ..., 0) $ \\
+		 $ 1 \cdot A $ \\
+		 $ c_i = 1 \cdot a_i + 0 \cdot a_i-1 +... = a_i $ \\
+		 $ A \cdot 1 $\\
+		 $ d_i = a_0 \cdot 0 + ... + a_i \cdot 1 = a_i $\\
+		 Коммут \\
+		 $ \sum_{i=0}^{n} a_i b_{n-i} = \sum_{i=0}^{n} b_i a_{n-i} $ \\
+		 $  \sum_{i=0}^{n} b_i a_{n-i}  = \sum_{i=0}^{n} a_{n-i} b_i = \sum_{j=0}^{n} a_j b_{n-j} = \sum_{i=0}^{n} a_i b_{n-i} $ \\
+		 $ j = n - i$\\
+		  
+	\end{proof}
+\end{theorem}
+
+В $ R[x] $ есть кольцо, изоморфное R, а именно \\ 
+$ \{ (a, 0, 0, ...) \mid a \in R \} $ \\
+$ (a, 0, ...) + (b, 0, ...) = (a+b, 0, ...) $ \\
+$  (a, 0, ...) \cdot (b, 0, ...) = (ab, 0, ...) $ \\
+$ R $ - с 1 \\
+$ X = (0, 1, 0, ...) $ \\
+$ X^i = (0, 0, ..., 1_i, 0, ...) $ - индукция по i \\
+$ X^{i+1} = X^i \cdot x = (0, ..., 1, 0,...) ( 0, 1, ...) = (0, 0, ...., 1_{i+1}, ...) $ \\
+Пусть $ a_i = 0 $при $ i> n $ \\
+$ (a_0, a_1, ...) \\
+= ( a_0, 0, ...) + (0, a_i, 0, ...) + ... =\\
+(a_0, 0, ...) (1, 0, ..., 0) \\
+...$\\ 
+$ a_0 + a_1 \cdot x + a_2 \cdot x^2 + ... + a_n x^n $ \\
+$ x^i \cdot x^j = x^{i+j} $ - индукция по j\\
+$ (\sum a_i x^i ) ( \sum b_j x^j )  = \sum  c_k x^k$ \\
+$ c_k = \sum_{i+j=k} a_i b_j = \sum_{i=0}^{k} a_i b_{k-i} $ \\
+\begin{definition}
+	R - кольцо с 1 \\
+	$ R[x, y] = (R[x])[y]  \cong (R[y]) [x]$
+\end{definition}
+\subsection{Степень многочлена}
+R - комм. кольцо с 1 \\
+$ f = (a_0, a_1, ...m a_n, ...) $ \\
+n - посл. индекс, $ a_n \neq 0 $ \\
+n - степень f \\
+$ n = \deg f $\\
+$ f = \sum_{i=0}^{n} a_i x^i $ \\
+Удобно считать, что $ \deg 0 = -\infty $ \\
+\begin{properties}
+	1. $ \deg (f+g) \leq \max (\deg f , \deg g) $ \\
+	Если $ \deg f \neq \deg g, $ то $ \deg (f+g) = \max (\deg f , \deg g) $ \\
+	\begin{definition}
+		R - область целостности (кольцо без делителей нуля), если $ \forall a, n, ab = 0 \Rightarrow (a=0 \cup b = 0) $ \\
+		Пример: $ \mathbb{Z} , $ любое поле.\\
+		2) $ {0, 1, 2, 3} = \mathbb{Z} \setminus 4 \mathbb{Z} $ \\
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline 
+			+& 0 & 1 & 2 &3  \\ 
+			\hline 
+			0&  0& 1 &2  &3  \\ 
+			\hline 
+			1& 1 & 2 & 3 & 0 \\ 
+			\hline 
+			2& 2 &3  & 0 &1  \\ 
+			\hline 
+			3& 3 & 0 & 1 & 2 \\ 
+			\hline 
+		\end{tabular} \\
+		\begin{tabular}{|c|c|c|c|c|}
+			\hline 
+			*& 0 & 1 & 2 &3  \\ 
+			\hline 
+			0&  0& 0 & 0 & 0 \\ 
+			\hline 
+			1&0  & 1 & 2 &3  \\ 
+			\hline 
+			2&  0& 2 &0  &2  \\ 
+			\hline 
+			3& 0 & 3 & 2 & 1 \\ 
+			\hline 
+		\end{tabular}  \\
+		Не область целостности 
+		2. $ \deg (f \cdot g) \leq \deg f + \cdot g $ \\
+		Если R - оц $ \deg(fg) = \deg f + \deg g $ \\
+		\begin{proof}
+			$ N = \deg f \\
+			M = \deg g \\
+			fg = \sum c_i x^i $ \\
+			$ i > N + M \Rightarrow c_i = 0 \\
+			deg (fg) \leq N+M \\
+			c_{N+M} = a_N \cdot b_M $
+		\end{proof}
+		Пример: $ R = \mathbb{Z} \setminus 4 \mathbb{Z}  $ \\
+		$ f = 1 + 2x $ \\
+		$ g = 2x^2 $ \\
+		$ fg = 2x^2 + 2 \cdot 2 \cdot x^3 = 2x^2 $ \\
+		$ 2 = \deg (f \cdot g) < \deg f + \cdot g  $
+	\end{definition}
+\end{properties}
+
+\subsection{Биномиальная формула} 
+
+\begin{definition}
+	R - коммут. кольцо c 1\\
+	$ x, y \in R $\\
+	$ (x+y)^n = ? $  \\
+	Биномиальный коэфф $ C^k_n = \begin{pmatrix}
+	n \\
+	k
+	\end{pmatrix}
+	= \left\{ \begin{matrix} \right\}\dfrac{n!}{k! (n-k) !} 0 \leq k \leq 1  \\
+	0	\end{matrix}  \right. $
+	\begin{properties}
+		 \begin{enumerate}
+		 	\item $ C^0_n = C^n_n = 1 $
+		 	\item $ C^k_n + C^{k-1}_n = C^{k+1}_n$ \\
+		 	$\dfrac{n!}{k!(n-k)!} + \dfrac{n!}{(k-1)!(n-k+1)!} = \dfrac{n!(n+1)!}{k!(n+1-k)!} = \dfrac{(n+1)!}{k!(n+1-k)!} $
+		 	\item $ C^k_n = C^{n-k}_n $
+		 \end{enumerate}
+	\end{properties}
+\end{definition}
+\begin{theorem} Биномиальная формула \\
+	$ (x+ y)^n = \sum_{k=0}^{n} C_n^k x^k y^{n-k} $ \\
+	\begin{proof}
+		Индукция по n \\
+		$ n = 0 : 1 $ \\
+		$ (x+y)^{n+1} = (x+y)^n(x+y) =  ( \sum_{k=0}^{n} C_n^k x^k y^{n-k} )(x+y) = \sum_{k={0}^{n} C_n^k x^{k+1} y^{n-k} + \sum_{k=0}^{n} C_n^k x^ny^{n+1-k} = C^n_n x^{n+1} + \sum_{k=0}^{n-1} C_n^k x^{k+1} y^{n-k} + \sum_{k=1}^{n} C_n^k x^k y^{m+1-k} +C_n^0 y^{n+1} = C^n_n + \sum_{k'=1}^{n} C_n^{k'-1} \cdot x^{k'}y^{n+1-k'} + 
+			\sum_{k=1}^n C_n^k x^ky^{n+1-k}+C_n^0y^{n+1} =  $
+			%pic2 
+	\end{proof}
+\end{theorem}
+
+
+
+
+

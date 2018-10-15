@@ -1,0 +1,382 @@
+\Subsection{Гомоморфизмы и изоморфизмы колец}
+
+
+\begin{definition}
+	$ R_1 $ и $R_2 $ - кольца \\
+	$ f : R_1 \rightarrow R_2 - $ гомоморфизм \\
+	$  \forall a, b \in R f(a+b) = f(a) + f(b) $
+	$ f(ab) = f(a)f(b)$
+\end{definition}
+
+\begin{definition}
+	Биективный гомоморфизм назывется изоморфизм  \\
+	$ f : R_1 \rightarrow R_2 - $ изоморфизм \\
+	$ R_1, R_2 - $ изоморфные кольца
+	$ R_1 \cong R_2$
+\end{definition}
+\begin{properties}
+	\begin{enumerate}
+		\item $ f(0) = f(0+0) = f(0) + f(0) $ \\
+		$ f(0_{R_1}) = 0_{R_2} $
+		\item Если $f(1_{R_1}) $ обратим в $R_2$, то \\
+		$ f(1_{R_1}) = 1_{R_2} $ \\
+		$ f(1) = f(1 \cdot 1) = f(1) \cdot f(1) $
+		
+	\end{enumerate}
+\end{properties}
+В некоторых книгах для колец с 1 рассматривают более узкое понятие гомоморфизма, требуют, чтобы $ f(1_{R_1}) = 1_{R_2} $\\
+\begin{example}
+	$ R_1 \subseteq R_2 $ \\
+	$ f: R_1 \rightarrow R_2 $ \\
+	$ r \mapsto r $ \\
+	$ \mathbb{Z} \rightarrow \mathbb{Q} $
+\end{example}
+\begin{example}
+	чётные $ \mapsto 0 $ \\
+	нечётные $ \mapsto 1 $ \\
+	$ f: \mathbb{Z} \rightarrow \mathbb{F}_2 $
+\end{example}
+\begin{properties}
+	$ f: R_1 \rightarrow R_2 $ - изоморфизм \\
+	$ f^{-1} : R_2 \rightarrow R_1 $ изоморфизм \\
+	$ c, d \in R_2, \exists a,b \in R_1, c = f(a), d = f(b) $ \\
+	$ a = f^{-1}(c), b = f^{-1} (d) $ \\
+	$ f^{-1} (c+d) = f^{-1} (f(a) + f(b)) = f^{-1} (f(a+b)) = a+b = f^{-1} (c) + f^{-1} (d) $\\
+	Упражн. $ f^{-1} (c+d) = f^{-1}(c) + f^{-1}(d) $ 
+\end{properties}
+% pic1
+Упр Композиция гомоморфизмов - гомоморфизм\\
+Композиция изоморфизмов - изоморфизм\\
+$ R_1 \cong R_2 \cong R_3 \Rightarrow R_1 \cong R_3 $
+
+\Section{Поле комплексных чисел} 
+
+\subsection{Поле комплексных чисел} 
+
+$ \mathbb{C} $ (complex) \\
+$ \mathbb{R} \times \mathbb{R} = \mathbb{C}  $\\
+\begin{definition}
+	$ (a, b) + (c, d) = (a+c, b+d) $\\
+	$(a,b) (c, d) = (ac - bd, bc + ad) $\\
+\end{definition}
+\begin{theorem}
+	$ \mathbb{C}, +, \cdot $ - поле 
+	\begin{proof}
+		\begin{enumerate}
+			\item $ (a, b) + (c, d) + (e, f) = (a + c, b+ d) + (e, f) = ((a+c) + e, (b+d) + f) = (a + (c+e), b + (d+f)) = (a, b) + (c+e, d+f) = (a, b) + ((c, d) + (e, f))$
+			\item обратный - $ (0, 0) $
+			\item $-(a, b) = (-a, -b) $
+			\item $ (a, b) + (c, d) = (c, d) + (a, b) $ 
+			\item $ (a, b) ((c,d) (e, f)) = (a, b)(ce-df, cf+de) = (ace - adf - bcf - bde , acf+ade+bce-bdf)  $ \\
+			$ ((a, b)(c, d))(e, f) = (ac - bd, ad, bc) (e,f) = (ace - bde - cdf - bcf,  acf - bdf + ade + bce)  $
+			\item $(1, 0) (a, b) = (1\cdot a - 0 \cdot b, 1 \cdot b - 0 \cdot a) = (a, b)$ \\
+			$ (a, b)(1, 0) = (a \cdot 1 - b \cdot 0 , a \cdot 0 + b \cdot 1) $ 
+			\item $ (a,b) (c, d) = (ac-bd, bd+bc) $ \\
+			$ (c, d)(a, b) = (ca - db, cb + da) = (ac - bd, bc + ad) $ 
+			\item упр дистрибутивн
+			\item $ (a, b) \neq (0, 0) $ \\
+			$ \exists ? (x, y) : (a, b)(x, y) = (1, 0) $ \\
+			$ ax - by, ay - bx $ \\
+			$ ax - by = 1  \mid \cdot a$\\
+			$ bx + ay = 0  \mid  \cdot b$\\
+			$ (a^2 + b^2)x = a, a_2 + b_2 > 0 $\\
+			$ x = \dfrac{a}{a^2 + b^2} $ \\
+			$ (b^2 + a^2) y = -b $ \\
+			$ y = \dfrac{-b}{a^2 + b^2} $ % pic2, 3
+ 		\end{enumerate}
+	\end{proof}
+\end{theorem}
+$ \{ (a, 0) \mid a \in \mathbb{R}   \} $ \\
+$ (a, 0) + (b, 0) = (a + b, 0) $ \\
+$ (a, 0)(b, 0) = (ab - 0, a\cdot 0 + 0 \cdot b) = (ab, 0) $\\
+$ \mathbb{R} \Rightarrow  \{ (a, 0) \mid a \in \mathbb{R}   \} $ \\
+$ a \mapsto (a, 0) $ \\
+Это - гомоморфизм, биекция, след изоморфизм \\
+$ \mathbb{C} $ содержит подполе, изоморфное полю $ \mathbb{R} $\\
+Отождествим $ \mathbb{R} $ с этим подполем \\
+$ (a, 0) = a $ \\
+$ i = (0, 1) $ \\
+$ i^2 = (0, 1)(0,1) = (0 \cdot 0 - 1 \cdot 1 , 0 \cdot 1 + 1 \cdot 0) = (-1, 0) = -1 $ \\
+$ i^2 = -1 $ \\
+$ (a, b) = (a, 0) + (0, b) = (a, 0) + (b, 0) = (a, 0) + (b_0) (0, 1) $ \\
+$ (a, b) = a + b \cdot i $ - алгебраическая форма записи комплексного числа \\
+$ z = a + bi $ \\
+a - вещественная часть $ Re(z) - $ real \\
+b - мнимая часть $ Im(z) - $ imaginary \\
+Геометрическое изображение комплексных чисел \\
+Комплексные числа удобно отождествлять с точками вещественной плоскости. \\
+\begin{remark}
+	$ (a + bi) (c+di) = ac + adi + bic + bidi = ac - bd + (ad+bc)i $\\
+	$ (a_1b)(c_1d) = (ac - bd, ad + bc) $ 
+\end{remark}
+% pic4
+\Subsection{Комплексное сопряжение}
+$ \mathbb{C}, z = a + bi, a, b \in \mathbb{R} $ \\
+\begin{definition}
+	$\overline{z} = a - bi  $ называется комплексно сопряжённым с $ z $\\
+	Геометрический смысл- отражение относительно вещественной оси. % pic5
+\end{definition}
+\begin{properties}
+	\begin{enumerate}
+		\item $ \overline{z_1 + z_2} = \overline{z_1} + \overline{z_2} $ 
+		\item $ \overline{z_1 + ... + z_k} =   \overline{z_1} + ... + \overline{z_k}$ 
+		\item $ \overline{z_1z_2} = \overline{z_1}\overline{z_2} $ 
+		\item $ \overline{z_1 \cdot ... \cdot z_k} =   \overline{z_1} \cdot ... \cdot \overline{z_k}$ 
+		\item $ \overline{\overline{z}} = z $ 
+		\item $ z = \overline{z} \Rightarrow z \in \mathbb{R} $ 
+		\item $ z + \overline{z} \in \mathbb{R} $ 
+		\item $ z \cdot \overline{z} \in \mathbb{R} $  $z \cdot \overline{z} = 0 \Leftrightarrow z = 0 $
+		\item $ a \in \mathbb{R} \ \ \overline{az} = a \overline{z} $
+	\end{enumerate}
+	\begin{proof}
+		\begin{enumerate}
+			\item $ z_1 + z_2 = a + c + (b+d) i $ \\
+			$ (a, b) + (c, d) = (a+c + b+ d) = a + c + (b+d) i $  \\
+			$ \overline{z_1} = a- bi \ \ \ \overline{z_2} = c - di $ \\
+			$ \overline{z_1} + \overline{z_2} = (a+c) + ((-b) + (-d))i = (a+c) - (b+d) i = \overline{z_1 + z_2} $
+			\item Индукция по числу слагаемых 
+			\item $ z_1z_2 = (a + bi)(c+di) = ac+bid+adi + bic = ac - bd + (ad-bc)i $ \\
+			$ \overline{z_1}\overline{z_2} = (a-bi)(c-di) = ac - adi - bic + bid = ac - bd - (ad + bc) i = \overline{z_1z_2} $
+			\item Индукция по числу сомножителей 
+			\item Очевидно
+			\item $ z = \overline{z} \Leftrightarrow a + bi = a - bi \Leftrightarrow b = -b \Leftrightarrow 2b = 0 \Leftrightarrow b = 0 $
+			\item $ z + \overline{z} = a + bi + a - bi = 2a = 2 Re(z) \in \mathbb{R} $
+			\item  $ z \cdot \overline{z} = (a + bi) ( a- bi ) = a^2 - b^2 $ \\
+			$ z \cdot \overline{z} = Re^2(z) + Im^2(z) \geq 0 $\\
+			$ z \cdot \overline{z} \Leftrightarrow Re(z) = 0 = Im(z) \Leftrightarrow z = 0 $
+			\item $ a \in \mathbb{R} \overline{az} = \overline{a} \overline{z} = a \overline{z}$
+		\end{enumerate}
+	\end{proof}
+\end{properties}
+Замечание - сопряжение - изоморфизм поля комплексных чисел на самого себя\\
+\begin{definition}
+	$ \sqrt{z \cdot \overline{z} } = \sqrt{Re^2(z) + Im^2 (z) } $ \\
+	Называется модулем z и обозначается $ |z| $ \\
+	Замечание $ z \cdot \overline{z} = |z|^2$ если $ z \neq 0 $\\
+	% pic6
+\end{definition}
+
+\Subsection{Тригонометрическая форма записи комплексного числа}
+
+%pic6
+Угол $ \phi $ определён не однозначно, а с точностью до слагаемого $ 2 \pi k, k \in \mathbb{Z} $\\
+$ z = a + bi $\\
+$ r^2 = a^2 + b^2 $ \\
+$ r = |z| $ \\
+$ \phi $ - аргумент $z$\\
+$ \phi = arg z, Arg(z) = \{ \phi + 2 \pi k | k \in \mathbb{Z} \} $\\
+$ x \sim y $ если $ \exists k \in \mathbb{Z} , x-y=2\pi k$ \\
+Упраж
+$ \phi = arg z, Arg z = [ \phi ] = [arg z] $\\
+
+Если полярные коорд $ z \in \mathbb{C} $ равны $ (r, \phi) $ \\
+$ z = r \cos(\phi) + r \sin (\phi ) i = r (\cos(\phi) + \sin(\phi) i ) $ - тригонометрическая форма записи\\
+$ r \in \mathbb{R}_{\geq 0} $ \\
+Если $ z = r(\cos(\phi) + i \sin(\phi) ) $ и $ r \geq 0, r \in \mathbb{R} $ , то тогда $\phi$ - одно из значений $arg(z)$ \\
+
+$ z = a + bi \ \ \ \ \ \ r = |z| $\\
+$ a = r \cdot \cos(\phi) $ \\
+$ b = r \cdot \sin(\phi) $ \\
+$ a \neq 0 $ \\
+\begin{enumerate}
+	\item $ a > 0, \phi = \arctan \dfrac{b}{a} + 2\pi k$
+	\item $ a < 0, \phi = \arctan \dfrac{b}{a} + \pi + 2\pi k $ 
+	\item $ a = 0, b > 0, \phi = \dfrac{\pi}{2} + 2 \pi k $ 
+	\item $ a =0, b < 0, \phi = -\dfrac{\pi}{2} + 2 \pi k $
+\end{enumerate}
+$ z = r(\cos \phi + i \sin \phi)  \ \ \ r = |z|, \phi = arg z $ \\
+$ |z|^2 = r^2\cos^2\phi + i^2 \sin^2\phi=r^2 $\\
+$ r = |z| $ \\
+$ z_1 = r_1(\cos \phi_1 + i \sin\phi_1) $ \\
+$ z_2 = r_2(\cos \phi_2 + i \sin\phi_2) $ \\
+$ z_1z_2 = r_1r_2(\cos\phi_1 + i \sin\phi_1) (\cos\phi_2 + i \sin\phi_2) =
+r_1r_2 (cos(\phi_1 + \phi2) + i \sin(\phi_1 + \phi_2)) $ - тригонометрическая форма $ z_1z_2 $ \\
+При перемножении комплексных чисел модули перемножаются, а аргументы складываются.
+\begin{consequence}
+	$ |z_1z_2| = |z_1||z_2| \ \ arg(z_1) + arg(z_2) = arg(z_1z_2)$
+\end{consequence} 
+\begin{consequence}
+	$ |z_1z_2|^2 = |z_1|^2 \cdot|z_2|^2 $\\
+	$ z_1 = a + bi, z_2 = c + di $ \\
+	$ (a^2+b^2)(c^2 + d^2) = (ac-bd)^2 + (ad + bc)^2 $ - Тождество Фибоначчи \\
+	\begin{remark}
+		$ (a_1^2 + a_2^2 + a_3^2 + a_4^2)(b_1^2 + b_2^2 + b_3^2 + b_4^2) = c_1^2+ ... + c_4^2, c_i = c_i(\vec{a}, \vec{b})$ \\
+		$ (a_1^2 + ... + a_8^2)(b_1^2 + ... + b_8^2) = c_1^2+ ... + c_8^2, c_i = c_i(\vec{a}, \vec{b}) $
+	\end{remark}
+\end{consequence} 
+\begin{consequence}
+	$ z_1 ... z_k $ \\
+	$ z_j =  $ %pic7
+\end{consequence}
+\begin{consequence} Формула Муавра
+	$ k \in \mathbb{Z}, z \neq 0 , z = r(\cos \phi + i \sin \phi) $ \\
+	$  z^k = r^k (\cos k\phi + i \sin k\phi)$ 
+	\begin{proof}
+		$ k > 0 \  \ $ В сл. 3 $ z_1 = ... = z_k = z $ \\
+		$ k = 0 \ \  1 = 1(\cos 0 + i \sin 0) $ \\
+		$ k = -1 , z^{-1} = \dfrac{\overline{z}}{|z|^2} $ \\
+		$ |z^-1| = \sqrt{ \dfrac{\overline{z}}{|z|^2}  \dfrac{z}{|z|^2}}  = \dfrac{1}{z} $ \\
+		$ arg z^{-1} = arg(  \dfrac{\overline{z}}{|z|^2} ) = arg \overline{z} = - arg z $
+	\end{proof}
+	$ z^{-1} = \dfrac{1}{|z|} (\cos\phi + i \sin (-\phi)) $ \\
+	$ z^{-k} = (z^{-1})^k $
+\end{consequence}
+\Subsection{Извлечение корней из комплексных чисел}
+
+\begin{definition}
+	$ z \in \mathbb{C} $ \\
+	$ x^n = z $ \\
+	$ x \in \mathbb{C} $ называется корнем n-й степени из z если $x^n = z$ \\
+\end{definition}
+\noindent
+Если $ z = 0 $ то единственным корнем n-й степени будет 0 \\
+Если $ z \neq 0 $, то существует в точности n корней n-й степени из z\\
+(попарно различных)
+$ z = 0, x^n=0 \Rightarrow x = 0$ \\
+Если $ x \neq 0, \exists x^{-1} \in \mathbb{C} $\\
+$ 1 = (x^{-1})^n x^n = (x^{-1})^n \cdot 0 = 0 $ Противоречие \\
+$ z = R(\cos \phi + i \sin \phi) $ \\
+$ x = r(\cos \phi + i \sin \phi) $ \\
+$ x^n = z $ \\
+$ r^n(\cos n \psi + i \sin s\psi) = R(\cos \phi + i \sin \phi) $ \\
+$ z^n = R $  \\
+$ n \psi = \phi + 2 \pi k, k \in \mathbb{Z} $\\
+$ r = \sqrt[n]{R} $ корень в веществ. степени.
+$ \psi = \dfrac{\phi}{n} + \dfrac{2 \pi k}{n}, k \in \mathbb{Z} $ \\
+Подставляя, проверяем \\
+$ x_k = \sqrt[n]{R} (\cos( \dfrac{\phi}{n} + \dfrac{2 \pi k}{n}) + i sin( \dfrac{\phi}{n} + \dfrac{2 \pi k}{n} )$ \\
+$ x_k^n = z $\\
+Все решения $ x^n=z $ имеют вид $x_k, k = 0, ..., n-1$ и для этих k решения попарно различны (ровно n решений) \\
+\begin{theorem}
+	$ a \in \mathbb{Z}, b \in \mathbb{Z} \setminus \{0\} $ \\
+	$ \Rightarrow \exists $ единственные $ q, d \in \mathbb{Z} $ \\
+	$ a = bq + d, 0 \leq d < |b| $
+	\begin{proof}
+		$ x \in \mathbb{R} $\\
+		$ [x] - целая часть x $ \\
+		Наибольшее целое, не превосходящее x \\
+		$ [2] = 2, [\pi] = 3, [-\pi] = -4 $ \\
+		$ {x} = x - [x] $ \\
+		$ m = [z] \Leftrightarrow m \in \mathbb{Z}, m \leq x < m+1 $ \\
+		$ \dfrac{a}{b} = \left[ \dfrac{a}{b} \right] + \left\{ \dfrac{a}{b} \right\} $ \\
+		$ \alpha = a - bq $ 
+		$ d = \left( \dfrac{a}{b} - q \right) \cdot b = \left\{ \dfrac{a}{b} \right\} \cdot b $\\
+		$ 0 \leq \left\{ \dfrac{a}{b} \right\} < 1 $ \\
+		$ 0 \leq \left\{ \dfrac{a}{b} \right\} \cdot b < b $ \\
+		$ b < 0, -b > 0,  \exists q_1, d $ \\
+		$ a = (-b)q + d, 0 \leq d < -b = |b| $ \\
+		$ q = -q_1 $ \\
+		$ a = b \cdot (-q_1) + d = bq+d, 0 \leq d < |b| $ 
+	\end{proof}
+\end{theorem}
+
+$ x_l = \sqrt[n]{R} (\cos( \dfrac{\phi}{n} + \dfrac{2 \pi k}{n}) + i sin( \dfrac{\phi}{n} + \dfrac{2 \pi k}{n} ) $ \\
+$ \exists k \in \{0, 1, ..., n-1\} $ \\
+$ x_k = x_l $ \\
+$ l = nq+b, 0 < k < n $ \\
+$ \dfrac{2 \pi l}{n} = \dfrac{2 \pi nq}{n} + \dfrac{2 \pi k}{n} = 2\pi q + \dfrac{2 \pi k}{n}  $\\
+$ \dfrac{\phi}{n} + \dfrac{2 \pi k}{n} = \dfrac{ \phi }{n } + \dfrac{2 \pi k}{n} + 2 \pi q $ \\
+$ x_k = x_l  (arg(x_l) = arg(x_k) + 2 \pi q$ \\
+Если $ k, j \in  \{0,1,..., n^{k+1}\}, k \neq j $ \\
+То $ x_k \neq x_j $ \\
+$ \dfrac{\phi}{n} + \dfrac{2 \pi k}{n} - ( \dfrac{\phi}{n} + \dfrac{2 \pi k}{n}) = \dfrac{2 \pi (k - j)}{n} $ \\
+$ 0 \leq k, j < n $\\
+$ -n < k - j < n $ \\
+$ -2 \pi < \dfrac{2 \pi (k - j)}{n}  <  2 \pi $ \\
+Если $ x_k = x_j $ то $ k- j = 0 $ \\
+$ x_k = x_j \Leftrightarrow n \divby b - l $ \\
+
+$ r = \sqrt[n]{R} $ \\
+Все корни лежат в вершинах правильного n-угольника, вписанного в окружность, радиусом r 
+\subsubsection{Корни из 1}
+$ 1 = \cos(0) + i \sin (0) $ 
+$ R = 1, \phi = 0 $ \\
+Корни n-й степени из 1 это $ \cos \dfrac{2 \pi k}{n} + i \sin \dfrac{2 \pi k}{n} $ \\
+$ \sqrt[n]{z} $ так можно обозначать множество всех корней из z но не какой-то конкретный. \\
+\begin{definition}
+	$ \varepsilon^n = 1 $ \\
+	$ \varepsilon $ называется первообразным корнем степени n из 1, если $ \varepsilon^m \neq 1, 0 < m < n $ \\
+	
+	\begin{tabular}{|c|c|c|}
+		\hline
+		n & все корни & первообразные \\
+		\hline
+		1 & 1 & 1 \\
+		\hline
+		2 & 1, -1 & -1 \\
+		\hline
+		3 & 1, $\dfrac{-1 \pm \sqrt{3} i }{2}$&  $\dfrac{-1 \pm \sqrt{3} i }{2}$\\
+		\hline
+		4 & 1, i, -1, -i & i, -i  \\
+		\hline
+		6 & $ \pm 1, \dfrac{\pm1 \pm \sqrt{3} i }{2}$&  $\dfrac{1 \pm \sqrt{3} i }{2}$\\
+		\hline
+	\end{tabular} 
+\end{definition}
+
+$ \varepsilon = \cos \dfrac{2 \pi k}{ n} + i \sin \dfrac{2 \pi k}{n} $ \\
+Когда $ \varepsilon $ - первообр? \\
+ Когда $ \varepsilon $ - не первообр? \\
+$ \varepsilon^m = 1, 0 < m < n $ \\
+$ \dfrac{2 \pi km}{n} = 2 \pi l $ \\
+$ km = ln $ \\
+$ \dfrac{k}{n}$ - сократима \\
+$ n \divby k \cdot m \Rightarrow n$ и $k $ имеют общ делитель $ > 1 $\\
+$ \varepsilon $ - первообразные, когда $k $ и $ n $ - взаимно просты \\
+Первообразных корней степени n из 1 ровно столько, сколько чисел от 0 до n-1, взаимно простых с n. \\
+
+\subsection{Применение комплексных чисел для вычисления пригонометрических сумм} 
+
+$ 1 + \cos \phi + \cos 2\phi + ... + \cos n \phi $ \\
+$ S_1 = \phi = 2 \pi k \ \ \ S_1 = n + 1 $ \\
+$ \phi \neq 2 \pi k $ \\
+$ S_2 = 0 + \sin \phi + \sin 2\phi + ... + \sin n \phi $ \\
+$ S = S_1 + i \cdot S_2 $\\
+$ S_1 = Re(S) , S(2) = Im(S) $ \\
+$ S  = 1 + \cos \phi + i \sin \phi + \cos 2\phi +  i \sin 2\phi + ... \cos n \phi + i \sin n \phi $ \\
+$ q = \cos \phi + i \sin \phi $ \\
+$ S = 1 + q + q^2 + ... + q^n , q \neq 1 $\\
+$ S = 1 + q + ... + q^n $ \\
+$ qS = q + ... + q^{n+1} $ \\
+$ (1-q) S = 1 - q^{n+1} $ \\
+$ S = \dfrac{1 - q^{n+1}}{1 - q} $ \\
+$ t = \cos \dfrac{\phi}{2} + i \sin \dfrac{\phi}{2} $ \\
+$ q = t^2 $ \\
+$ S = \dfrac{1- t^{2(n+1)}}{1-t^2} = \dfrac{t^{2(n+1)} - 1}{t^2 - 1} = \dfrac{t^{n+1} ( t^{n+1} - t^{-n+1} )}{t(t - t^{-1})} $ \\
+$ t = \cos \dfrac{\phi}{2} + i \sin \dfrac{\phi}{2} $ \\
+$ t^{-1} = \cos -\dfrac{\phi}{2} + i \sin -\dfrac{\phi}{2} $ \\
+$ t^{n+1} = \cos \dfrac{(n+1)\phi}{2} + i \sin \dfrac{(n+1)\phi}{2} $ \\
+$ S = t^n \left( \dfrac{t^{n+1} - t^{-(n+1)}}{t - t^{-1}} \right) = \left( \cos \dfrac{n\phi}{2} + i \sin \dfrac{n\phi}{2} \right) \dfrac{2i \sin \dfrac{(n+1) \phi }{2}}{2i \sin \dfrac{\phi}{22}} $\\
+$ S_1 = ReS = $%pic1 
+\subsection{Применение комплексных чисел в планиметрии} 
+$ z_0 = a + bi $ \\
+Окружность с центром z радиусом r \\
+$ |z - z_0 | = r$ \\
+$ z =  x + iy  $ \\
+$ \sqrt{(x-a)^2 + (y-b)^2} = r$ \\
+$ (x_1, y_1), (x_2, y_2) \in \mathbb{R}^2 $ \\
+$ x_1x_2 + y_1y_2 $ \\
+$ z_1 = x_1 + iy_1 $ \\
+$ z_2 = x_2 + i y_2 $\\
+$ Re(z_1 \overline{z_2}) = x_1x_2 + y_1y_2 $\\
+$ (x_1, y_1) \perp (x_2, y_2) \Leftrightarrow Re(z_1, \overline{z_2}) = 0 $\\
+
+\begin{theorem}
+	3 высоты в треугольнике пересекаются в одной точке \\
+	\begin{proof}
+		Надо доказать, что прямая, проходящая через 0 и z перпендикулярна стороне $ z_1, z_2 $ \\
+		$ Re((z - z_2) \overline{z_1} ) = 0 $ \\
+		$ Re((z - z_1) \overline{z_2} ) = 0 $ \\
+		$ Re(z \overline{z_1} - z_2 \overline{z_1} - z \overline{z_2} + z_1\overline{z_2}) = 0 $ \\
+		
+		$ A = z_1 \overline{z_2} - z_2 \overline{z_1} $ \\
+		$ \overline{A} = \overline{z_1} z_2 - \overline{z_2} z_1 = -A $ \\
+		$ \Rightarrow A $ чисто мнимое число, $ Re(A) = 0 $  
+	\end{proof}
+\end{theorem}
+
+
+
+
+
+
