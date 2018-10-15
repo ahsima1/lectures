@@ -1,7 +1,7 @@
-\Section{}
+\Section{1}
 
 \begin{theorem}
-	Пусть $x_n$ последовательность, $ x_n > 0, \lim \dfrac{x_{n+1}}{x_n} \leq 1 \Rihghtarrow \lim x_n = 0 $
+	Пусть $x_n$ последовательность, $ x_n > 0, \lim \dfrac{x_{n+1}}{x_n} \leq 1 \Rightarrow \lim x_n = 0 $
 	\begin{proof}
 		Пусть $ c $ такое число, что $  \lim \dfrac{x_{n+1}}{x_n} \leq c \leq 1 $ \\
 		$ \exists N, \forall n \geq N,  \dfrac{x_{n+1}}{x_n} < c $ \\
@@ -46,7 +46,7 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 		% pic1
 	\end{enumerate}
 	\begin{proof}
-		Знаем $ \cap [a_n, b_n] \neq \varempty $ \\
+		Знаем $ \cap [a_n, b_n] \neq \emptyset $ \\
 		Предположим, что это не 1 элем. мн-во \\
 		Тогда $ \exists c, d \in  \cap [a_n, b_n], c < d $ \\
 		$ \forall n \in \mathbb{N} : c, d \in  [a_n, b_n] \Rightarrow a_n \leq c < d \leq b_n  \Rightarrow b_n - a_n \geq $
@@ -65,7 +65,7 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 	Пусть $ x_n$ - ограниченная последовательность. Тогда в $ x_n $ можно выбрать сходящуюся подпоследовательность
 	\begin{proof}
 	$ (x_n) \Rightarrow \exists a, b \in \mathbb{R} : a \leq b, \forall n : x_n \in [a, b] $ \\
-	Из отрезков $ [a, a+b / 2] $ и $ [a+b/2, b] $ выберем $ [a_1, b_1] $ такой, что $ \{i \mid x_i \in [a_1, b_1]} $ бесконечно. \\
+	Из отрезков $ [a, a+b / 2] $ и $ [a+b/2, b] $ выберем $ [a_1, b_1] $ такой, что $ \{i \mid x_i \in [a_1, b_1]\} $ бесконечно. \\
  	Из отрезков $ [a_1, a_1+b_1 / 2] $ и $ [a_1+b_1/2, b_1] $ выберем $ [a_2, b_2] $ такой, что $ \{i \mid x_i \in [a_2, b_2]\} $ бесконечно. \\
     $ b_i - a_i = \frac{1}{2^n} (b-a) $ \\
     По теореме о стягивающихся отрезках 
