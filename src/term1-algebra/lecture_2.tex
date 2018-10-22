@@ -1,0 +1,144 @@
+\noindent
+$\{A_i\}_{i\in I}$ \\
+$ M $ - множество множеств \\
+$ I $ - индексное множество \\
+$ f: I \rightarrow M $ \\
+$ i \mapsto A $
+
+\Section{Алгебраические структуры. Группы, кольца, поля.}
+
+\Subsection{Группы}
+
+Опр: На множестве А задана n-арная операция, если задано отображение $ f: A^n \rightarrow A $\\
+Бинарные операции n=2, унарные n=1 \\
+Опр. Непустое мн-во G с одной бинарной операцией $ * : G \times G \rightarrow G $ если выполнено три аксиомы. \\
+1. $ \forall a,b,c \in G \ a * (b * c) = (a *b) * c) \\$
+2. $ \exists e \in G \forall a \in G \ e*a=a*e=a $ \\
+3. $ \forall a \in G \exists a' \in G \ a*a'=a'*a=e$ \\
+Опр: Если G - группа и $ \forall a,b \in G \ a*b=b*a $ G называется абелевой группой. \\
+Если $*$ обозначается как $ \cdot$ или знак опускается, то говорят о мультипликативной записи, $e = 1, a' = a^{-1} $. Нейтральный элемент называют единицей\\
+Если $*$ обозначается через $+$, говорят об аддитивной записи, $ e=0$, называют нулём группы, $ a' = -a$\\
+Для неабелевых групп обычно  используется мультипликативная запись, для абелевых и та и другая. \\
+Примеры: \\
+1. $ \Z, +, 0 $ \\
+$ \mathbb{Q}, + $ \\
+$ \R, + $ \\
+$ \N, + $ - не группа \\
+3. $\mathbb{Q} \setminus \{A\}, \cdot $\\
+$\R \setminus \{A\}, \cdot $\\
+$\R_{> 0}, \cdot $\\
+4. $ \Z \setminus 0, \cdot $ не группа. \\
+5. $ \{ \pm 1 \}, \cdot $ группа из двух элементов \\
+6. $ X$ - какое-то множество $ X \neq \emptyset $\\
+$ S(X) -$ множество всех биекций на $X$\\
+$ * - \circ $ - композиция \\
+$ S(X) \neq \emptyset \ id_X \in S(X) $ \\
+$ \circ $ -ассоциативна \\
+$ id_X \circ f = f \circ id_X = f \Rightarrow e = id_X $ \\
+$ f \in S(X) \Rightarrow \exists $ обратное отображение \\
+$ f \circ f^{-1} = f^{-1} \circ f = id_X $ \\
+$ |X| = 1, X=\{X_1\} , |S(X)| = 1, x_1 \mapsto x_1 $ \\
+$ |X| = 2, X = \{x_1, x_2\}, id: x_1 \mapsto x_1, x_2 \mapsto x_2 $ \\
+$ g: x_1 \mapsto x_2, x_2 \mapsto x_1 $ \\
+$ g * g = id $ \\
+$ |X| \geq 3, S(X) -$ не абелева. \\
+$ f: x_1 \mapsto x_2, x_2 \mapsto x_3, x_3 \mapsto x_3 $ \\
+% ------pic1
+$ g \circ f: x_1 \mapsto x_3, x_2 \mapsto x_1, x_3 \mapsto x_2  $\\
+$ f \circ g: x_1 \mapsto x_2, x_2 \mapsto x_3, x_3 \mapsto x_1 $ \\
+$ S(X) $ - симметрическая группа на множестве $X$ \\
+$ X = \{ x_1, \dots, x_n \} \ X = \{ 1, \dots, n \} $ \\
+$ S_n - $ cимметрическая группа степени n. \\
+$ X $ - мн-во \\
+$ G = P(X) $ - мн-во подмножеств X
+$ \triangle : G * G \rightarrow G $ \\
+$ A \triangle B = (A \setminus B) \cup (B \setminus A) = (A \cup B) \setminus (A \cap B)$ \\
+$ G, \triangle $ - группа. \\
+Найдите нейтральный и обратный. Будет ли группа абелевой. \\
+\subsubsection{Свойства групп}
+1. Единственность нейтрального. \\
+Пусть $e_1 $ и $e_2$ - нейтральные. \\
+$ e_1 * e_2 = e_1$ \\
+$ \forall a \in G, e*a=a*e=a $\\
+2. Единственность противоположного \\ 
+$ a \in G $ пусть есть два обратных $ a'$ и $a'' $\\
+$ a' * a * a'' = a'*(a*a'') = a'*e=a' $\\
+$ (a' *a) *a'' = e * a'' = a'' \Rightarrow a' = a'' $
+\subsection{Кольца и поля}
+
+$ R, +, \cdot \hspace*{5cm} R \neq \emptyset $ \\
+1. $ \forall a,b,c \in R \ a + (b + c) = (a +b) + c) \\$
+2. $ \exists 0 \in R \forall a \in R \ 0+a=a+0=a $ \\
+3. $ \forall a \in R \exists -a \in R \ a+(-a)=(-a)+a=0$ \\
+4. $ \forall a,b \in R \ a+b=b+a $ \\
+5. $ \forall a, b, c \in R \ (a \cdot b) \cdot c = a \cdot (b \cdot c) $ \\
+6. $ \exists 1 \in R \ \forall a \in R \ 1 \cdot a = a \cdot 1 = a $ \\
+7. $ \forall a \in R \setminus \{0\} \exists a^{-1} \ a \cdot a^{-1} = a^{-1} \cdot a = 1 $ \\
+8. $ \forall a, b \in R \ ab=ba$ \\
+9. $ \forall a,b,c \in R \ a(b+c) = ab+ac $ \\
+10 $ 1 \neq 0 $ \\
+Кольцо - выполнены 1-5 и 9 \\
+Кольцо с 1 - выполнены 1-6, 9 \\
+Коммутативное кольцо - выполнены 1-5, 8, 9 \\
+Коммутативное кольцо с 1 - выполнены 1-6, 8, 9 \\
+Тело, если выполнены 1-7, 9-10 \\
+Поле, если выполнены все 10 аксиом \\
+Примеры:
+$ \Z, +, \cdot $ Кольцо, коммутативное с 1, не поле. \\
+$ \mathbb{Q}, +, \cdot $ Поле \\
+$ \R, +, \cdot $ Поле \\
+$ 2\Z , +, \cdot $ Кольцо, коммутативное без 1 \\
+Существуют конечные поля.\\
+$ |F| = 2,3,4$ \\
+\begin{tabular}{|c|c|c|}
+	\hline 
++	& 0 & 1 \\ 
+	\hline 
+0	& 0 & 1 \\ 
+	\hline 
+1	& 1 & 0 \\ 
+	\hline 
+\end{tabular} 
+\begin{tabular}{|c|c|c|}
+	\hline 
+	$\cdot$	& 0 & 1 \\ 
+	\hline 
+	0	& 0 & 0  \\ 
+	\hline 
+	1	&  0 & 1 \\ 
+	\hline 
+\end{tabular} \\
+%-----pic2------
+$ R $ -кольцо \\
+$ (-(0\cdot a)) \mid 0 \cdot a = (0+0) \cdot a = 0 \cdot a + 0 \cdot a $\\
+\hspace*{15mm} $ -(0 \cdot a) + 0 \cdot a = -(0 \cdot a) +  0 \cdot a + 0\cdot a$ \\
+\hspace*{15mm}$ 0 = 0 + 0 \cdot a = 0 \cdot a $\\
+Упражнение: проверить, что заданное $ \mathbb{F}_2 $ - поле \\
+\begin{tabular}{|c|c|c|c|}
+	\hline 
++	& 0 & 1 & a \\ 
+	\hline 
+0	& 0 & 1 & a \\ 
+	\hline 
+1	& 1 & a & 0 \\ 
+	\hline 
+a	& a & 0 & 1 \\ 
+	\hline 
+\end{tabular} 
+ \begin{tabular}{|c|c|c|c|}
+	\hline 
+	$\cdot$	& 0 & 1 & a \\ 
+	\hline 
+	0	& 0 & 0 & 0 \\ 
+	\hline 
+	1	& 0 & 1 & a \\ 
+	\hline 
+	a	& 0 & a & 1 \\ 
+	\hline 
+\end{tabular} \\
+%---pic3, 4
+F - поле, $ a \in F \setminus \{0\} $ \\
+$ F \setminus \{0\} \rightarrow   $\\
+$ x \mapsto ax $
+Упражнение: проверить, что заданное $ \mathbb{F}_3 $ - поле \\
+

@@ -1,153 +1,158 @@
-\Subsection{Основные обозначения и определения, функции}
+\paragraph{Учебники} 
 
-\begin{center}
-  \renewcommand{\arraystretch}{1.7}
-  \large
-  \begin{tabular}{| c | c | c |}
-    \hline
-    \textbf{Символ} & \textbf{Определение} & \textbf{Описание}\\
-    \hline
-    {\Large $\cap$} & $A \cap B = \{ x \mid x \in A \land x \in B\}$ & Пересечение множеств\\
-    \hline
-    {\Large $\cup$} & $A \cup B = \{ x \mid x \in A \lor x \in B\}$ & Объединение множеств\\
-    \hline
-    {\Large $\setminus$} & $A \setminus B = \{ x \mid x \in A \land x \notin B\}$ & Разность множеств\\
-    \hline
-    {\Large $\times$} & $A \times B = \{ (x,\,y) \mid x \in A, y \in B\}$ & Произведение множеств\\
-    \hline
-    {\Large $\forall x\colon$} & Выражение верно для любого (всех) $x$ & Квантор всеобщности\\
-    \hline
-    {\Large $\exists x\colon$} & Существует $x$, такой что & Квантор существования\\
-    \hline
-    {\Large $\exists!\, x\colon$} & Существует ровно один $x$, такой что & Квантор существования\\
-    \hline
-    {\Large $\emptyset$} & $\forall x\colon x \notin \emptyset$ & Пустое множество\\
-    \hline
-    {\Large $\sqcup$} & $A \sqcup B = A \cup B$, при этом $A \cap B = \emptyset$ & Дизъюнктное объединение\\
-    \hline
-    {\Large $\subset$} & $A \subset B \iff x \in A\implies x\in B$ & $A$ ~--- подмножество $B$\\
-    \hline
-  \end{tabular}
-\end{center}
-\bigskip
-\begin{remark}
-  В данном конспекте $\subset$ и $\subseteq$ означают одно и то же, но иногда запись $\subset$ используется для того, чтобы подчеркнуть, что подмножество не совпадает со всем множеством (также как $\sqcup$ используется, чтобы подчеркнтуь пустоту пересечения у операндов).
-\end{remark}
+1. Д. К. Фаддеев "Лекции по алгебре" \\
+2. А. И. Кострыкин "Введение в алгебру" в 3-х частях \\
+3. З. И. Боревич "Определители и матрицы" \\
+4. И. В. Виноградов "Основы теории чисел" \\
+5. К. Айерленд, М. Роузен Классическое введение в современную теорию чисел \\
+6. Д. К. Фаддеев, И. С. Солинский "Сборник задач по высшей алгебре" \\
+7. И. В. Проскурков "Сборник задач по линейной алгебре"
 
-\begin{definition}\label{def:intro-set}
-  Множество~--- аксиоматическое понятие, не имеющее определения.
-\end{definition}
+\Section{Введение}
 
-\begin{definition}\label{def:intro-func}
-  Функция~--- это упорядоченная тройка $(X,\,Y,\,\Gamma)$, где $X$, $Y$~--- множества, а $\Gamma$~--- подмножество $X \times Y$, такое что $\forall x \in X\colon \exists!\,y\in Y\colon (x,\,y) \in \Gamma$.
-\end{definition}
+\Subsection{Высказывания}
 
-\begin{definition}\label{def:intro-func2}
-  Множество $X$ из предыдущего определения называется областью определения функции, множество $Y$~--- \textbf{областью} значений, а $\Gamma$~--- графиком функции.
-\end{definition}
+$ A, B, C, ... $ -высказывания \\
+$ \cap $ - И, конъюнкция \\
+$ \cup $ - ИЛИ, дизъюнкция \\
+$ \Rightarrow $ - импликация \\
+$ \Leftrightarrow $ - эквивалениция \\
+$ \neg $ - НЕ, отрицание \\
+$ \oplus $ - XOR, сложение по модулю 2 \\
 
-\begin{definition}\label{def:intro-funchealth}\slashn
-  \begin{itemize}
-  \item Запись $f\colon X \to Y$ означает, что $f$~--- функция из $X$ в $Y$.
-  \item Запись $f(x) = y$, означает, что $(x,\,y) \in \Gamma_f$.
-  \end{itemize}
-\end{definition}
+$ M $ - множество \\
+$ \forall x \in M: P(x) $ \\
+Для всех $x$ из $M$ выполнено $P(x)$ \\
+$ \forall $ - квантор общности \\
+$ \exists x \in M:  P(x) $ \\
+Существует x в M, такой, что P(x) \\
+$ \exists $ - квантор существования \\
+$ \neg (\forall x \in M: P(x)) \equiv \exists x \in M: \neg P(x) $ \\
+$ \neg ( \exists x \in M: P(x)) \equiv \forall x \in M: \neg P(x) $ \\
 
-\begin{definition}\label{def:intro-funcim}
-  Образом функции $f$ (\textbf{множеством} значений, обозначается как $\Im f$) называется множество $y \in Y$, таких что $\exists x \in X\colon f(x) = y$.
-\end{definition}
+\subsection{Множества и операции над ними}
+M - конечное множество
+$ M = \{ x_1, x_2, x_3, ...\} $ \\
+$ \{x_1, x_2\} $ - неупорядоченная пара \\
+$ \{x_1, x_2 \} = \{x_2, x_1 \} $ \\
+$ \emptyset $ - пустое множество \\
+$ A $ - множество, $ a \in A $ \\
+$ a $ - элемент множества $ A $ \\
+$ a \notin A $ - $a$ не принадлежит $A$ \\
+$ \forall x \in B: x \in A  \equiv B \subseteq A $ - $B$ подмножество $A$ \\
 
-\begin{definition}\label{def:intro-funcpreim}
-  Прообразом точки $y$ у отображения $f$ (записывается как $f^{-1}(y)$) называется множество таких $x$, что $f(x) = y$.
-\end{definition}
+$ 
+\begin{matrix}
+B \subseteq A & B \subset A & B \subseteq A \\
+B \subset A & B \subsetneqq A & B \subsetneqq A \\
+\end{matrix}
+$\\
+X - множество 
+P(X) - множество подмножеств X\\
+$ \{X_i\}_{i \in I} $\\
+$ X_i $ - множества\\
+$\cup$ - объединение\\
+$\cap $- пересечение\\
 
-\begin{definition}\label{def:intro-funcpreim2}
-  Прообразом множества $\hat{y}$ у отображения $f$ (записывается как $f^{-1}(\hat{y}$) называется множество таких $x$, что $f(x) \in \hat{y}$.
-\end{definition}
+$ \emptyset \neq \{ \emptyset \} $ \\
+M - множество \\
+P - свойство элементов множества \\
+$ \{ x\in M \mid P(x) \} $ \\
+Множество элементов M для которых выполнено свойство P \\
+A, B - множества
+$ A \setminus B = \{ x \in A \mid x \notin B \} $ \\
+$ A \cap B = \{ x \in A \cup B | x \in A \wedge x \in B \} $ \\
+Если $ B \subseteq A $ то $ A \setminus B $ - называется дополнением B до A\\
+Упорядоченная пара
+$ ( a_1, a_2 ) $ \\
+$ (a_1 , a_2 ) = ( b_1, b_2 ) \Leftrightarrow a_1 = b_1, a_2 = b_2 $\\
+$ A \times B = \{ (a, b) \mid a \in A, b \in B \} $ \\
+$ A \times A $ - декартов квадрат \\
+$ A^n $ - декартова степень \\
+1. $A^n = \{ (a_1 .. a_n ) \mid a_i \in A \} $ \\
+2. $ A^n = A^{n-1} \times A  $ \\
+$ A_1 \times ... \times A_n = \{ (a_1 ... a_n ) \in (\cup_{i=1}^n A_i) \} \mid $
+$ \forall i \in \{1, ... n\} a_i \in A_i $ \\
 
-\exersize Докажите, что $f^{-1}(\hat{y}) = \bigcup\limits_{y \in \hat{y}} f^{-1}(y)$.
+\Section{Отображения}
 
-\begin{definition}\label{def:intro-funcnarrow}
-  Пусть $f\colon X \to Y$ и $Z \subset X$. Тогда функцию $f$ можно сузить на множество $Z$ (записывается как $f|_Z$), где $f|_{Z}(x) := f(x)$.
-\end{definition}
+A, B - множества \\
+Мн-во $ \varGamma_f \subseteq A \times B $ (график отбражения f) \\
+$ \forall a \in A \exists b \in B (a, b) \in \varGamma_f $\\
+$ \forall a \in A \forall b_1, b_2 \in B ((a_1, b_1) \in \varGamma_f \wedge (a_1, b_2) \in \varGamma_f) \Rightarrow b_1 = b_2  $ \\
+Говорим, что задано отображение из множества А в множество B, если задана тройка $ A, B, \varGamma_f $ \\
+$A$ - область определения \\
+$B $- область значений \\
+$\varGamma_f$ - график \\
+$ (a, b) \in \varGamma_f \equiv b = f(a) $ \\
+$ id_A : A \rightarrow A $ \\
+$ \varGamma_f = \{ (a, a) \in A^2 \mid a \in A \} $\\
+Отображение $ f: A \rightarrow B $ называется сюръективным, если $ \forall b \in B \exists a \in A (a, b) \in \varGamma_f $\\
+$ f: A \twoheadrightarrow B $
+f - инъективное отображение, если $ \forall a_1, a_2 \in A \forall b \in B, (a_1, b) \in \varGamma_f \wedge (a_2, b) \in \varGamma_f \Rightarrow a_1 = a_2 $ \\
+$ f: A \rightarrowtail B $
+f - биективное отображение, если f и сюръекция и инъекция. \\
 
-\begin{definition}\label{def:intro-funccompose}
-  Пусть $f\colon X \to Y,~g\colon Y \to Z$, определим композицию функций $g \circ f\colon X \to Z$:
+\Subsection{Композиция отображений}
 
-  $(g \circ f)(x) := g(f(x))$
-\end{definition}
+$ f: A \rightarrow B, g: B \rightarrow C $ \\
+$ g \circ f : A \rightarrow C $ \\
+$ \varGamma_{g \circ f} = \{ (a, c) \in A \times C \mid \exists b \in B (a, b) \in \varGamma_f \wedge (b, c) \in \varGamma_g \} $ \\
+$ (g \circ f)(a)= g(f(a)) $ \\
+Теорема ассоциативность композиции\\
+$ h \circ (g \circ f) = (h \circ g) \circ f $ \\
+$ \varGamma_{h \circ (g \circ f)} = \{ (a, d) \mid \exists c \in C (a, c) \in \varGamma_{g \circ f} \wedge (c, d) \in \varGamma_{h} \} $\\
+$ \varGamma_{(h \circ g) \circ f} = \{ (a, d) \in A \mid  \} $ \\
+Теорема 2: $ f: A \rightarrow B $ \\
+$ id_B \circ f = f \circ id_A  = f $ \\
+$ f : A \rightarrow B, g: B \rightarrow A $ \\
 
-\begin{definition}\label{def:intro-funcid}
-  Отображение $id_X$ из $X$ в $X$, такое что $\forall x\colon id_X(x) = x$ называется тождественным отображением.
-\end{definition}
+$ (f \circ id_A)(a) = f(id_A(a)) = f(a) $ \\
+$ (id_B \circ f)(a) = id_B(f(a)) = f(a) $ \\
+Теорема3 : Если $ g \circ f = id_A$ то f - инъекция, g - сюръекция \\
+$ g \circ f = id_A $ \\
+$ \forall a \in A (g \circ f )(a) = a $\\
+$ \forall a \in A \ g(f(a)) = a $ \\
+Сюръекция \\
+$ a \in A $ $ g(b) = a $ $ b = f(a)$\\
+Инъекция \\
+$ f(a_1) = f(a_2) \Rightarrow a_1 = a_2 $
+$ f(a_1) = f(a_2) $ $g(f(a_1)) = g(f(a_2)) $ \\
+$ a_1 = id_A(a_1) = (g \circ f )(a_1) = (g \circ f)(a_2) = id_A(a_2) =  a_2 $
+Определение $ f: A \rightarrow B $ \\
+Отображение $ g: B \rightarrow A $ \\
+Если $ g \circ f = id_A $ $ f \circ g = id_B $ g называется обратимым к f \\
+Теорема 1. f - обратимо $\Leftrightarrow$ f - биекция\\
+2. Если f обратимо то обратное отображение единственно\\
+3. $ f: A \rightarrow  B \hspace{1mm} h: B \rightarrow C $ обратимо $ \Rightarrow h \circ f $ обратимо\\
+4. $ f: A \rightarrow B $ обратимо $ f^{-1} : B \rightarrow A$ обратимо\\
+$ f \circ f^{-1} = id_B $ \\
+$ f^{-1} \circ f = id_A $ \\
+$ f^{-1} $ обратимо и f обратное к $ f^{-1} $ \\
 
-\begin{definition}\label{def:intro-funceq}
-  Две функции называются равными, если они равны на всей области определения.
-\end{definition}
+\Subsection{Отношения на множествах}
 
-\begin{definition}\label{def:intro-funcinv}
-  Пусть $f\colon X \to Y$. Отображение $y\colon Y \to X$ называется:
-  \begin{compactitem}
-  \item Обратным к $f$ слева, если $f \circ g = id_Y$
-  \item Обратным к $f$ справа, если $g \circ f = id_X$.
-  \item Обратным к $f$, если оно обратно к $f$ слева и справа.
-  \end{compactitem}
-\end{definition}
+A - множество
+n - местное отношение к А (n-арное)
+это подмножество $ R \subseteq A^n $
+Бинарное отношение $ R \subseteq A^2 $
+Пример на $\N$ \\
+$ a_1 \divby a_2$ если $ \exists c \in \N : a_1 = a_2 c$\\
+1. R - рефлексивным, если $ \forall a \in A : aRa $ \\
+2. R - антирефлексивным, если $ \forall a \in A : \neg (aRa) $\\
+3. R - симметричное, если $ \forall a,b \in A : aRb \Rightarrow bRa $\\
+4. R - acимметричное, если $ \forall a,b \in A: aRb \Rightarrow \neg (bRa) $ \\
+5. R - aнтисимметрично, если $ \forall a, b \in A : aRb \wedge bRa \Rightarrow a = b $ \\
+6. R - транзитивно, если $ \forall a, b, c \in A : aRb \wedge bRc \Rightarrow aRc $ \\
 
-\begin{definition}\label{def:intro-funcinj}
-  Функция $f$ называется инъекцией (вложением), если
-  \begin{compactitem}
-    \item $\forall x, y\colon f(x) = f(y) \implies x = y$
-  \end{compactitem}
-\end{definition}
+\Subsection{Отношения эквивалентности}
 
-\begin{definition}\label{def:intro-funcsur}
-  Функция $f$ называется сюръекцией, если \hyperref[def:intro-funcim]{образ функции} совпадает с \hyperref[def:intro-func2]{областью значений}.
-  \begin{compactitem}
-    \item $\forall y \in Y\colon \exists x \in X\colon f(x) = y$
-  \end{compactitem}
-\end{definition}
-
-\begin{definition}\label{def:intro-funcbi}
-  Функция называется биекцией, если она одновременно является и инъекцией, и сюръекцией.
-\end{definition}
-
-\begin{theorem}\label{thm:intro-bi} Пусть $g\colon X \to Y$. Следующие условия экивалентны:$\slashn$
-  \begin{enumerate}
-  \item $g$~--- биекция.
-  \item $\exists g'\colon Y \to X$: $g \circ g' = id_Y$, $g' \circ g = id_X$.
-  \item $\exists f, h\colon Y \to X$: $g \circ f = id_Y$, $h \circ g = id_X$.
-  \end{enumerate}
-\end{theorem}
-
-\begin{proof}\slashn
-  \begin{itemize}
-  \item ``1'' $\implies$ ``2''. Рассмотрим функцию $g' = (Y,\, X,\, \Gamma_{g'})$, где $\Gamma_{g'} = \{(y,\,x) \mid (x,\,y) \in \Gamma_{g}\}$.
-
-    Так как $f$~--- биекция, то график задан корректно: для каждого $y$ найдётся (так как выполнена сюръекция) ровно один (так как выполнена биекция) $x$, такой что $(y,\,x) \in \Gamma_{g'}$
-
-    Показать \hyperref[def:intro-funcid]{тождественность} композиций остаётся в качестве упражнения для читателя.
-    
-  \item ``2'' $\implies$ ``3''. Просто возьмём $f := g', h := g'$.
-
-  \item ``3'' $\implies$ ``2''. $f = id_X \circ f = (h \circ g) \circ f = h \circ (g \circ f) = h \circ id_Y = h$, тем самым $f = h$.
-
-
-  \item ``2'' $\implies$ ``1'':
-    \begin{itemize}
-      \item Верна инъективность:
-
-        $g(x) = g(y) \implies g'(g(x)) = g'(g(y)) \implies (g' \circ g)(x) =  (g' \circ g)(y) \implies id_X(x) = id_X(y) \implies x = y$.
-      \item Верна сюръективность:
-
-        Сюръективность $\iff \forall y\colon g^{-1}(y) \ne \emptyset$ (см \ref{def:intro-funcpreim}).
-        
-        Покажем, что $g'(y) \in g^{-1}(y)$, тем самым последнее не пусто.
-
-        И действительно $g(g'(y)) = (g \circ g')(y) = id_Y(y) = y$. \qedhere
-    \end{itemize}
-  \end{itemize}
-\end{proof}
-
-\begin{remark} Тем самым мы показали, что функция является биекцией тогда и только тогда, когда она обратима (см пункты $1$ и $2$ теоремы).
-\end{remark}
+Если R рефлексивно, симметрично и транзитивно, то R - отношение эквивалентности. $ R - \sim $
+$A, \sim$ \\
+$ a \in A $ $ [a] = \{ b \in A \mid a \sim b \} $ \\
+Класс эквивалентности $ [a] $\\
+Теорема: $ \sim $ - отношение эквивалентности на A, тогда любые 2 класса эквивалентности либо не пересекаются, либо совпадают.\\
+Множество классов эквивалентности \\
+$ A / \sim $ - фактормножество мн-ва A по отношению $\sim$ \\
+$ A = \Z m \in \N$ \\
+Пример: $ a \equiv b (mod m) $ если $a \cdot b \divby m$ \\

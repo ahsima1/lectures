@@ -1,0 +1,67 @@
+\Section{Элементарные функции} 
+
+\begin{definition}
+$ f(x) = x^r $\\
+Если $ r = n \in N, x_n = x \cdot ... \cdot x $ \\
+$ r = -n, n \in \N, x^n = \dfrac{ 1}{x^{-n}} $ \\
+Пусть $ r = \dfrac{1}{n} , n \in N, x^n $ строго монотонна на $ \R $ n нечётн, $ R_{\geq 0} $ n чётн \\
+$ n - $ неч $ \Rightarrow $ опр, стого монотонна, непр $ f^{-1} (x) \R \rightarrow \R $ \\
+$ f^{-1} (x) = x^{\dfrac{1}{n}} $ \\
+n - чётно $ \Rightarrow $ опр, строго монотонная, непрерывн $ f^{-1} (x) \R_{\geq 0} \rightarrow \R_{\geq 0} $ \\
+$ f^{-1} (x) = x^{\dfrac{1}{n}} $ \\
+$ r = \dfrac{p}{q}, p \in \Z, q \in \N $\\
+$ x^r = (x^{\dfrac{1}{q}})^p $ Задана и непрерывна на $[0; +\infty] $\\
+Пусть $ \dfrac{p}{q} = \dfrac{p'}{q'} $ тогда $ (x^{\frac{1}{q}})^p = (x^{\frac{1}{q'}})^{p'} $ \\
+$ ((x^{\frac{1}{q}})^p)^{qq'} = ((x^{\frac{1}{q}})^{qq'})^p = ((x^{\frac{1}{q'}})^{p'})^{qq'} = x^{qp'} = x^{q'p}$ \\
+$ f : \R_{\geq 0} \rightarrow \R_{\geq 0} $ - биекция \\
+$ x \mapsto x^{qq'} \Rightarrow (x^{\frac{1}{q}})^p = (x^{\frac{1}{q'}})^{p'}$ \\
+$ r = \dfrac{p}{q}, $ q неч,  $ p \geq 0 $ \\
+$ \Rightarrow x^r $ опр на $ \R $ \\
+
+Зафиксируем $ a > 0 $ \\
+$ a^r, \forall r \in \Q $\\
+% pic1
+
+\begin{lemma}
+	$ \lim\limits_{n \rightarrow \infty} a^{\frac{1}{n}} = 1$
+	\begin{proof}
+		$ a > 1 $ \\
+		$ x_n = a^{\frac{1}{n}} - 1 > 0 $ \\
+		$ a = (1 + x_n)^n > n \cdot x_n $ \\
+		$ \Rightarrow 0 < x_n < \frac{a}{n} \rightarrow 0 $  \\
+		$ \Rightarrow x_n \rightarrow 0$ \\
+		$ \Rightarrow a^{\frac{1}{n}} \rightarrow 1 $ 
+	\end{proof}
+\end{lemma}
+\begin{theorem}
+	$ a > 0, x \in \R, x_n \rightarrow x, , x_n \in \Q $ \\
+	Тогда $ \exists \lim a^{x_n} $ и он не зависит от выбора $x_n$\\
+	\begin{proof}
+		$ a > 1$ ( Для $ a < 1 $ аналогичн) \\
+		$ x_n \rightarrow x $ \\
+		$ |x_n | \leq M \in \N \rightarrow a^{x_n} \leq a^M $ \\
+		$ n, k \in \N, n \geq k | a^{x_n} - a^{x_k} | = |a^{x_k} | \cdot | a^{x_n - x_k} - 1 | \leq a^M \cdot | a^{x_n - x_k} - 1 | $ \\
+		$ \eps > 0, \exists N : |a^{\frac{1}{n}} - 1| < \dfrac{\eps}{a^M} $ \\
+		$ \exists K, |x_n - x_k | \leq \dfrac{1}{n} $ если $ n, k \geq K $ \\
+		$ a^{x_n - x_k } - 1 < a^{\frac{1}{n}} - 1 < \dfrac{\eps}{a^M} $ \\
+		$ \Rightarrow |a^{x_n} - a^{x_k} | \leq a^M \cdot \dfrac{\eps}{a^M} \equiv \eps $ \\
+		% pic2
+	\end{proof}
+\end{theorem}
+\begin{definition}
+$ a^x = \lim\limits_{n \rightarrow \infty} a^{x_n}, x_n \in \Q, x_n \rightarrow x $\\
+\end{definition}
+\begin{properties}
+	1. Для $ x \in \Q $ новое опред эквив старому \\
+	2. $ a^xa^y= a^{x+y} $\\
+	3. $ (a^x)^y = a^{xy} $ \\
+	%pic3
+	4. $ a^x b^x = (ab)^x $ \\
+	5. $ a < b, x > 0, a^x < b^x $ 
+ 	
+\end{properties}
+
+
+
+
+\end{definition}

@@ -29,12 +29,12 @@
 	$ R_1 \subseteq R_2 $ \\
 	$ f: R_1 \rightarrow R_2 $ \\
 	$ r \mapsto r $ \\
-	$ \mathbb{Z} \rightarrow \mathbb{Q} $
+	$ \Z \rightarrow \mathbb{Q} $
 \end{example}
 \begin{example}
 	чётные $ \mapsto 0 $ \\
 	нечётные $ \mapsto 1 $ \\
-	$ f: \mathbb{Z} \rightarrow \mathbb{F}_2 $
+	$ f: \Z \rightarrow \mathbb{F}_2 $
 \end{example}
 \begin{properties}
 	$ f: R_1 \rightarrow R_2 $ - изоморфизм \\
@@ -54,7 +54,7 @@ $ R_1 \cong R_2 \cong R_3 \Rightarrow R_1 \cong R_3 $
 \subsection{Поле комплексных чисел} 
 
 $ \mathbb{C} $ (complex) \\
-$ \mathbb{R} \times \mathbb{R} = \mathbb{C}  $\\
+$ \R \times \R = \mathbb{C}  $\\
 \begin{definition}
 	$ (a, b) + (c, d) = (a+c, b+d) $\\
 	$(a,b) (c, d) = (ac - bd, bc + ad) $\\
@@ -86,14 +86,14 @@ $ \mathbb{R} \times \mathbb{R} = \mathbb{C}  $\\
  		\end{enumerate}
 	\end{proof}
 \end{theorem}
-$ \{ (a, 0) \mid a \in \mathbb{R}   \} $ \\
+$ \{ (a, 0) \mid a \in \R   \} $ \\
 $ (a, 0) + (b, 0) = (a + b, 0) $ \\
 $ (a, 0)(b, 0) = (ab - 0, a\cdot 0 + 0 \cdot b) = (ab, 0) $\\
-$ \mathbb{R} \Rightarrow  \{ (a, 0) \mid a \in \mathbb{R}   \} $ \\
+$ \R \Rightarrow  \{ (a, 0) \mid a \in \R   \} $ \\
 $ a \mapsto (a, 0) $ \\
 Это - гомоморфизм, биекция, след изоморфизм \\
-$ \mathbb{C} $ содержит подполе, изоморфное полю $ \mathbb{R} $\\
-Отождествим $ \mathbb{R} $ с этим подполем \\
+$ \mathbb{C} $ содержит подполе, изоморфное полю $ \R $\\
+Отождествим $ \R $ с этим подполем \\
 $ (a, 0) = a $ \\
 $ i = (0, 1) $ \\
 $ i^2 = (0, 1)(0,1) = (0 \cdot 0 - 1 \cdot 1 , 0 \cdot 1 + 1 \cdot 0) = (-1, 0) = -1 $ \\
@@ -111,7 +111,7 @@ b - мнимая часть $ Im(z) - $ imaginary \\
 \end{remark}
 % pic4
 \Subsection{Комплексное сопряжение}
-$ \mathbb{C}, z = a + bi, a, b \in \mathbb{R} $ \\
+$ \mathbb{C}, z = a + bi, a, b \in \R $ \\
 \begin{definition}
 	$\overline{z} = a - bi  $ называется комплексно сопряжённым с $ z $\\
 	Геометрический смысл- отражение относительно вещественной оси. % pic5
@@ -123,10 +123,10 @@ $ \mathbb{C}, z = a + bi, a, b \in \mathbb{R} $ \\
 		\item $ \overline{z_1z_2} = \overline{z_1}\overline{z_2} $ 
 		\item $ \overline{z_1 \cdot ... \cdot z_k} =   \overline{z_1} \cdot ... \cdot \overline{z_k}$ 
 		\item $ \overline{\overline{z}} = z $ 
-		\item $ z = \overline{z} \Rightarrow z \in \mathbb{R} $ 
-		\item $ z + \overline{z} \in \mathbb{R} $ 
-		\item $ z \cdot \overline{z} \in \mathbb{R} $  $z \cdot \overline{z} = 0 \Leftrightarrow z = 0 $
-		\item $ a \in \mathbb{R} \ \ \overline{az} = a \overline{z} $
+		\item $ z = \overline{z} \Rightarrow z \in \R $ 
+		\item $ z + \overline{z} \in \R $ 
+		\item $ z \cdot \overline{z} \in \R $  $z \cdot \overline{z} = 0 \Leftrightarrow z = 0 $
+		\item $ a \in \R \ \ \overline{az} = a \overline{z} $
 	\end{enumerate}
 	\begin{proof}
 		\begin{enumerate}
@@ -140,11 +140,11 @@ $ \mathbb{C}, z = a + bi, a, b \in \mathbb{R} $ \\
 			\item Индукция по числу сомножителей 
 			\item Очевидно
 			\item $ z = \overline{z} \Leftrightarrow a + bi = a - bi \Leftrightarrow b = -b \Leftrightarrow 2b = 0 \Leftrightarrow b = 0 $
-			\item $ z + \overline{z} = a + bi + a - bi = 2a = 2 Re(z) \in \mathbb{R} $
+			\item $ z + \overline{z} = a + bi + a - bi = 2a = 2 Re(z) \in \R $
 			\item  $ z \cdot \overline{z} = (a + bi) ( a- bi ) = a^2 - b^2 $ \\
 			$ z \cdot \overline{z} = Re^2(z) + Im^2(z) \geq 0 $\\
 			$ z \cdot \overline{z} \Leftrightarrow Re(z) = 0 = Im(z) \Leftrightarrow z = 0 $
-			\item $ a \in \mathbb{R} \overline{az} = \overline{a} \overline{z} = a \overline{z}$
+			\item $ a \in \R \overline{az} = \overline{a} \overline{z} = a \overline{z}$
 		\end{enumerate}
 	\end{proof}
 \end{properties}
@@ -159,20 +159,20 @@ $ \mathbb{C}, z = a + bi, a, b \in \mathbb{R} $ \\
 \Subsection{Тригонометрическая форма записи комплексного числа}
 
 %pic6
-Угол $ \phi $ определён не однозначно, а с точностью до слагаемого $ 2 \pi k, k \in \mathbb{Z} $\\
+Угол $ \phi $ определён не однозначно, а с точностью до слагаемого $ 2 \pi k, k \in \Z $\\
 $ z = a + bi $\\
 $ r^2 = a^2 + b^2 $ \\
 $ r = |z| $ \\
 $ \phi $ - аргумент $z$\\
-$ \phi = arg z, Arg(z) = \{ \phi + 2 \pi k | k \in \mathbb{Z} \} $\\
-$ x \sim y $ если $ \exists k \in \mathbb{Z} , x-y=2\pi k$ \\
+$ \phi = arg z, Arg(z) = \{ \phi + 2 \pi k | k \in \Z \} $\\
+$ x \sim y $ если $ \exists k \in \Z , x-y=2\pi k$ \\
 Упраж
 $ \phi = arg z, Arg z = [ \phi ] = [arg z] $\\
 
 Если полярные коорд $ z \in \mathbb{C} $ равны $ (r, \phi) $ \\
 $ z = r \cos(\phi) + r \sin (\phi ) i = r (\cos(\phi) + \sin(\phi) i ) $ - тригонометрическая форма записи\\
-$ r \in \mathbb{R}_{\geq 0} $ \\
-Если $ z = r(\cos(\phi) + i \sin(\phi) ) $ и $ r \geq 0, r \in \mathbb{R} $ , то тогда $\phi$ - одно из значений $arg(z)$ \\
+$ r \in \R_{\geq 0} $ \\
+Если $ z = r(\cos(\phi) + i \sin(\phi) ) $ и $ r \geq 0, r \in \R $ , то тогда $\phi$ - одно из значений $arg(z)$ \\
 
 $ z = a + bi \ \ \ \ \ \ r = |z| $\\
 $ a = r \cdot \cos(\phi) $ \\
@@ -209,7 +209,7 @@ r_1r_2 (cos(\phi_1 + \phi2) + i \sin(\phi_1 + \phi_2)) $ - тригономет�
 	$ z_j =  $ %pic7
 \end{consequence}
 \begin{consequence} Формула Муавра
-	$ k \in \mathbb{Z}, z \neq 0 , z = r(\cos \phi + i \sin \phi) $ \\
+	$ k \in \Z, z \neq 0 , z = r(\cos \phi + i \sin \phi) $ \\
 	$  z^k = r^k (\cos k\phi + i \sin k\phi)$ 
 	\begin{proof}
 		$ k > 0 \  \ $ В сл. 3 $ z_1 = ... = z_k = z $ \\
@@ -240,24 +240,24 @@ $ x = r(\cos \phi + i \sin \phi) $ \\
 $ x^n = z $ \\
 $ r^n(\cos n \psi + i \sin s\psi) = R(\cos \phi + i \sin \phi) $ \\
 $ z^n = R $  \\
-$ n \psi = \phi + 2 \pi k, k \in \mathbb{Z} $\\
+$ n \psi = \phi + 2 \pi k, k \in \Z $\\
 $ r = \sqrt[n]{R} $ корень в веществ. степени.
-$ \psi = \dfrac{\phi}{n} + \dfrac{2 \pi k}{n}, k \in \mathbb{Z} $ \\
+$ \psi = \dfrac{\phi}{n} + \dfrac{2 \pi k}{n}, k \in \Z $ \\
 Подставляя, проверяем \\
 $ x_k = \sqrt[n]{R} (\cos( \dfrac{\phi}{n} + \dfrac{2 \pi k}{n}) + i sin( \dfrac{\phi}{n} + \dfrac{2 \pi k}{n} )$ \\
 $ x_k^n = z $\\
 Все решения $ x^n=z $ имеют вид $x_k, k = 0, ..., n-1$ и для этих k решения попарно различны (ровно n решений) \\
 \begin{theorem}
-	$ a \in \mathbb{Z}, b \in \mathbb{Z} \setminus \{0\} $ \\
-	$ \Rightarrow \exists $ единственные $ q, d \in \mathbb{Z} $ \\
+	$ a \in \Z, b \in \Z \setminus \{0\} $ \\
+	$ \Rightarrow \exists $ единственные $ q, d \in \Z $ \\
 	$ a = bq + d, 0 \leq d < |b| $
 	\begin{proof}
-		$ x \in \mathbb{R} $\\
+		$ x \in \R $\\
 		$ [x] - целая часть x $ \\
 		Наибольшее целое, не превосходящее x \\
 		$ [2] = 2, [\pi] = 3, [-\pi] = -4 $ \\
 		$ {x} = x - [x] $ \\
-		$ m = [z] \Leftrightarrow m \in \mathbb{Z}, m \leq x < m+1 $ \\
+		$ m = [z] \Leftrightarrow m \in \Z, m \leq x < m+1 $ \\
 		$ \dfrac{a}{b} = \left[ \dfrac{a}{b} \right] + \left\{ \dfrac{a}{b} \right\} $ \\
 		$ \alpha = a - bq $ 
 		$ d = \left( \dfrac{a}{b} - q \right) \cdot b = \left\{ \dfrac{a}{b} \right\} \cdot b $\\
@@ -294,8 +294,8 @@ $ R = 1, \phi = 0 $ \\
 Корни n-й степени из 1 это $ \cos \dfrac{2 \pi k}{n} + i \sin \dfrac{2 \pi k}{n} $ \\
 $ \sqrt[n]{z} $ так можно обозначать множество всех корней из z но не какой-то конкретный. \\
 \begin{definition}
-	$ \varepsilon^n = 1 $ \\
-	$ \varepsilon $ называется первообразным корнем степени n из 1, если $ \varepsilon^m \neq 1, 0 < m < n $ \\
+	$ \eps^n = 1 $ \\
+	$ \eps $ называется первообразным корнем степени n из 1, если $ \eps^m \neq 1, 0 < m < n $ \\
 	
 	\begin{tabular}{|c|c|c|}
 		\hline
@@ -314,15 +314,15 @@ $ \sqrt[n]{z} $ так можно обозначать множество все
 	\end{tabular} 
 \end{definition}
 
-$ \varepsilon = \cos \dfrac{2 \pi k}{ n} + i \sin \dfrac{2 \pi k}{n} $ \\
-Когда $ \varepsilon $ - первообр? \\
- Когда $ \varepsilon $ - не первообр? \\
-$ \varepsilon^m = 1, 0 < m < n $ \\
+$ \eps = \cos \dfrac{2 \pi k}{ n} + i \sin \dfrac{2 \pi k}{n} $ \\
+Когда $ \eps $ - первообр? \\
+ Когда $ \eps $ - не первообр? \\
+$ \eps^m = 1, 0 < m < n $ \\
 $ \dfrac{2 \pi km}{n} = 2 \pi l $ \\
 $ km = ln $ \\
 $ \dfrac{k}{n}$ - сократима \\
 $ n \divby k \cdot m \Rightarrow n$ и $k $ имеют общ делитель $ > 1 $\\
-$ \varepsilon $ - первообразные, когда $k $ и $ n $ - взаимно просты \\
+$ \eps $ - первообразные, когда $k $ и $ n $ - взаимно просты \\
 Первообразных корней степени n из 1 ровно столько, сколько чисел от 0 до n-1, взаимно простых с n. \\
 
 \subsection{Применение комплексных чисел для вычисления пригонометрических сумм} 
@@ -354,7 +354,7 @@ $ z_0 = a + bi $ \\
 $ |z - z_0 | = r$ \\
 $ z =  x + iy  $ \\
 $ \sqrt{(x-a)^2 + (y-b)^2} = r$ \\
-$ (x_1, y_1), (x_2, y_2) \in \mathbb{R}^2 $ \\
+$ (x_1, y_1), (x_2, y_2) \in \R^2 $ \\
 $ x_1x_2 + y_1y_2 $ \\
 $ z_1 = x_1 + iy_1 $ \\
 $ z_2 = x_2 + i y_2 $\\

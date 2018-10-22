@@ -1,11 +1,9 @@
-\Section{1}
-
 \begin{theorem}
 	Пусть $x_n$ последовательность, $ x_n > 0, \lim \dfrac{x_{n+1}}{x_n} \leq 1 \Rightarrow \lim x_n = 0 $
 	\begin{proof}
 		Пусть $ c $ такое число, что $  \lim \dfrac{x_{n+1}}{x_n} \leq c \leq 1 $ \\
 		$ \exists N, \forall n \geq N,  \dfrac{x_{n+1}}{x_n} < c $ \\
-		$ \forall m \in \mathbb{N} :  \dfrac{x_{n+1}}{x_n} = \prod_{i=0}^{m-1}  \dfrac{x_{n+1}}{x_n} < c^m $ \\
+		$ \forall m \in \N :  \dfrac{x_{n+1}}{x_n} = \prod_{i=0}^{m-1}  \dfrac{x_{n+1}}{x_n} < c^m $ \\
 		$ 0 < x_{n+m} < c^mx_n \underset{m \rightarrow \infty}{\rightarrow} 0 $ \\
 		$ \Rightarrow \lim\limits_{n \rightarrow \infty} x_{n+m} = 0 =  \lim\limits_{n \rightarrow \infty} x_{n} $
 
@@ -49,14 +47,14 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 		Знаем $ \cap [a_n, b_n] \neq \emptyset $ \\
 		Предположим, что это не 1 элем. мн-во \\
 		Тогда $ \exists c, d \in  \cap [a_n, b_n], c < d $ \\
-		$ \forall n \in \mathbb{N} : c, d \in  [a_n, b_n] \Rightarrow a_n \leq c < d \leq b_n  \Rightarrow b_n - a_n \geq $
+		$ \forall n \in \N : c, d \in  [a_n, b_n] \Rightarrow a_n \leq c < d \leq b_n  \Rightarrow b_n - a_n \geq $
 		% pic2,3
 	\end{proof}
 \end{theorem}
 \begin{definition}
 	Говорят, что $ b_n $ подпоследовательность $ a_n $ если \\
 	возр. посл-ть натуральных чисел $ m_i $ \\
-	$ \forall n \in \mathbb{N}$
+	$ \forall n \in \N$
 	
 \end{definition}
 \begin{theorem}
@@ -64,7 +62,7 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 
 	Пусть $ x_n$ - ограниченная последовательность. Тогда в $ x_n $ можно выбрать сходящуюся подпоследовательность
 	\begin{proof}
-	$ (x_n) \Rightarrow \exists a, b \in \mathbb{R} : a \leq b, \forall n : x_n \in [a, b] $ \\
+	$ (x_n) \Rightarrow \exists a, b \in \R : a \leq b, \forall n : x_n \in [a, b] $ \\
 	Из отрезков $ [a, a+b / 2] $ и $ [a+b/2, b] $ выберем $ [a_1, b_1] $ такой, что $ \{i \mid x_i \in [a_1, b_1]\} $ бесконечно. \\
  	Из отрезков $ [a_1, a_1+b_1 / 2] $ и $ [a_1+b_1/2, b_1] $ выберем $ [a_2, b_2] $ такой, что $ \{i \mid x_i \in [a_2, b_2]\} $ бесконечно. \\
     $ b_i - a_i = \frac{1}{2^n} (b-a) $ \\
@@ -76,14 +74,14 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
     $ x_{m_i} $ - подпоследовательность \\
     $ a_i \leq x_{m_i} \leq b_i  \Rightarrow x_m \rightarrow c$ 
     \end{proof}
-	Зам. Легко видеть, что  если $ x_n \rightarrow c \in \mathbb{R} $ \\
+	Зам. Легко видеть, что  если $ x_n \rightarrow c \in \R $ \\
 	То любая подпоследовательность $ x_{m_i} \rightarrow c $ \\
 \end{theorem}
 Дополнение \\
 Пусть $x_n$ - неограниченная последовательность. Тогда в ней есть подпоследовательность $ x_{n_i}  \rightarrow +\infty $ или $ \rightarrow -\infty $ \\
 \begin{proof}
 	Пусть $ x_n $ не ограничена сверху \\
-	Тогда легко видеть, что $ \forall n \in \mathbb{N} $ существует бесконечно много $ i \in \mathbb{N} : x_i > n $ \\
+	Тогда легко видеть, что $ \forall n \in \N $ существует бесконечно много $ i \in \N : x_i > n $ \\
 	Иначе существуеть лишь конечн. i \\
 	Пусть это так, тогда $ max(x_1, x_2, ..., n) $ - верхняя граница $x_n$\\
 	$ m_1 $ - любое нат. число, $ x_{m_1} > 1 $ \\
@@ -99,8 +97,8 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 
 \begin{definition}
 	Пусть $x_n$ - последовательность. Она называется фундаментальной, если выполненое след. св-во \\
-	$ \forall \varepsilon,  \exists N \in \mathbb{N}, \forall m,n \geq N : | x_m - x_n | < \varepsilon $\\
-	Очевидно, сходящаяся последовательность фундаментальна. Можно взять предел и окресность $ \frac{\varepsilon}{2} $ \\
+	$ \forall \eps,  \exists N \in \N, \forall m,n \geq N : | x_m - x_n | < \eps $\\
+	Очевидно, сходящаяся последовательность фундаментальна. Можно взять предел и окресность $ \frac{\eps}{2} $ \\
 	Фундаментальная $=$ сходящаяся в себе $=$ последовательность Коши.
 \end{definition}
 \begin{theorem}
@@ -109,13 +107,13 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 	\begin{proof}
 		Пусть $ (x_n) $ - фундаментальна \\
 		1. Докажем, что $(x_n)$ - ограничена \\
-		По определению, $  \exists N \in \mathbb{N} \forall n \geq N : x_n \in (x_{N} - 1, x_N +1)$\\
+		По определению, $  \exists N \in \N \forall n \geq N : x_n \in (x_{N} - 1, x_N +1)$\\
 		$ a = min(x_N - 1, x_n, ..., )$ %pic6
 		2. По т. Б-В, $ (x_n)$ содержит сх. подпоследовательность $(x_{m_i}) $ \\
 		Пусть $ x_{m_i} \rightarrow c $ \\
 		Д-м, что $ x_n \rightarrow c $ \\
-		По опр фунд. посл $ \exists N \in \mathbb{N}  : \forall m, n \geq N : |x_m-x_n| < \frac{\varepsilon}{2}$ \\
-		$\exists N' \in \mathbb{N} : \forall i \geq N' : |x_{m_i} -c | < \frac{\varepsilon}{2} $ \\
+		По опр фунд. посл $ \exists N \in \N  : \forall m, n \geq N : |x_m-x_n| < \frac{\eps}{2}$ \\
+		$\exists N' \in \N : \forall i \geq N' : |x_{m_i} -c | < \frac{\eps}{2} $ \\
 		Пусть i таково, что %pic7,8,9,10
 		
 	\end{proof}

@@ -1,5 +1,3 @@
-
-
 \Subsection{Язык теории множеств}
 
 
@@ -17,7 +15,7 @@
 \end{definition}
 
 \begin{definition} P - предикат \\
-	$ A = \rm \mathbb{Z} $ \\
+	$ A = \rm \Z $ \\
 	$ P(n) - n^2 \leq 10 $ \\
 	Множество А, Р - предикат на А \\
 	$ \forall x \in A : P(x) $  \\
@@ -39,7 +37,7 @@
 
 \begin{definition}
 	Отношения \\
-	$ a, b \in \mathbb{Z} $ \\
+	$ a, b \in \Z $ \\
 	$ a \divby b $ \\
 	$ a \divbynot b $ \\
 	Отношение делимости\\
@@ -56,13 +54,13 @@
 \end{definition}
 
 \noindent
-$ \mathbb{N} $ - Натуральные числа\\
-$ \mathbb{Z} $ - Целые числа\\
-$ \mathbb{Q} = \{ \frac{a}{b} \mid a \in \mathbb{Z}, b \in \mathbb{N} \} $ - Рациональные числа\\
-$ \mathbb{R} $ - Вещественные числа\\
+$ \N $ - Натуральные числа\\
+$ \Z $ - Целые числа\\
+$ \mathbb{Q} = \{ \frac{a}{b} \mid a \in \Z, b \in \N \} $ - Рациональные числа\\
+$ \R $ - Вещественные числа\\
 $ \mathbb{C} $ - Комплексные числа\\
 
-\subsection{Отображения}
+\Subsection{Отображения}
 
 \begin{definition} Отображение \\
 X, Y - множества\\
@@ -73,11 +71,11 @@ $\hspace*{11mm} y_1, ..., y_n $\\
 $ |X| = 3, |Y| = 5 $\\
 $ f: X \rightarrow Y $\\
 Количество отображений f - $ Y^X = 5^3 $ \\
-$ X = Y = \mathbb{N} $ \\
+$ X = Y = \N $ \\
 $ f(x) = 3x + 5 $ \\
-$ \mathbb{N} \Rightarrow \mathbb{N} $ \\
+$ \N \Rightarrow \N $ \\
 $ x \Rightarrow 3x+5 $ 
-$ f(x) = |\{ d \in \mathbb{N} \mid x \divby d \}| $ 
+$ f(x) = |\{ d \in \N \mid x \divby d \}| $ 
 \end{definition}
 
 \begin{definition}
@@ -87,7 +85,7 @@ $ f(X_0) = \{ f(x) \mid x \in X_0 \} \in Y $ - образ подмножеств
 $ f^{-1}(y) = \{ x \in  X \mid f(x) = y \} $ - прообраз элемента \\
 $ f^{-1}(Y_0) = \{ x \in X \mid f(x) \in Y_0 \} $  - прообраз множества 
 \begin{example}
-	$ f: \mathbb{Z} \Rightarrow \mathbb{Z} $ \\
+	$ f: \Z \Rightarrow \Z $ \\
 	$ a \Rightarrow a^2 $ \\
 	$ f( \{ -1, 0, 1, 2 \} ) = \{ 0, 1, 4 \} $ \\
 	$ f^{-1} (1)= \{-1, 1\}$ \\
@@ -161,20 +159,22 @@ $\Leftarrow$ - Построим отображение $g$. Пусть $y \in Y$
 \end{proof}
 \end{theorem}
 
-\section{Аксиомы вещественных чисел}
-\subsection{Аксиомы поля}
+\Section{Аксиомы вещественных чисел}
+
+\Subsection{Аксиомы поля}
+
 \begin{definition}
 Бинарные операции \\
 $ M \times M \rightarrow M $ \\
-$ \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z} $ 
+$ \Z \times \Z \rightarrow \Z $ 
 \end{definition}
 
-Мы будем рассматривать множество $\mathbb{R}$ с бинарными операциями $+$ и $-$ и отношением $\leq$, для которых выполняются следующие условия
+Мы будем рассматривать множество $\R$ с бинарными операциями $+$ и $-$ и отношением $\leq$, для которых выполняются следующие условия
 \begin{enumerate}
-	\item $ \forall x, y \in \mathbb{R} : x + y = y + x $ 
-	\item $ \forall x, y, z \in \mathbb{R} (x + y) + z = x + (y + z) $ 
-	\item $ \exists 0 in \mathbb{R}, \forall x \in \mathbb{R}: x+0 = x $ 
-	\item $ \forall x \in \mathbb{R} \exists x' \in R x + x' = 0 $ 
+	\item $ \forall x, y \in \R : x + y = y + x $ 
+	\item $ \forall x, y, z \in \R (x + y) + z = x + (y + z) $ 
+	\item $ \exists 0 in \R, \forall x \in \R: x+0 = x $ 
+	\item $ \forall x \in \R \exists x' \in R x + x' = 0 $ 
 	\begin{lemma}
 		0 - единственный 
 		\begin{proof}
@@ -187,18 +187,18 @@ $ \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z} $
 		Пусть $0' , 0 = 0 + 0' = 0, 0' + 0 = 0'$
 	\end{proof} 
 \end{lemma}
-	\item $ \forall x, y \in \mathbb{R} : x \cdot y = y \cdot x $ 
-    \item $ \forall x, y, z \in \mathbb{R} (x \cdot y) + z = x + (y \cdot z) $ 
-	\item $ \exists 1 \in \mathbb{R} \setminus \{0\}, \forall x \in \mathbb{R}: x \cdot 1 = x $ 
-	\item  $ \forall x \in \mathbb{R} \setminus \{0\} \exists x' \in R x \cdot x' = 1 $
-	\item $ \forall x, y, z \in \mathbb{R} x(y+z) = xy + xz $ 
+	\item $ \forall x, y \in \R : x \cdot y = y \cdot x $ 
+    \item $ \forall x, y, z \in \R (x \cdot y) + z = x + (y \cdot z) $ 
+	\item $ \exists 1 \in \R \setminus \{0\}, \forall x \in \R: x \cdot 1 = x $ 
+	\item  $ \forall x \in \R \setminus \{0\} \exists x' \in R x \cdot x' = 1 $
+	\item $ \forall x, y, z \in \R x(y+z) = xy + xz $ 
 \end{enumerate}
 
 \begin{example}
 	Примеры полей
 	\begin{enumerate}
 		\item $\mathbb{Q}$ 
-		\item  $\mathbb{R}$ 
+		\item  $\R$ 
 		\item  $\mathbb{C}$ 
 		\item  $\mathbb{Q}(\sqrt{2}) = \{a + b \cdot \sqrt{2} \mid a, b \in \mathbb{Q} \}$ 
 		\item  $ {0, 1} = \mathbb{F}_2 $ 
@@ -222,9 +222,9 @@ $ \mathbb{Z} \times \mathbb{Z} \rightarrow \mathbb{Z} $
 $\left\{
 \begin{tabular}{p{.8\textwidth}}
 \begin{enumerate}
-	\item $ \forall x \in \mathbb{R} : x \leq x $ - рефлексивность 
-	\item $ \forall x, y in \mathbb{R} : x \leq y \and y \leq x \Rightarrow x = y $ антисимметричность 
-	\item $ \forall x, y, z \in \mathbb{R}, x \leq y, y \leq z \Rightarrow x \leq z $ Транзитивность.
+	\item $ \forall x \in \R : x \leq x $ - рефлексивность 
+	\item $ \forall x, y in \R : x \leq y \and y \leq x \Rightarrow x = y $ антисимметричность 
+	\item $ \forall x, y, z \in \R, x \leq y, y \leq z \Rightarrow x \leq z $ Транзитивность.
 \end{enumerate}
 \end{tabular}
 \right.$
@@ -232,7 +232,7 @@ $\left\{
 $\left\{
 \begin{tabular}{p{.8\textwidth}}
 \begin{enumerate}[4.]
-	\item $ \forall x, y \in \mathbb{R}, x \leq y $ или  $  y \leq x $ 
+	\item $ \forall x, y \in \R, x \leq y $ или  $  y \leq x $ 
 \end{enumerate}
 	\end{tabular}
 \right.$
@@ -290,16 +290,16 @@ $ (a, b) $\\
 \end{theorem}
 
 \begin{theorem}
-	Пусть $ X, Y \in \mathbb{R} $ ограниченные сверху мн-ва\\
+	Пусть $ X, Y \in \R $ ограниченные сверху мн-ва\\
 	Тогда $sup(X+Y) = sup(X) + sup(Y)$ \\
 	$ X + Y = \{ x + y \mid x \in X, y \in Y \} $
 	\begin{consequence}
-		Пусть $ a \in \mathbb{R} $  Тогда  $\exists n \in \mathbb{N} n > a $ 
+		Пусть $ a \in \R $  Тогда  $\exists n \in \N n > a $ 
 		\begin{proof}
 			Пусть это не так \\
-			$ \forall n \in \mathbb{N} : n \leq a $ , т.е. $ \mathbb{N} $ ограничено сверху. \\
-			$ \exists c = sup(\mathbb{N}) $ \\
-			$ c - 1 < sup (\mathbb{N}) $ 
+			$ \forall n \in \N : n \leq a $ , т.е. $ \N $ ограничено сверху. \\
+			$ \exists c = sup(\N) $ \\
+			$ c - 1 < sup (\N) $ 
 		\end{proof}
 	\end{consequence}
 \end{theorem}

@@ -1,5 +1,98 @@
-\Section{111}
-$ 2+2$
+
+\begin{theorem} Принцип вложенных отрезков\\
+
+Пусть $A_i = [a_i, b_i], i = 1,2,3,\dots$ - отрезок \\
+$ a_i, h \in \R, a_i < b_i $ и $ A_i \supset A_{i+1} , i=1,2,\dots $ \\
+Тогда $ \bigcap_{i=1}^{\infty} A_i \neq \emptyset $\\
+\begin{proof} $ X = \{ a_i | i=1,2... \}, Y=\{b_i | i = 1,2,...\} $ \\
+$ \forall x \in X, \forall y \in Y: x \leq y $ \\
+$ x = a i \in N $\\
+$ y = b_j j \in N$ \\
+$ \exists i \leq j \ a_i \leq a_j < b_j \ a_i \leq a_{i+1} \leq a_{i+2} $ \\
+$ \exists i > j \ a_i < b_i \leq b_j \ b_j \geq b_{j+1} \geq b_{g+2} $\\
+Т. е. $ a_i < b_j $ \\
+$ \exists c \in \R : \forall x \in X : x \leq c $ \\
+$ \hspace*{16mm} \forall y \in Y : y \geq c $ \\
+$ a_i \leq c \leq b_i $ т. е. $c \in A_i$ \\ 
+$\Rightarrow \bigcap_{i=1}^{\infty} A_i \neq \emptyset$ \\
+$ \bigcap_{i=1}^{\infty} A_i $ - точка или отрезок \\
+\end{proof}
+Аналогичное утверждение не верно для интервалов. $ A_i = (0, \frac{1}{i} ]$ \\
+Аналогичное утверждение не верно для $\mathbb{Q}$ - $ \{a_i\} = \{1, 1.4, 1,41, ...\}   \ \{b_i\} = \{2, 1.5, 1,42, ...\},   \bigcap_{i=1}^{\infty} A_i = \sqrt{2} = \emptyset$
+\end{theorem}
+
+\Subsection{Мощность множества}
+
+Множества называются равномощными если существует биекция $ f: X \rightarrow Y $. Равномощность - отношение эквивалентности.\\
+1. $X \sim X \ id_X$ \\
+2. $ X \sim Y \Rightarrow Y \sim X$ \\ 
+3. $ X \sim Y, Y \sim Z \Rightarrow X \sim Z $ \\
+$ f: X \rightarrow Y, g: Y \rightarrow Z $ - биекции $\Rightarrow g \circ f $ - биекция \\
+Мощность конечного множества - неотрицательное целое число. \\
+Множество X называется счётным, если оно равномощно множеству $ \N $\\
+Собстквенное подмножество - подмножество отличное от всего множества. \\
+$ \N \setminus \{1\} $ - счётное \\
+$ \N \setminus \{1\} \mapsto \N $\\
+$ x \mapsto x - 1 $ \\
+Любое подмножество счётного множества конечно или счётно \\
+$ x = \{ x, x_1, x_2, x_3, \dots | x_i \neq x_j, i \neq j \}$ \\
+$ Y \subset X $ \\
+Y конечнно - очевидно \\
+Y бесконечно $ y_1 = x_i, i $ - минимально \\
+$ y_2 = x_{i_2}  $\\
+% ------ph1 --- ph2
+$ \N \rightarrow Y - $ биекция
+
+Мощность X не превосходит мощности Y если X равномощно подмножеству Y. $ |X| \leq |Y| $ \\
+Равносильно инъекции $X \rightarrow Y$ \\
+$ |X| \leq |\N \Rightarrow |X| \in \N_0 \mid  |X| = |N| $\\
+$ |X| \leq Y, |Y| \leq |Z| \Rightarrow |X| \leq |Z|$ \\
+Задача: доказать, если $|X| \leq |Y|, |Y| \leq |X| $, то $ |X| = |Y|$ \\
+Пр. $\Z - $ cчётное \\
+-2, -1, 0, 1, 2, 3\\
+5, 3, 1, 2, 4, 6 \\
+$ \N \rightarrow \Z $ \\
+$ n \mapsto \frac{n}{2}, 2 \divby n \\
+-\frac{n-1}{2}, 2 \divbynot n $ \\
+X, Y - счётное Тогда $ X \times Y - $ счётное. \\
+% ---- pic3----
+$ X \times Y = \bigcup_{i=1}^{\infty}\{(x_m, y_n)\mid m+n=i \} $ \\
+$ |C_i| = i - 1 $ \\
+Элементы $C_i$ получают номера заканчивающиеся на $ \frac{(i-2)(i-3)}{2}+1 ... \frac{(i-1)(i-2)}{2} $ \\
+$ \mathbb{Q}$ - счётно
+$ \mathbb{Q} \rightarrow \Z \times \R$ \\
+$ q \mapsto (a, b) $ \\
+$ \alpha $ инъективно(очевидно) \\
+$ |\mathbb{Q} \leq |\Z \times \N | = |\N| = \aleph_0 $\\
+$ |X| < |Y| \Leftrightarrow |X| \leq |Y|, |X| \neq |Y| $ \\
+X - любое множество, $ |X| < |2^X| $ (Упражнение)\\
+Любые 2 промежутка в $ \R - $ равномощны \\
+Cперва докажем, что $ [a, b] \sim [a', b'], a < b, a' < b' $ \\
+$ \exists $ линейная ф-ция $ y = f(x)$ т.ч. $ f(a) = a', f(b) = b' $ Она даёт биекцию $ [a, b] \rightarrow [a', b']$\\
+Аналогично: $  [a, b) \rightarrow [a', b')$ \\
+$  (a, b] \rightarrow (a', b']$\\
+$ (a, b) \rightarrow (a', b')$\\
+Проверим $ [0, 1) \sim [0,1] $ \\
+$ x \mapsto x, x \neq \frac{1}{n}, n \in \N$
+\hspace*{15mm} \\
+% ---pic4
+Аналогично $ (0, 1] \sim [0,1] $\\
+$ (0, 1) \sim (0,1] $\\
+$\R$ равномощно $ [0, 1] $ \\
+$ \left( -\frac{\pi}{2}, \frac{\pi}{2} \right] \mapsto \R \\
+x \mapsto tg(x) $\\
+$ \left( -\frac{\pi}{2}, \frac{\pi}{2} \right]  \sim [0, 1] $ \\
+Теорема: $\R$ - несчётно \\
+Достаточно доказать, что $ (0, 1) $ - несчётный.\\
+Предположим, что это не так\\
+$ (0, 1) = \{ a_1, a_2, \dots \} $ \\
+$ a_i = 0,a_1a_2a_3a_4 $ Без 9 в периоде \\
+$ \beta_i $ - любая цифра, отличная от $ a_{ii}, i=1,2,3,\dots$ 0 и 9\\
+$ \beta_i = 0,\beta_1\beta_2\dots$\\
+$\beta \notin \{ a_1, a_2, a_3, \dots \} $\\
+Число $ \beta$ нельзя пронумеровать \\
+Континуум-гипотеза - любое несчётное подмножество  $\R$  равномощно $\R$ \\
+
 
 
 
