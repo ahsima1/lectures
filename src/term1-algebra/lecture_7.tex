@@ -1,0 +1,178 @@
+\subsection{title}
+
+$ 1 = \begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+I = \begin{pmatrix}
+i & 0 \\
+0 & -i
+\end{pmatrix}
+J = \begin{pmatrix}
+0 & i \\
+i & 0
+\end{pmatrix}
+K = \begin{pmatrix}
+0 & -i \\
+1 & 0
+\end{pmatrix} $ \\
+$ z = c_0 + c_1 I + c_2 J + c_3 K $ \\
+$ I^2 = J^2 = K^2 = -1 $ \\
+$ IJ = -JI = K $ \\
+$ JK = -KJ = I $\\
+$ KI = -IK = K $ \\
+Вторая конструкция \\
+$ \{ ( c_0, c_1, c_2, c_3 ) | c_i \in \R \}$ \\
+$ 1 = (1, 0, 0, 0) $ \\
+$ i = (0, 1, 0, 0) \\
+j = (0, 0, 1, 0) \\
+k = (0, 0, 0, 1) $ \\
+$ (c_0, c_1, c_ 2, c_3) \cdot (d_0, d_1, d_2, d_3) = \begin{pmatrix}
+c_0d_0 - c_1d_1 - c_2d_2 -c_3d_3\\
+c_0d_1 + c_1d_0 + c_2d_3 - c_3d_2\\
+c_0d_2 - c_1d_3 + c_2d_0 +c_3d_1 \\
+c_0d_3 + c_1d_2 - c_2d_1 + c_3d_0 
+\end{pmatrix}
+$\\
+$ \mathcal{H} \subseteq M_2(\mathbb{C}) $ \\
+$ \mapsto \mathbb{H} $ \\
+$ c_0\cdot 1 + c_1 I + c_2 J + c_3 K \mapsto (c_0, c_1,c_2, c_3) $\\
+$ \{ (a_0, a_1, 0, 0) | a_i \in \R \} = \{ a_0 + a_1I \} $ - Изоморфно комплексным числам  $ \backsimeq $\\
+$ \{ (a_0, 0, a_2, 0) | a_i \in \R \} = \{ a_0 + a_2О \}  \backsimeq $ \\
+$ \{ (a_0, 0, 0, a_3) | a_i \in \R \} = \{ a_0 + a_3Л \} $ \\
+
+$ \det \left( \begin{pmatrix} a & b \\ c & d \end{pmatrix} \cdot \begin{pmatrix} a' & b' \\ c' & d' \end{pmatrix} \right) = \det \begin{pmatrix} a & b \\ c & d \end{pmatrix} \cdot \det \begin{pmatrix} a' & b' \\ c' & d' \end{pmatrix} $ \\
+$ \begin{pmatrix} a & b \\ c & d \end{pmatrix} \cdot \begin{pmatrix} a' & b' \\ c' & d' \end{pmatrix} = \begin{pmatrix} aa' + bc' & ab' + bd' \\ ca' + dc' & cb' + dd' \end{pmatrix} $ \\
+$ (aa' + bc')(cb' + dd') - (ab' + bd')(ca'+dc') ?=(ad-bc)(a'd' -b'c') $\\ % pic1
+$ \mathcal{H} =  \left\{\begin{pmatrix} z_1 & - \overline{z}_2 \\ z^2 &  \overline{z_1} \end{pmatrix} | z_i \in \mathbb{C}  \right\} $ \\
+$ z_1 = a_0 + a_1 i, z_2 = a_3 + a_2 i $ \\
+$ \det \begin{pmatrix}  z_1 & - \overline{z}_2 \\ z^2 &  \overline{z_1}  \end{pmatrix} = z_1 \overline{z_1} + z_2 \overline{z_2} = a_0^2 +a_1^2+a_2^2+a_3^2  $\\
+$\sqrt{ a_0^2 +a_1^2+a_2^2+a_3^2 } - $ модуль кватерниона $ a_0 + a_1I + a_2J + a_3K $\\
+$ (c_0 + c_1I + c_2J + c_3K) \cdot (d_0 + d_1I + d_2J + d_3 K)  $ \\
+$ (c_0^2 + c_1^2 + c_2^2 + c_3^2) \cdot (d_0^2 + d_1^2 + d_2^2 + d_3^2) = \\
+(c_0d_0 - c_1d_1 - c_2d_2 -c_3d_3 )^2\\
+(c_0d_1 + c_1d_0 + c_2d_3 - c_3d_2)^2\\
+(c_0d_2 - c_1d_3 + c_2d_0 +c_3d_1)^2 \\
+(c_0d_3 + c_1d_2 - c_2d_1 + c_3d_0 )^2 $ \\
+$ z = (c_0, c_1, c_2, c_3) = c_0 + c_1 i + c_2 j + c_3 k $ \\
+$ Re(z) = c_0 $ - вещественная часть\\
+$ \vec{V} = c_1i + c_2j + c_3k $ - векторная часть \\
+$ z = c_0 + \vec{V} $ \\
+$ \overline{z} = c_0 - \vec{V} = c_0 - c_1i -c_2j - c_3k $ \\
+$ z \cdot \overline{z} = (c_0 + c_1i + c_2j + c_3k) (c_0 - c_1 -c_2j -c_3k) = c_0^2 + c_1^2 + c_2^2 + c_3^2 = | z | $ \\
+2-й способ д-ва тождества Эйлера \\
+$ \overline{\overline{z}} = z $ \\
+$ \overline{z_1 + z_2 } = z_1 + \overline{z_2} $ \\
+$ \overline{z_1z_2} = \overline{z_2} \cdot \overline{z_1} $ \\
+$ a \in \R \ \ \ \overline{az} = a \cdot \overline{z} $\\
+$ |z_1z_2|^2 = z_1z_2\cdot \overline{ z_1z_2} = z_1 z_2 \overline{ z_2} \overline{z_1} =  = z_1 (z_2 \overline{z_2}) \overline{ z_1} = |z_1|^2 \cdot |z_2|^2$ \\ 
+
+$ (c_0 + \vec{V}) (d_0) + \vec{U} = c_0d_0 - \vec{v} \cdot  \vec{u} + c_0 \cdot \vec{u} + \vec{v} \cdot d_0  $ \\%pic2,3
+
+\Section{Теория делимости в коммутативных кольцах}
+
+$ R $ - комм кольцо \\
+$ a | b $ a делит b $ \exists c : b = ac $ \\
+$ b \divby a  $ b делится на a \\
+
+\begin{properties}
+	\begin{enumerate}
+		\item  $ a | 0 $
+		\item $ a | b , b | c \Rightarrow a | c $ 
+		\item $ R > 1 \Rightarrow a | a, a = a \cdot 1 $ \\
+		Замечание $ a | b \& b | a \centernot\Rightarrow a = b $
+		\item $ a| b, a|c \Rightarrow a | (b \pm c ) $
+	\end{enumerate}
+\end{properties}
+\begin{definition}
+	Если $ a \cdot b = 0 $, но $ a, b \neq 0 $ то a и b называются нетривиальными делителями нуля \\
+	R - область целостности если нет нетривиальных делителей нуля 
+\end{definition}
+Замечание: для некомм R : \\
+Если $ b = ac $ ,то a - левый, b - правый делитель \\
+
+$ R > 1 - $ комм \\
+$ R^* = \{ a \in R : a | 1 \} = \{ a \in R : \exists b, ab=1 \} $ - мн-во обратимых элементов \\
+$ R^*m \cdot $ - группа \\
+$ R^* - $ мультипликативная группа кольца \\
+$ R^* \times R^* \rightarrow R^* $\\
+%pic5
+$ a \in R^* \exists b ab=1 \Rightarrow ab = ba = 1 \Rightarrow b \in R^* $\\
+Примеры: $ \Z^* = \{\pm 1\} $ \\
+K - поле $ K^* = K \setminus \{0\} $\\
+К - поле $ (k[x])^* = K^* $ \\
+Упр. 1 $ \Z[i] = \{ a + bi | a,b \in \Z \} \subseteq \mathbb{C} $ - Гауссовы числа\\
+Д-те что $ \Z[i] $ - кольцо и найдите $(\Z[i])^* $\\
+Упр. 2 $ \omega = \dfrac{-1 + \sqrt{3} i}{2}, \omega^3 = 1 $ \\
+$ \Z[\omega] = \{ a + b\omega | a,b \in \Z \} $ - Кольцо чисел Эйзенштейна \\
+$ d \in \Z $ не явл целым квадратом \\
+$ \Z[\sqrt{d}] \subseteq \mathbb{C} $ если $ d < 0 $ \\
+$ \hspace*{12mm} \subseteq \R $ если $ d > 0 $ \\
+$ \Z[\sqrt{d}] = \{ a + b\sqrt{d} | a, b \in \Z  \} $ \\
+Каждый эл-т из $ \Z[\sqrt{d}] $ единственным образом представляется в виде $ a + b\sqrt{d}, a,b \in \Z $ \\
+5. Д-те, что $ (\Z[\sqrt{2}])^*, (Z[sqrt{3}])^*, (\Z[\sqrt{5}])^*, (\Z[\sqrt{6}])^* $ - бесконечны \\ % pic6
+
+\Subsection{Ассоцированность} 
+
+R - кольцо коммут, $ 1 \in R $ \\
+a ассоцировано с b если $ a | b \& b | a $ \\
+$ a \sim b $\\
+$ \sim $ - отнош эквивалентности \\
+\begin{theorem}
+	1. Если $ \varepsilon \in R^* $, то $ a \sim a\eps $\\
+	2. Если R - область целостности, $ a \sim b \Rightarrow \exists \eps \in R^*, b = a\eps $
+	\begin{proof}
+		1. %pic
+		2. $ a | b \& b | a $ \\
+		$ a = 0 \Rightarrow b = 0, 0 = 0 \cdot 1 \Rightarrow \eps = 1	$ \\
+		$ a \neq 0, a | b \ \exists \eps \in R, b = a\eps $ \\
+		$ b | a \ \exists r \in R \Rightarrow a = r \cdot b $ \\
+		$ a = r \eps a  $ \\
+		$ 0 = a (1 - re) \Rightarrow 1 - r \eps = 0 $ \\
+		$ \eps | 1, \eps \in R^* $
+	\end{proof}
+\end{theorem}
+Примеры \\
+$ \Z, Z^* = \{\pm 1 \}$ \\
+$ \{0\}, \{\pm 1\}, \{ \pm 2 \} $ - классы ассоцированности \\
+$ K[X], K - $ поле $ \{0\} $ \\
+Любой другой класс ассоцированности содержит ровно 1 многочлен со старш коэфф 1(приведённый, унитарный) \\
+
+\Subsection{Идеал в кольце}
+
+R - произвольное кольцо\\ %pic
+$I = R$ \\
+$ I = \{0\} $ - идеалы \\ 
+Для некомм колец различают левые и правые идеалы \\
+1. остаётся \\
+2(левый). $ \forall a \in I, \forall r \in R, ra \in I, R\cdot I \subseteq I $ \\ 2(правый). $ \forall a \in I, \forall r \in R, ar \in I,  I \cdot R \subseteq  (\sum r_is_i + \sum m_js_j)I $ \\
+
+Замеч. в усл 1 $ \forall a,b \in I, a \pm b \in I $\\
+$ 1' : \forall a,b \in I, a-b \in I , \\
+1' \Rightarrow 1 $ I - непусто \\
+$ a \in I, I \neq 0 $ \\
+$ a - a \in I, 0 \in I $\\
+$ a \in I, 0 \in  I, 0 - a \in I, -a \in I $\\
+$ \forall a,b, -b \in I, a - (-b) \in I $\\
+
+$ R, S \subseteq R $ \\
+Какой наименьш идеал содержит S \\
+$ s \in S \subseteq I $ \\
+$ \forall r \in R, r \cdot s \in I $\\
+$ \forall m \in \Z, m \cdot s \in I $ \\
+$ \{ \sum_{i=1}^{n} r_is_i + \sum_{j=1}^{k} m_js_j | n, k \in \N \cup \{0\}, r_i \in R, m_j \in \Z \} $ - это мн-во образует идеал \\
+а значит это и есть минимальный идеал, содержащий S \\
+$ (\sum r_is_i + \sum m_js_j) \pm  (\sum r'_is'_i + \sum m'_js'_j) - $ вновь сумма такого же вида \\
+Идеал, порождённый мн-вом S $ (S) $ \\
+
+
+
+
+
+
+
+
+
+
+
+
