@@ -4,7 +4,7 @@
 Пусть $A_i = [a_i, b_i], i = 1,2,3,\dots$ - отрезок \\
 $ a_i, h \in \R, a_i < b_i $ и $ A_i \supset A_{i+1} , i=1,2,\dots $ \\
 Тогда $ \bigcap_{i=1}^{\infty} A_i \neq \emptyset $\\
-\begin{proof} $ X = \{ a_i | i=1,2... \}, Y=\{b_i | i = 1,2,...\} $ \\
+\begin{proof} $ X = \{ a_i | i=1,2\dots \}, Y=\{b_i | i = 1,2,\dots\} $ \\
 $ \forall x \in X, \forall y \in Y: x \leq y $ \\
 $ x = a i \in N $\\
 $ y = b_j j \in N$ \\
@@ -18,47 +18,79 @@ $\Rightarrow \bigcap_{i=1}^{\infty} A_i \neq \emptyset$ \\
 $ \bigcap_{i=1}^{\infty} A_i $ - точка или отрезок \\
 \end{proof}
 Аналогичное утверждение не верно для интервалов. $ A_i = (0, \frac{1}{i} ]$ \\
-Аналогичное утверждение не верно для $\mathbb{Q}$ - $ \{a_i\} = \{1, 1.4, 1,41, ...\}   \ \{b_i\} = \{2, 1.5, 1,42, ...\},   \bigcap_{i=1}^{\infty} A_i = \sqrt{2} = \emptyset$
+Аналогичное утверждение не верно для $\mathbb{Q}$ - $ \{a_i\} = \{1, 1.4, 1,41, \dots\}   \ \{b_i\} = \{2, 1.5, 1,42, \dots\},   \bigcap_{i=1}^{\infty} A_i = \sqrt{2} = \emptyset$
 \end{theorem}
 
 \Subsection{Мощность множества}
 
-Множества называются равномощными если существует биекция $ f: X \rightarrow Y $. Равномощность - отношение эквивалентности.\\
-1. $X \sim X \ id_X$ \\
-2. $ X \sim Y \Rightarrow Y \sim X$ \\ 
-3. $ X \sim Y, Y \sim Z \Rightarrow X \sim Z $ \\
-$ f: X \rightarrow Y, g: Y \rightarrow Z $ - биекции $\Rightarrow g \circ f $ - биекция \\
-Мощность конечного множества - неотрицательное целое число. \\
-Множество X называется счётным, если оно равномощно множеству $ \N $\\
-Собстквенное подмножество - подмножество отличное от всего множества. \\
-$ \N \setminus \{1\} $ - счётное \\
-$ \N \setminus \{1\} \mapsto \N $\\
-$ x \mapsto x - 1 $ \\
-Любое подмножество счётного множества конечно или счётно \\
-$ x = \{ x, x_1, x_2, x_3, \dots | x_i \neq x_j, i \neq j \}$ \\
-$ Y \subset X $ \\
-Y конечнно - очевидно \\
-Y бесконечно $ y_1 = x_i, i $ - минимально \\
-$ y_2 = x_{i_2}  $\\
-% ------ph1 --- ph2
-$ \N \rightarrow Y - $ биекция
+\begin{definition}
+	Множества называются равномощными если существует биекция $ f: X \rightarrow Y $. Равномощность - отношение эквивалентности.\\
+\end{definition}
+
+\begin{definition} $ \sim $ - отношение эквивалентности \\
+	\begin{enumerate}
+		\item $X \sim X \ id_X$
+		\item $ X \sim Y \Rightarrow Y \sim X$ 
+		\item $ X \sim Y, Y \sim Z \Rightarrow X \sim Z $ 
+		\item $ f: X \rightarrow Y, g: Y \rightarrow Z $ - биекции $\Rightarrow g \circ f $ - биекция 
+	\end{enumerate}
+\end{definition}
+Mощность конечного множества - неотрицательное целое число. \\
+
+\begin{definition}
+	Множество X называется счётным, если оно равномощно множеству $ \N $
+\end{definition}
+
+\begin{example} $ $ \\
+	$ \N \setminus \{1\} $ - счётное \\
+	$ \N \setminus \{1\} \mapsto \N $\\
+	$ x \mapsto x - 1 $ 
+\end{example}
+
+\begin{definition}
+	Собственное подмножество - подмножество отличное от всего множества. 
+\end{definition}
+
+\begin{theorem}
+	Любое подмножество счётного множества конечно или счётно \\
+	$ x = \{ x, x_1, x_2, x_3, \dots | x_i \neq x_j, i \neq j \}$ \\
+	\begin{proof}
+		Пусть $ Y \subset X $ \\
+		Y конечнно - очевидно \\
+		Y бесконечно $ y_1 = x_{i_1}, i_1 $ - минимально \\
+		$ y_2 = x_{i_2} $ т.ч. $ x_{i_2} \in Y \setminus \{y_1\} $ и $ i_2 $ - минимально\\
+		$ y_3 = x_{i_3} $ т.ч. $ x_{i_3} \in Y \setminus \{y_1, y_2\} $ и $ i_3 $ - минимально\\
+		И т.д. Все $ Y \setminus \{y_1, \dots, y_n \} $ непусты т.к. Y бесконечно. \\
+		Проверим $ Y = \{y_1, y_2, \dots, y_n \} $ \\
+		Пусть $ y \in Y \setminus \{ y_1, \dots, y_n \} $ \\
+		$ \exists j : y = x_j $ \\
+		$ y \in Y \setminus \{ y_1, \dots, y_n \} $ при любом n \\
+		$ \Rightarrow \forall n \in \N, i_n < j $ В силу процедуры выбора $ y_n $ \\
+		$\underbrace{i_1, i_2, \dots, i_j}_{\in \N} < j $ - не бывает \\
+		$ \N \rightarrow Y - $ биекция
+	\end{proof}
+\end{theorem}
+
 
 Мощность X не превосходит мощности Y если X равномощно подмножеству Y. $ |X| \leq |Y| $ \\
 Равносильно инъекции $X \rightarrow Y$ \\
 $ |X| \leq |\N \Rightarrow |X| \in \N_0 \mid  |X| = |N| $\\
 $ |X| \leq Y, |Y| \leq |Z| \Rightarrow |X| \leq |Z|$ \\
 Задача: доказать, если $|X| \leq |Y|, |Y| \leq |X| $, то $ |X| = |Y|$ \\
-Пр. $\Z - $ cчётное \\
--2, -1, 0, 1, 2, 3\\
-5, 3, 1, 2, 4, 6 \\
-$ \N \rightarrow \Z $ \\
-$ n \mapsto \frac{n}{2}, 2 \divby n \\
--\frac{n-1}{2}, 2 \divbynot n $ \\
-X, Y - счётное Тогда $ X \times Y - $ счётное. \\
-% ---- pic3----
+\begin{example}
+	$\Z - $ cчётное \\
+	-2, -1, 0, 1, 2, 3\\
+	5, 3, 1, 2, 4, 6 \\
+	$ \N \rightarrow \Z $ \\
+	$ n \mapsto \frac{n}{2}, 2 \divby n \\
+	-\frac{n-1}{2}, 2 \divbynot n $ \\
+\end{example}
+\begin{example}
+	X, Y - счётное Тогда $ X \times Y - $ счётное. \\
+\end{example}
 $ X \times Y = \bigcup_{i=1}^{\infty}\{(x_m, y_n)\mid m+n=i \} $ \\
 $ |C_i| = i - 1 $ \\
-Элементы $C_i$ получают номера заканчивающиеся на $ \frac{(i-2)(i-3)}{2}+1 ... \frac{(i-1)(i-2)}{2} $ \\
+Элементы $C_i$ получают номера заканчивающиеся на $ \frac{(i-2)(i-3)}{2}+1 \dots \frac{(i-1)(i-2)}{2} $ \\
 $ \mathbb{Q}$ - счётно
 $ \mathbb{Q} \rightarrow \Z \times \R$ \\
 $ q \mapsto (a, b) $ \\
@@ -73,26 +105,28 @@ $ \exists $ линейная ф-ция $ y = f(x)$ т.ч. $ f(a) = a', f(b) = b'
 $  (a, b] \rightarrow (a', b']$\\
 $ (a, b) \rightarrow (a', b')$\\
 Проверим $ [0, 1) \sim [0,1] $ \\
-$ x \mapsto x, x \neq \frac{1}{n}, n \in \N$
-\hspace*{15mm} \\
-% ---pic4
+$ x \mapsto \left\{ \begin{array}{ll} x, x \neq \frac{1}{n}, n \in \N \\ \dfrac{1}{n-1}, x = \dfrac{1}{n} \end{array} \right. $\\
 Аналогично $ (0, 1] \sim [0,1] $\\
 $ (0, 1) \sim (0,1] $\\
 $\R$ равномощно $ [0, 1] $ \\
 $ \left( -\frac{\pi}{2}, \frac{\pi}{2} \right] \mapsto \R \\
 x \mapsto tg(x) $\\
 $ \left( -\frac{\pi}{2}, \frac{\pi}{2} \right]  \sim [0, 1] $ \\
-Теорема: $\R$ - несчётно \\
-Достаточно доказать, что $ (0, 1) $ - несчётный.\\
-Предположим, что это не так\\
-$ (0, 1) = \{ a_1, a_2, \dots \} $ \\
-$ a_i = 0,a_1a_2a_3a_4 $ Без 9 в периоде \\
-$ \beta_i $ - любая цифра, отличная от $ a_{ii}, i=1,2,3,\dots$ 0 и 9\\
-$ \beta_i = 0,\beta_1\beta_2\dots$\\
-$\beta \notin \{ a_1, a_2, a_3, \dots \} $\\
-Число $ \beta$ нельзя пронумеровать \\
-Континуум-гипотеза - любое несчётное подмножество  $\R$  равномощно $\R$ \\
+\begin{theorem}
+	$\R$ - несчётно \\
+	\begin{proof}
+		Достаточно доказать, что $ (0, 1) $ - несчётный.\\
+		Предположим, что это не так\\
+		$ (0, 1) = \{ a_1, a_2, \dots \} $ \\
+		$ a_i = 0,a_1a_2a_3a_4 $ Без 9 в периоде \\
+		$ \beta_i $ - любая цифра, отличная от $ a_{ii}, i=1,2,3,\dots$ 0 и 9\\
+		$ \beta_i = 0,\beta_1\beta_2\dots$\\
+		$\beta \notin \{ a_1, a_2, a_3, \dots \} $\\
+		Число $ \beta$ нельзя пронумеровать 
+	\end{proof}
+\end{theorem}
 
+Континуум-гипотеза - любое несчётное подмножество  $\R$  равномощно $\R$ \\
 
 
 

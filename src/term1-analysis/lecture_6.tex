@@ -38,10 +38,17 @@ $ f : E \setminus \{a\} \rightarrow \R, y \in \overline{\R}$
 \begin{enumerate}
 	\item Единственность \\
 	$ \lim\limits_{x \rightarrow a} f(x) = y_1, \lim\limits_{x \rightarrow a} f(x) = y_2 \Rightarrow y_1 = y_2 $ \\
-	% pic2
+	\begin{proof}
+		a - пред точка E \\
+		$ \Rightarrow  \exists (x_n), x_n \rightarrow a, x_n \subset E \setminus \{a\} $ \\
+		$ f(x_n) \rightarrow y_1, f(x_n) \rightarrow y_2 $\\
+		$ \Rightarrow y_1 = y_2 $
+	\end{proof}
 	\item Локальная ограниченность \\
 	Пусть $  \lim\limits_{x \rightarrow a} f(x) = y \in \R $ \\
-	Тогда $ \exists C > 0 \exists \delta > 0 \forall x \in U_{\delta} (a) \cap E : |f(x)| < C $ \\ % pic3
+	Тогда $ \exists C > 0 \exists \delta > 0 \forall x \in U_{\delta} (a) \cap E : |f(x)| < C $ \\
+	По опр. $ \exists \delta > 0, f(\dot{U_{\delta}}(a) \cap E) \subset U_1(y) \Rightarrow \forall x \in U_{\delta} (a) \cap E \ |f(x) | < c $ \\
+	$ c = \max(|y-1|, |y+1|, \underbrace{|f(a)| + 1}_{\text{если } a \in E} )$ 
 	\item Стабилизация знака \\
 	Пусть  $ \lim\limits_{x \rightarrow a} f(x)  = y \in \overline{\R}, y >0$ \\
 	Тогда $ \exists \delta > 0 \forall x \in \dot{U_\delta} (a) \cap E f(x) > 0 $
@@ -51,7 +58,10 @@ $ f : E \setminus \{a\} \rightarrow \R, y \in \overline{\R}$
 	a - пред точка E \\
 	$   \lim\limits_{x \rightarrow a} f(x) = y_1 \in \overline{R},  \lim\limits_{x \rightarrow a} f(x) = y_2 $ \\
 	Пусть $ \forall x \in E : f(x) \leq g(x) $\\
-	Тогда $ y_1 \leq y_2 $\\ % pic4
+	Тогда $ y_1 \leq y_2 $\\
+	$ x_n \rightarrow a, x_n \in E \setminus \{a\} $ \\
+	$ f(x_n) \rightarrow y_1, g(x_n) \rightarrow y_2 $ \\
+	$ \forall n : f(x_n) \leq g(x_n)  \Rightarrow y_1 \leq y_2 $
 	\item Теорема о зажатой функции \\
 	Пусть a  предельная точка E $ f,g,h : E \rightarrow \R $\\
 	$  \lim\limits_{x \rightarrow a} f(x) =  \lim\limits_{x \rightarrow a} h(x) \in \R $ \\
@@ -78,7 +88,12 @@ $ \exists \lim\limits_{x \rightarrow a} = y \in \R $ \\
 2. Пусть $ f : E \rightarrow \R a - $ пред точка $ E_-, E_+ $\\
 $ \exists  \lim\limits_{x \rightarrow a_-} f(x) = y_1,  \lim\limits_{x \rightarrow a_+} f(x) = y_2, y_1 = y_2 \Rightarrow  \lim\limits_{x \rightarrow a} f(x) = y $ \\
 1. $ \exists \delta > 0 f(\dot{U_{\delta}}(x) \cap E ) \subset U(y)  \Rightarrow  f(\dot{U_{\delta}}(x) \cap E_- ) \subset U(y)   $
-2. %pic6
+2. Зафикс $ U(y) $ \\
+$ \forall \delta_1 > 0 : f(\dot{U_{\delta_1}} (a) \cap E_-) \subset U(y) $ \\
+$ \exists \delta_2 > 0 : f(\dot{U_{\delta_2}}(a) \cap E_+) \subset U(y) $ \\
+$ \delta = \min(\delta_1, \delta_2) $ \\
+$ f(\underbrace{\dot{U_{\delta}}(a) \cap E}) \subset U(y) $ \\
+$ (\dot{U_{\delta}}(a) \cap E_-) \cup (\dot{U_{\delta}}(a) \cap E_+) $
 
 \begin{definition}
 	 $ f : E \Rightarrow \R $ называется монотонно возрастающей если $ \forall x, y \in E, x \leq y \Rightarrow f(x) \leq f(y)$

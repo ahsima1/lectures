@@ -1,0 +1,166 @@
+$ S = \{a\} $\\
+$ (a) - $ идеал, порождённый a, главный идеал\\
+$ (a) = \{ ra + ma | r \in R, m \in \Z \} $\\
+Если R кольцо с 1, то $ (a) = \{ra\} = Ra $\\
+\begin{definition}
+	Коммутативная область целостности R - область главных идеалов, если каждый идеал в ней главный. (ОГИ, PID (principal ideal domain))  
+\end{definition}
+Пример: $ R = \Z $ \\
+$ (n) = \Z \cdot n = n\Z $\\
+$ n = 0 \ \ (0) $\\
+$ n = 1 \ \ \Z $ \\
+$ \Z $ - ОГИ \\
+$ K[x], K $ - поле - ОГИ \\
+Пример: K - поле \\
+$ K[x, y] $ \\
+$ (x, y) = \{x\cdot f(x, y) + y\cdot g(x, y)  | f, g \in K[x, y] \}  = \{ h \in K[x, y] | h(0, 0) = 0 \}$ \\
+$ h = \sum c_{i,j} x^iy^j = \sum_i \sum_j c_{i, j} x^i y^j + \sum_i c_{0, j} y_j $ \\
+$ h(0, 0) = 0, h(x, y) = xf(x, y) + yg(x , y) $\\
+$ (x, y) $ не главный \\
+$ (x, y) = (h) = \{ h \cdot r | r \in K[x, y] \} $\\
+$ x \in (h) $\\
+$ y \in (h) $ \\
+$ h | x \Rightarrow h \in \{ c, cx | c \in K^* \} $\\
+$ h | y \Rightarrow h \in \{ c, cy | c \in K^* \} $ \\
+$ h = const \neq 0 $\\
+$ h(x, y) = xf(x, y) + yg(x, y) $\\
+\Subsection{Операции над идеалами} 
+
+R, $ \{ I_{\alpha} \}_{a \in A} \ \ I_{\alpha} -  $ идеалы в R \\
+$ \bigcap_{a \in R} I_{\alpha} - $ идеал в R \\
+$ \forall \alpha, 0 \in I_{\alpha} \Rightarrow 0 \in  \bigcap_{a \in R} I_{\alpha} $\\
+$ a, b \in  \bigcap_{a \in R} I_{\alpha} $ \\
+$ \forall \alpha \in A, a, b \in I_{\alpha} $\\
+$ \forall a \in A, a \pm b \in I_{\alpha} $\\
+$ r \in R, a \in  \bigcap_{a \in R} I_{\alpha} , a\pm b in  \bigcap_{a \in R} I_{\alpha} $\\
+Объединение идеалов идеалом быть не обязано \\
+$ 2 \Z \cup 3\Z | 3 + (-2) \notin  2 \Z \cup 3\Z$ \\
+$ I_1, ..., I_n $ - идеалы в R \\
+$ I_1 + ... + I_n = \{ a_1 + a_2 + .. + a_n | a_j in I_j \}$ \\
+$ I_1 I_2 = \{a_1b_1 + ... + a_nb_n | a_j \in I_j, b_j \in I_j \} $\\
+
+$ n\Z \cap m\Z  = LCM(n,m)\Z $\\
+$ n\Z \cdot m\Z = nm\Z $\\
+$ n\Z + m\Z = GCD(n, m) \Z $ \\
+
+\Subsection{Сравнение по модулю идеала} 
+
+R - кольцо с 1\\
+I - двусторонний идеал в R \\
+$ a \equiv b(I) $ если $ a - b \in I $ \\
+$ \equiv $ - область эквивалентности \\
+$ a \equiv a(I), a - a = 0 \in I $\\
+$ a \equiv b (I) , a - b \in I, b - a \in I, \b \equiv a(I) $ \\
+$ a \equiv b(I) , b \equiv c(I) $ \\
+$ a - b \in I, b - c \in I, a - c = (a-b) + (b - c) \in I $ \\
+$ [a] $ - класс эквивалентности (сравнимости) \\
+$ [a] = a + I = \{a_i | i \in I \} $\\
+Если $ a \equiv b(I), c \equiv d(I) $ \\
+$ a + c \equiv (b + d)(I) $ \\
+$ ac \equiv bd(I) $ \\
+
+$ a - b  \in I, c - d \in I, (a+c) - (b+d) \in I \Rightarrow a+c \equiv b+d(i) $\\
+
+$ a - b \in I, c - d \in I, (a-b)c \in I, b(c - d) \in I $\\
+$ ac - bc + bc -bd \in I $\\
+$ ac \equiv bd (I) $\\
+
+\Subsection{Гомоморфизмы колец} 
+$ R_1, R_2 - $ кольца \\
+\begin{definition}
+	c$ \phi : R_1 \rightarrow R_2 $ называется гомоморфизмом, если \\
+	$ \phi(a+b) = \phi(a) + \phi(b)$ \\
+	$ \phi(ab) = \phi(a) \phi(b) $
+\end{definition}
+
+$ \phi(0) = \phi(0+0) = \phi(0) + \phi(0) \Rightarrow \phi(0_{R_1}) = 0_{R_2} $\\
+$ \ker \phi = \{ a \in R | \phi(a) = 0 \} $\\
+Ядро гомоморфизма $ \phi $ \\
+$  \phi : R_1 \rightarrow R_2 $ - гомоморфизм \\
+Тогда $ \ker \phi $ - двусторонний идеал в R \\
+\begin{proof}
+	$ 0 \in \ker \phi $
+	$ a, b \in \ker \phi $ \\
+	$ \phi (a \pm b) = \phi(a) \pm \phi(b) \ \ 0+0=0$
+	$ a \pm b \in  \ker \phi $\\
+	$ a \in \ker \phi $ \\
+	$ r \in R$ \\
+	$ \phi(ra) : \phi(r) \cdot \phi(a) = \phi(r) \cdot 0 = 0 \Rightarrow ra \in \ker \phi $\\
+	$ \phi (ar) = \phi(a) \phi(r) = 0 \cdot \phi(r) = 0 \Rightarrow ar \in \ker \phi $\\ 
+\end{proof}
+
+\Subsection{Факторкольцо по двустороннему идеалу}
+
+$ R, I $ - двусторонний идеал в R \\
+$ a \equiv b (I) $\\
+$ R / \equiv $ - мн-во всех классов сравнимости \\
+Введём на $ R/\equiv $ структуру кольца \\
+$ [a] + [b] = [a+b] $\\
+$ [a][b] = [ab] $\\
+Проверка корректности \\
+$ [a] = [c], [b] = [d] $ \\
+$ [a+b] = [c+d], [ab] = [cd] $\\
+$ a+b \equiv c+d(I) $\\
+$ ab = cd (I) $\\
+%pic1
+$ R / \equiv, +, \cdot  $ - кольцо \\
+Факторкольцо R по идеалу I \\
+$ R / I $ \\
+$ R = \Z , I = 2\Z $ \\
+$ \Z / 2\Z = \{ [0], [1] \} $ \\
+%pic2
+Упражнение $ \Z / 3\Z $ \\
+Пример $ \Z / 4/Z = \{ [0], [1], [2], [3] \} $ - кольцо с делителями 0 \\
+$ [2] \cdot [2] = 0 $ 
+
+$ \phi : R \rightarrow R / I $ \\
+$ a \mapsto [a] $ \\
+$ \phi(a + b) = [a+b] = [a] + [b] $\\
+$ \phi(ab) = [ab] = [a][b] $\\
+$ \phi $ - гомоморфизм сюръективный \\
+$ \phi(a) = [0]  \Leftrightarrow [a] = [0] \Leftrightarrow a \equiv 0(I) \Leftrightarrow a \in I $\\
+Всякий двусторонний идеал в R есть ядро некоторого гомоморфизма \\
+\begin{definition}
+	$ R = \Z, I = n\Z $ \\
+	$ \Z / n\Z $ - кольцо вычетов по модулю n\\
+	$ \Z / (n) $
+\end{definition}
+
+\Subsection{Максимальные идеалы}
+
+R - коммутативное кольцо \\
+$ I \neq R $ называется максимальным идеалом если для любого J т.ч. $ I \subseteq J \subseteq R $ либо $ I = J $ либо $ R = J $ \\
+\begin{theorem}
+	R - коммутативное кольцо, I - идеал \\
+	$ \Leftarrow R / I $ поле $ \Leftrightarrow $ I - максимальный идеал \\
+	$ R / I \ni x \neq 0_{R /I} $ \\
+	$ x = [a], a \notin I $ \\
+	$ I \subsetneqq Ra + I \subseteq R $\\
+	$ Ra + I = R $ \\
+	$ 1 \in Ra + I $ \
+	$ 1 = ra + i, r \in R, i \in I $\\
+	$ [1] = [ra + i] = [r] \cdot [a] + [i] = [r][a] = [r]\cdot x $\\
+	$ x^{-1}  = [r] \Rightarrow R / I $ - поле \\
+	$ \Rightarrow R / I $ - поле \\
+	$ I \subsetneqq Y \subseteq R $ \\
+	$ a \in Y \setminus I $ \\
+	$ [a] \neq [0] $ \\
+	$ \Rightarrow \exists r \in R, [r] [a] = [1] $ \\
+	$ r - ra \in I $ \\
+	$ 1 = ra + i, r \in Y, i \in I \subseteq J \Rightarrow 1 \in Y  \Rightarrow J = R $ 
+\end{theorem}
+ 
+ $ 1 \in R - $ комм \\
+ $ a | b \Leftrightarrow (a) \supseteq (b) $ 
+ $ b \in (b) \subseteq (a) $ \\
+ $ b \in (a) $ \\
+ $ b = a \cdot c $ 
+
+
+
+
+
+
+
+
+   

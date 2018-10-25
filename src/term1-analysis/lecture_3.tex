@@ -3,50 +3,72 @@
 
 \Subsection{Основные определения}
 
-Числовая последовательность - отображение $ a: \N \rightarrow \R $ \\
-$ \N \rightarrow \R $ \\
-$ n \rightarrow a_n $ \\
-$ a_n = 3n^2 - \sqrt{2} n+ \frac{5}{2} $ \\
-$ a_n = a_{n-1} + n^2, a_1 = 1$\\
+\begin{definition}
+	Числовая последовательность - отображение $ a: \N \rightarrow \R $ \\
+	$ \N \rightarrow \R $ \\
+	$ n \rightarrow a_n $ \\
+	$ a_n = 3n^2 - \sqrt{2} n+ \frac{5}{2} $ \\
+	$ a_n = a_{n-1} + n^2, a_1 = 1$
+\end{definition}
 
-Последовательность ограничена сверху, если существует  $ C \in \R : \forall i \in \N : a_i < C $ \\
-Последовательность ограничена снизу, если существует  $ C \in \R : \forall i \in \N : a_i > C $ \\
-Последовательность ограничена, если она ограничена и сверху и снизу.
+\begin{definition}
+	Последовательность ограничена сверху, если существует  $ C \in \R : \forall i \in \N : a_i < C $  \\
+	Последовательность ограничена снизу, если существует  $ C \in \R : \forall i \in \N : a_i > C $ \\
+	Последовательность ограничена, если она ограничена и сверху и снизу.
+\end{definition}
 
-Монотонные последовательности \\
-Неубывающая последовательность: $ \forall i \in \N : a_i \leq a_{i+1} $\\
-Возрастающая $ < $ \\
-Невозрастающая $ a_i \geq a_{i+1} $\\
-Убывающая $ > $ \\
-2, 4 - строго монотонные.
+\begin{definition}
+	Монотонные последовательности \\
+	Неубывающая последовательность: $ \forall i \in \N : a_i \leq a_{i+1} $\\
+	Возрастающая $ < $ \\
+	Невозрастающая $ a_i \geq a_{i+1} $\\
+	Убывающая $ > $ \\
+	2, 4 - строго монотонные.\\
+	Монотонные, начиная с некоторого места \\
+	Неубывающая $ \exists n \in \N \forall i > n : a_i \leq a_{i+1} $\\
+\end{definition}
 
-Монотонные, начиная с некоторого места \\
-Неубывающая $ \exists n \in \N \forall i > n : a_i \leq a_{i+1} $\\
 
 \Section{Предел последовательности}
 
-$ \eps$-окрестность - $ (x - \eps, x+\eps) $\\
-\begin{enumerate}
-	\item  Окрестность x - это $ \eps $ окрестность x для $ \eps > 0 $
-	\item Окрестность x - произвольный интервал $ (a ,b) : a < x < b$
-	\item Окрестность x - $U \subset \R :  U \supset (a, b) , a, b \in \R, a < x < b $ 
-\end{enumerate}
+\begin{definition}
+	$ \eps$-окрестность - $ (x - \eps, x+\eps) $
+	\begin{enumerate}
+		\item  Окрестность x - это $ \eps $ окрестность x для $ \eps > 0 $
+		\item Окрестность x - произвольный интервал $ (a ,b) : a < x < b$
+		\item Окрестность x - $U \subset \R :  U \supset (a, b) , a, b \in \R, a < x < b $ 
+	\end{enumerate}
+\end{definition}
+
 Любая окрестность х содержит $\eps $ окрестноть х с $ \eps > 0 $ \\
-Пусть $(a_i)$ - последовательность, $ x \in \R $ Говорят, что $a_i$ сходится к x(имеет х своим пределом) если $ \forall U $ окрестности $x \exists N \in \N : a_i \in U $ при всех $ i \geq N $ \\
-Понятие предела не изменится, если мы определения окрестности 1 перейдём к определению 3. Если нужное свойство выполняется для класса 3, то оно, в частности, выполняется и для $ \eps $ окрестностей. \\
-Предположим оно выполнено для всех $ \eps $ окрестностей. Тогда $ U \supset(a, b), (a,b) > (x-\eps, x+ \eps) \eps > 0 \Rightarrow \exists N, \forall i \in \N, a_i \in U$  \\
-Определение 2: Пусть $(a_i), X \in \R$ сходится к Х, если $\forall U $ 	числа Х $, \{ i \in \N \mid a_i \notin U \} $ конечно \\
-% -------pic1---------
-$ \lim a_i = x $ \\
-$ a_i \rightarrow x $ \\
+\begin{definition}
+	Пусть $(a_i)$ - последовательность, $ x \in \R $ Говорят, что $a_i$ сходится к x(имеет х своим пределом) если $ \forall U $ окрестности $x \exists N \in \N : a_i \in U $ при всех $ i \geq N $ \\
+	Понятие предела не изменится, если мы определения окрестности 1 перейдём к определению 3. Если нужное свойство выполняется для класса 3, то оно, в частности, выполняется и для $ \eps $ окрестностей. \\
+	Предположим оно выполнено для всех $ \eps $ окрестностей. Тогда $ U \supset(a, b), (a,b) > (x-\eps, x+ \eps) \eps > 0 \Rightarrow \exists N, \forall i \in \N, a_i \in U$  \\
+\end{definition}
+\begin{definition}
+	Пусть $(a_i), X \in \R$ сходится к Х, если $\forall U $ 	числа Х $, \{ i \in \N \mid a_i \notin U \} $ конечно 
+\end{definition}
+\noindent Определение 1 $\Rightarrow$ Определение 2 \\
+$ Y = \{ i \in \N | a_i \notin U \} \subset \{ 1, 2, \dots, N - 1 \} \Rightarrow $ конечность Y \\
+Определение 2 $\Rightarrow$ Определение 1 \\ 
+$ N = \max Y + 1, \forall i \geq N : i \notin Y$ т.е. $ a_i \in U$
+\begin{definition}
+	$ \lim a_i = x  \Leftrightarrow a_i \rightarrow x $ \\
+\end{definition}
+
 Последовательность имеет не больше одного предела.
-Предп: $ a_i \rightarrow x, a_i \rightarrow y, x < y $ \\
-$ \eps = \dfrac{y-x}{2} $ \\
-$Y_1 = \{ i \mid a_i \notin U_{\eps} (x) \} $конечно\\
-$ Y_2 = \{ i \mid a_i \notin U_{\eps} (y) \} $конечно\\
-$ \N = Y_1 \cup Y_2 $ конечно
+\begin{proof}
+	Предположим $ a_i \rightarrow x, a_i \rightarrow y, x < y $ \\
+	$ \eps = \dfrac{y-x}{2} $ \\
+	$Y_1 = \{ i \mid a_i \notin U_{\eps} (x) \} $конечно\\
+	$ Y_2 = \{ i \mid a_i \notin U_{\eps} (y) \} $конечно\\
+	$ \N = Y_1 \cup Y_2 $ конечно
+\end{proof}
+
 
 \Subsection{Свойства пределов}
+
 Предл(предельный переход в неравенстве) \\
 Пусть $ a_i \rightarrow x, b_i \rightarrow y $ \\
 Предп. $ \forall i \in \N : a_i \leq b_i. $Тогда $ x\leq y $ \\
@@ -61,38 +83,48 @@ $ x- \eps <  a_n \leq b_n < y+\eps = \eps x-\eps$\\
 Следствие: Пусть $ a_i \leq C \forall i; a_i \rightarrow x \Rightarrow x \leq C $\\
 
 \begin{theorem} Теорема о сжатой последовательности\\
-Пусть $ a_i \rightarrow x, b_i \rightarrow x $ \\
-$ c_i \ \ \forall i, a_i \leq c_i \leq b_i $ \\
-\begin{proof}
-Возьмём $ \eps > 0 $ и док-м, что $ \exists N \in \N $ \\
-$ \forall i \geq N : c_i \in U_{\eps} (x) $ \\
-$ \exists N_1 : \forall i \geq N_1 : a_i \in U_{\eps} (x) $\\
-$ \exists N_2 : \forall i \geq N_2 : b_i \in U_{\eps} (x) $\\
-$ \Rightarrow N = max(N_1, N_2) $ обладает нужным свойством. \\
-Начиная с некоторого номера - менять/откидывать некоторые члены, предел от этого не ипзменится. \\
+	Пусть $ a_i \rightarrow x, b_i \rightarrow x $ \\
+	$ c_i \ \ \forall i, a_i \leq c_i \leq b_i $ 
+	\begin{proof}
+		Возьмём $ \eps > 0 $ и док-м, что $ \exists N \in \N $ \\
+		$ \forall i \geq N : c_i \in U_{\eps} (x) $ \\
+		$ \exists N_1 : \forall i \geq N_1 : a_i \in U_{\eps} (x) $\\
+		$ \exists N_2 : \forall i \geq N_2 : b_i \in U_{\eps} (x) $\\
+		$ \Rightarrow N = max(N_1, N_2) $ обладает нужным 		свойством. \\
+		Начиная с некоторого номера - менять/откидывать некоторые члены, предел от этого не ипзменится. \\
 
-Если сушествует $ lim a_i = x $, то $(a_i)$ - ограничена\\
-% ---pic2 ----
-\end{proof}
+		Если сушествует $ \lim a_i = x $, то $(a_i)$ - ограничена\\
+		$ \lim a_i = x $ \\
+		Проверим огр-ть сверху \\
+		$ \exists N : \forall i \geq N, a_i \in U_1 (x) $ \\
+		в части $ a_i < x + 1 $ \\
+		$ C = \max( a_1, \dots, a_{N-1}, x + 1) $ \\
+		Очевидно $ \forall i \in \N : a_i \leq C $ \\
+		Аналогично $ a_i $ ограничено снизу 
+	\end{proof}
 \end{theorem}
 
 Если последовательность неубывающая и ограничена свеху, то она сходится
 Если последовательность невозрастающая и ограничена снизу, то она сходится
 
-$ x = \sup\{a_i | i \in \N\} $ \\
-$ a_i \rightarrow x $\\
-Возьмём $ \eps > 0 $\\
-$ x - \eps < x \Rightarrow x - \eps  - $ не верхняя граница $ \Rightarrow \exists N \in \N, a_N > x-\eps $ \\
-$ a_i $ - неубывающая $ \Rightarrow \forall i \geq N : a_i > x-\eps \Rightarrow \forall i \geq N : a_i \in U_{\eps} (x)$\\
+\begin{proof}
+	$ x = \sup\{a_i | i \in \N\} $ \\
+	$ a_i \rightarrow x $\\
+	Возьмём $ \eps > 0 $\\
+	$ x - \eps < x \Rightarrow x - \eps  - $ не верхняя граница $ \Rightarrow \exists N \in \N, a_N > x-\eps $ \\
+	$ a_i $ - неубывающая $ \Rightarrow \forall i \geq N : a_i > x-\eps \Rightarrow \forall i \geq N : a_i \in U_{\eps} (x)$\\
+\end{proof}
 
 \Subsection{Арифметические действия с пределами} 
 
-Пусть есть $ a_i \rightarrow x, b_i \rightarrow y $ \\
-$ |a_i| \rightarrow |x| $\\
-$ a_i + b+i \rightarrow x+y $ \\
-$ a_i - b_i \rightarrow x - y$\\
-$ a_i \cdot b_i \rightarrow xy $ \\
-$ b_i \neq 0 \ \  \forall i, \dfrac{ a_i}{b_i} \rightarrow \dfrac{x}{y} $\\
+Пусть есть $ a_i \rightarrow x, b_i \rightarrow y $ 
+\begin{enumerate}
+\item $ |a_i| \rightarrow |x| $
+\item $ a_i + b+i \rightarrow x+y $ 
+\item $ a_i - b_i \rightarrow x - y$
+\item $ a_i \cdot b_i \rightarrow xy $ 
+\item $ b_i \neq 0 \ \  \forall i, \dfrac{ a_i}{b_i} \rightarrow \dfrac{x}{y} $
+\end{enumerate}
 
 $ | | a_i | - | x| | \leq | a_i - x | $ \\
 2. $ \eps > 0$
@@ -102,26 +134,29 @@ $ | a_i b_i - xy | \leq  |a_i b_i - xb_i| + | xb_i - xy | $ \\
 $ \exists C > 0 : | b_i | \leq C \forall i \in \N $ \\
 $ | a_i b_i - xy | \leq C | a_i - x| + |x | \cdot | b_i - y | $\\
 Возьмём $\eps > 0 $ 
-Тогда $ \exists N \in \N \forall i \geq N :\\ |a - x| < 
-\frac{\eps}{2C} \\
-|b_i - y | < \frac{\eps}{2|x|} $(при х $\neq 0$)\\
-%----pic3----											
+Тогда $ \exists N \in \N \forall i \geq N : \left\{ \begin{array}{ll} |a - x| < 
+\dfrac{\eps}{2C} \ \ a \in U_{\frac{\eps}{2c}} (x) \\
+\\
+|b_i - y | < \dfrac{\eps}{2|x|} \text{(при х }\neq 0) \end{array} \right. $ \\											
 $ |ab_i - xy| < C \cdot \frac{\eps}{2C} + \frac{\eps}{2} = \eps $
 
-5. Достаточно доказать, что $\frac{1}{b_i} \rightarrow \frac{1}{y}$ \\
-$|\dfrac{1}{b_i} - \dfrac{1}{y}| = |\dfrac{y-b_i}{b_i y}| = \dfrac{|b_i - y|}{|b_i||y|}$ 	\\
-$ \exists  N_0 \in \N \ \forall i > N_0 : |b_i| > \frac{|y|}{2} $\\
-$ y > 0 : b_i \in U_{\frac{y}{2}}(y) \Rightarrow b_i  > \frac{y}{2} > 0 $\\
-$ y < 0	:  b_i \in U_{-\frac{y}{2}}(y) \Rightarrow b_i  < \frac{y}{2} < 0 $ \\
-$ |\dfrac{1}{b_i} - \dfrac{1}{y}| \leq |\dfrac{b_i - y}{|y|^2 / 2}| $ \\
+5. Достаточно доказать, что $\dfrac{1}{b_i} \rightarrow \dfrac{1}{y}$ \\
+$\left|\dfrac{1}{b_i} - \dfrac{1}{y} \right| = \left|\dfrac{y-b_i}{b_i y}\right| = \dfrac{|b_i - y|}{|b_i||y|}$ 	\\
+$ \exists  N_0 \in \N \ \forall i > N_0 : |b_i| > \dfrac{|y|}{2} $\\
+$ y > 0 : b_i \in U_{\dfrac{y}{2}}(y) \Rightarrow b_i  > \dfrac{y}{2} > 0 $\\
+$ y < 0	:  b_i \in U_{-\dfrac{y}{2}}(y) \Rightarrow b_i  < \dfrac{y}{2} < 0 $ \\
+$ \left|\dfrac{1}{b_i} - \dfrac{1}{y}\right| \leq \left|\dfrac{b_i - y}{|y|^2 / 2}\right| $ \\
 Возьмём $ \eps > 0 $\\
 $ \exists N \geq N_0 : \forall i \geq N_0 $
-%-----pic4-----
+$ \exists N \geq N_0 : \forall i \geq N_0, |b_i - y | < \eps \cdot \dfrac{|y|^2}{2} $ \\
+Отсюда при $ i \geq N : \left| \dfrac{1}{b_i} - \dfrac{1}{y} \right| < \dfrac{\eps\cdot\dfrac{|y|^2}{2}}{\dfrac{|y|^2}{2}} = \eps $ \\
+То $ \dfrac{1}{b_i} \rightarrow \dfrac{1}{y} $ 
 
-\subsection{Бесконечные пределы} 
+\Subsection{Бесконечные пределы} 
+
 Пусть $a_i$ последовательность.
 $ a_i $ стремится к $ +\infty$ если $ \forall C \in \R \  \exists N \in \N : \forall i \geq N : a_i > C $ \\
-Определение станет аналогичным определению конечного предела, если определить окресность $ +\infty $ как произвольный открытый луч $ (C, +\infty)$ \\
+Определение станет аналогичным определению конечного предела, если определить окрестность $ +\infty $ как произвольный открытый луч $ (C, +\infty)$ \\
 Равносильное определение: $ \{i \mid a_i \neq (C, +\infty) \} $ - конечно \\
 Последовательность не имеет конечного предела - последовательность расходится \\
 Пусть $a_i$ последовательность.
@@ -132,14 +167,31 @@ $ ( C, +\infty )$ - окрестность $+\infty$ \\
 $ (-\infty, C) $ \\
 $ (-\infty, C) \cup ( C, +\infty), C > 0 $  \\
 
-Теорема: Не ограниченная сверху неубывающая последовательность стремится к $ + \infty $ \\
-Не ограниченная снизу невозрастающая последовательность стремится к $ -\infty $ \\
-% ---------pic5---------
+\begin{theorem}
+	Не ограниченная сверху неубывающая последовательность стремится к $ + \infty $ \\
+	Не ограниченная снизу невозрастающая последовательность стремится к $ -\infty $ \\
+	\begin{proof}
+		Пусть $ c \in \R $ \\
+		a не огр сверху $ \Rightarrow \exists N : a_N > c \Rightarrow \forall i \geq N, a_i > c $
+	\end{proof}
+\end{theorem}
+
 $ a_i \rightarrow \infty \Leftrightarrow |a_i | \rightarrow +\infty $ \\
-Бесконечно малая посл-ть $ a_i \rightarrow 0 $ \\
-Бесконечно большая посл-ть $ a_i \rightarrow \infty $ \\
-Теорема $\forall i : a_i \neq 0 \Rightarrow (a_i) \rightarrow 0 \Leftrightarrow (\dfrac{1}{a_i}) \rightarrow \infty $\\
-%----pic6-----
+\begin{definition}
+	Бесконечно малая посл-ть $ a_i \rightarrow 0 $ \\
+	Бесконечно большая посл-ть $ a_i \rightarrow \infty $ \\
+\end{definition}
+
+\begin{theorem}
+	$ (a_i) $ - посл-ть, $\forall i : a_i \neq 0 \Rightarrow (a_i) $ бесконечно малая $ \Leftrightarrow (\dfrac{1}{a_i}) \rightarrow \infty $ \\
+	$ (a_i) - $ б.м. $ \begin{array}{ll}
+		 \Leftrightarrow \forall \eps > 0 \  \{ i | a_i \notin U_{\eps} (0) \} \text{кон} \\
+		 \Leftrightarrow \forall \eps > 0 \ \{ i | |a_i|>\eps \} \text{кон} \\
+		 \Leftrightarrow \forall \eps > 0 \  \{ i | |a_i^{-1}| < \eps^{-1} \} \text{кон} \\
+		 \Leftrightarrow \forall c > 0 \  \{ i | |a_i^{-1}| < c \} \text{кон} \\
+	\end{array}$ \\
+	$ \Leftrightarrow a_i^{-1} \rightarrow \infty $
+\end{theorem}
 Замечание - сумма, разность, произведение бесконечно малых - бесконечно малая посл. \\
 Пусть $(a_i) $ бесконечно большая, $(b_i) $ ограниченная, тогда их сумма бесконечно большая. \\
 $ U_C(\infty) =  (-\infty, C) \cup ( C, +\infty) $ \\
@@ -160,15 +212,18 @@ $ a \cdot (+\infty) = (-\infty), a < 0 $\\
 $ a_n \leq b_n, a_n \rightarrow x \in \overline{\R}, b_n \rightarrow y \in \overline{\R} $ \\
 Тогда $ x \leq y $\\
 % ----------pic7--------------
-Пр. \\
-1. $lim x_n = +\infty, y_n $ огр. снизу $ \Rightarrow x_n + y_n \rightarrow +\infty $
-2. $lim x_n = -\infty, y_n $ огр. сверху $ \Rightarrow x_n + y_n \rightarrow -\infty $
-3. $ x_n \rightarrow +\infty (-\infty) \ y_n \geq C > 0 \ \forall n \in  \N \Rightarrow x_n y_n \rightarrow +\infty ( -\infty) $ \\
-4. $ x_n \rightarrow a \neq 0, y_n \neq 0, y_n \rightarrow 0 \Rightarrow \dfrac{x_n}{y_n} \rightarrow \infty$ \\
-5. $ x_n \rightarrow a \in \R y_n \rightarrow \infty \Rightarrow \dfrac{x_n}{y_n} \rightarrow 0 $ \\
-6. 
-7. % ---- pic8---------
-3. Пусть $ E > 0 \  \exists N, \forall i \geq N, x_i > \dfrac{E}{C}, x_i y_i > \dfrac{E}{C} C = E $ \\
+
+\begin{enumerate}
+	\item $lim x_n = +\infty, y_n $ огр. снизу $ \Rightarrow x_n + y_n \rightarrow +\infty $
+	\item $lim x_n = -\infty, y_n $ огр. сверху $ \Rightarrow x_n + y_n \rightarrow -\infty $
+	\item $ x_n \rightarrow +\infty (-\infty) \ y_n \geq C > 0 \ \forall n \in  \N \Rightarrow x_n y_n \rightarrow +\infty ( -\infty) $
+	\item $ x_n \rightarrow a \neq 0, y_n \neq 0, y_n \rightarrow 0 \Rightarrow \dfrac{x_n}{y_n} \rightarrow \infty$
+	\item $ x_n \rightarrow a \in \R y_n \rightarrow \infty \Rightarrow \dfrac{x_n}{y_n} \rightarrow 0 $
+	\item $ x_n \rightarrow \infty, y_n \rightarrow b \in \R  \Rightarrow \dfrac{x_n}{y_n} \rightarrow \infty $ 
+	\item $ (a_i) $ - бесконечно большая, $ (b_i) $ - ограниченная. Тогда $ (a_i + b_i) $ - бесконечно большая
+\end{enumerate}
+
+\noindent 3. Пусть $ E > 0 \  \exists N, \forall i \geq N, x_i > \dfrac{E}{C}, x_i y_i > \dfrac{E}{C} C = E $ \\
 4. $ \exists E > 0, x_n \rightarrow a \Rightarrow \exists N_0 : |x_i| \geq \dfrac{|a|}{2} $ при  $ i \geq N_0$ \\
 $ \dfrac{x_n}{y_n} $ беск. больш $ \Leftrightarrow \dfrac{y_n}{x_n} $ беск мал. $ \dfrac{1}{|x_i|} \leq \dfrac{2}{a} \Rightarrow \dfrac{1}{x_i}$ ограниченная \\
 $ y_n \cdot \left( \dfrac{1}{x_n} \right)  $\\

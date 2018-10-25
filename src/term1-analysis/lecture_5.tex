@@ -1,13 +1,13 @@
 
-7-адический показатель \\
-$ v_7\left( 7^b \dfrac{p}{l} \right) $ \\
-$ v_7 \left( \dfrac{3}{14} \right)  = -1 $ \\
-7-адическое расстояние \\
-$ \rho (a, b) = 7  \ \ \ -v_7(a - b) $ \\
-$ \rho (a, a) = 0 $ \\
-$ a_i - $ последовательность Коши \\
-$ \forall \eps > 0, \exists N \in \N, \forall i,j > N, v_7(a, b) < \eps$ \\
-$ M \setminus \sim = \mathbb{Q}_2 $ \\
+%7-адический показатель \\
+%$ v_7\left( 7^b \dfrac{p}{l} \right) $ \\
+%$ v_7 \left( \dfrac{3}{14} \right)  = -1 $ \\
+%7-адическое расстояние \\
+%$ \rho (a, b) = 7  \ \ \ -v_7(a - b) $ \\
+%$ \rho (a, a) = 0 $ \\
+%$ a_i - $ последовательность Коши \\
+%$ \forall \eps > 0, \exists N \in \N, \forall i,j > N, v_7(a, b) < \eps$ \\
+%$ M \setminus \sim = \mathbb{Q}_2 $ \\
 \Section{Верхние и нижние пределы. Частичные пределы}
 
 \begin{definition}
@@ -40,12 +40,17 @@ $ y_n \leq z_n \Rightarrow \lim y_n \leq \lim z_n $ \\
 			Пусть $ A = \varlimsup x_n $ Предположим $ A \in \R $\\
 			$ u_n = \left( A - \dfrac{1}{n}, A + \dfrac{1}{n} \right) $ \\
 			$ x_{m_1} \in u_1, x_{m_2} \in u_2 $ \\
-			$ y_n = \sup\limits_{k \geq n} x_k $ \\
-			Предпол. $ x_1 \notin u_1 $ % --pic3,4 
+			$ y_n = \sup\limits_{k \geq n} x_k \rightarrow A \Rightarrow \exists N : \left\{ \begin{array}{ll} y_n < A + \eps \Rightarrow \forall n \geq N x_n < A + \eps \\ y_n > A - \eps \end{array} \right. $ \\
+			Предпол. $ x_i \notin u_1 \ \forall i \left[ \begin{array}{ll} x_i < A - \eps \\ x_i > A + \eps \end{array} \right.$\\ % --pic3,4 
+			$\hspace*{2cm} \Rightarrow \forall n \geq N : x_i < A-\eps  $ \\
+			$ \hspace*{2cm} \Rightarrow y_n \leq A - \eps $\\ 
+			Т.о. $ \exists m_1 \in \N : x_{m_1} \in U_1 $\\
+			Аналогично $ \exists m_2 > m_1, x_{m_2} \in U_2 $\\
 			
-			Предп $ \exists A' > A : A' - $ частичный предел $ x_n $, т.е. $ \exists x_{m_k} \rightarrow A' $ \\
-			$ \eps = (A' - A) / 2 $ \\
-			% pic5
+			Предп $ \exists A' > A : A' - $ частичный предел $ x_n $, т.е. $ \exists x_{m_k} \rightarrow A' \ \  \eps = (A' - A) / 2 $ \\
+			$ \exists N : \forall k \geq N \ x_{m_k} > A' - \eps $ \\
+			$ y_{m_k} \geq x_{m_k} > A - \eps $ \\
+			$ \lim y_n = \lim y_{m_k} \geq A' - \eps = \dfrac{A'+A}{2} > A $
 		\end{proof}
 		\begin{proof}
 			Пусть $ \exists \lim x_n = A \Rightarrow $ любой частичный предел равен $ A $  \\
@@ -113,19 +118,35 @@ $ y_n \leq z_n \Rightarrow \lim y_n \leq \lim z_n $ \\
 	$  \sum_{k=1}^{\infty} \dfrac{1}{k} = +\infty $ \\
 \end{example}
 \begin{properties}
-	1. $ \sum(a_k + b_k) = \sum a_k + \sum b_k $ если $a_k $ $ b_k $ сходятся.\\
-	2. $ \sum (c \cdot a_k ) = c \cdot \sum a_k $ \\
-	3. Если ряд сходится, то сходится и имеет ту же самую сумму ряд, полученный расстановкой скобок. \\
-	
+	\begin{enumerate}
+		\item $ \sum(a_k + b_k) = \sum a_k + \sum b_k $ если $a_k $ $ b_k $ сходятся.
+		\item $ \sum (c \cdot a_k ) = c \cdot \sum a_k $ 
+		\item Если ряд сходится, то сходится и имеет ту же самую сумму ряд, полученный расстановкой скобок.
+	\end{enumerate}
 \end{properties}
 \begin{theorem} Теорема Штольца \\
 	Пусть $ y_1 < y_2, \lim y_n =  +\infty $ \\
 	$ x_n, \lim \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} = l \in \R \Rightarrow \dfrac{x_n}{y_n} = l $
 	\begin{proof}
 		1. $ l = 0, \eps_n = \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} $ \\
-		$ \eps > 0, \exists m \forall n \geq m |\eps_n | < \eps $ \\
-		$ x_n - x_m = $
-		%pic8,9,10
+		$ \eps > 0, \exists m \forall n \geq m \ \ |\eps_n | < \eps $ и $ y_m > 0 $\\
+		$ x_n - x_m = \sum_{k=m+1}^{n} (x_k - x_{k-1}) = \sum_{k=m+1}^{n} \eps_k (y_k - y_{k-1}) $ \\
+		$ |x_n - x_m| = \sum_{k=m+1}^{n} |\eps_k|_{\leq \eps} | y_k - y_{k-1}| < \eps \sum_{k=m+1}^n (y_k - y_{k-1}) = \eps (y_n - y_m) \leq  $ \\
+		$ \left| \dfrac{x_n}{y_n} \right| \leq \dfrac{|x_m - x_n |}{|y_n|}_{<\eps} + \dfrac{x_m}{y_n}_{\rightarrow 0} <  2\eps $ при достаточно больших $ \eps $ \\
+		2. $ l \in \R \ \ \tilde{x}_n = x_n - ly_n $ \\
+		$ \dfrac{\tilde{x} - \tilde{x}_{n-1}}{y_n - y_{n-1}} = \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}}_{\rightarrow l} - \dfrac{ly_n - ly_{n-1}}{y_n - y_{n-1}}_{\rightarrow l} \rightarrow 0 $ \\
+		$ \dfrac{\tilde{x}_n}{y_n} \rightarrow 0$ \\
+		$ \dfrac{x_n}{y_n} = \dfrac{\tilde{x}_n + ly_n}{y_n} = \dfrac{\tilde{x}_n}{y_n} + l \rightarrow l $ \\
+		3. $ l = +\infty $ \\
+		$ \dfrac{x_n - x_{n+1}}{y_n - y_{n+1}} > 1 $ н.с.н.м \\
+		$ x_n - x_{n-1} > y_n - y_{n-1} $ при $ n \geq m$ в частн $ x_n - x_{n-1} > 0 $ \\
+		$ x_n - x_m > y_n - y_m $ \\
+		$ x_n > y_n + (x_m - y_m) \rightarrow +\infty \Rightarrow x_n \rightarrow +\infty $ \\
+		$ \lim \dfrac{y_n - y_{n-1}}{x_n - x_{n-1}} = \left( \lim \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} \right)^{-1} = 0 $ \\
+		$ \Rightarrow \lim \dfrac{y_n}{x_n} = 0 \Rightarrow \dfrac{x_n}{y_n} $ - бесконечно большая $ \Rightarrow \dfrac{x_n}{y_n} \rightarrow +\infty $ \\
+		4. $ l = -\infty $ \\
+		$ \tilde{x}_n = -x_n $ \\
+		$ \dfrac{\tilde{x}_n}{y_n} \rightarrow +\infty \Rightarrow \dfrac{x_n}{y_n} \rightarrow -\infty $
 	\end{proof}
 \end{theorem}
 $ \lim\limits_{n \rightarrow \infty} \dfrac{1}{n^{m+1}} \sum_{k=1}^{n} k^m $ \\
@@ -135,13 +156,17 @@ $ \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} = \dfrac{n^m}{n^{m+1}- (n-1)^{m+1}} = \df
 	
 	
 \begin{theorem}
+	Теорема Штольца для отношения бесконечно малых\\
 	$ y_1 > y_2 > ... > 0 $ \\
 	$ \lim x_n = \lim y_n = 0 $ \\
-	$ \lim \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} = l \in \R $ \\
+	$ \lim \dfrac{x_n - x_{n-1}}{y_n - y_{n-1}} = l \in \overline{\R} $ \\
 	$ \lim \dfrac{x_n}{y_n} = l $ \\
 	\begin{proof}
-		1. $l = 0 \ \ \ | \eps_k | < \eps $ при $ k \geq m $ \\
-		$ | x_n - x_m | \leq \eps (y_m - y_n) $ \\
+		1. $l = 0 \ \ \ | \eps_k | < \eps $ при $ k \geq m \geq N $ \\
+		$ | x_n - x_m |_{\rightarrow |x_m|} \leq \eps (y_m - y_n)_{\rightarrow \eps y_m} $ \\
+		$ |x_m| \leq \eps y_m $ \\
+		$ \dfrac{|x_m|}{y_m} \leq \eps $ \\
+		Т.о. $ \dfrac{x_m}{y_m} \rightarrow 0 $ \\
 		2. $ l \in \R $ сводится к п.1
 		3. $ l = + \infty $ \\
 		$ \dfrac{ x_k - x_{k-1}}{y_k - y_{k-1}} > 1 \Rightarrow x_k \leq x_{k-1} $\\
@@ -160,15 +185,18 @@ $ a \in \R - $ предельная точка мн-ва E \\
 $ \forall \eps > 0 \exists x \in E : \left\{ \begin{matrix}
 |x-a| < \eps \\
 x \neq a 
-\end{matrix}\right. 
-$\\
-1. $ (a, b') = [a, b] $ \\
-2. $ \mathbb{Q}' =  \R $\\
-3. $\dfrac{1}{\R}' = {0} $ \\
+\end{matrix}\right. $
+\begin{enumerate}
+	\item $ (a, b') = [a, b] $ 
+	\item $ \mathbb{Q}' =  \R $
+	\item $\dfrac{1}{\R}' = {0} $ 
+\end{enumerate}
 Предл. След 3 условия эквивалентны
-1. а предельная точка Е \\
-2. В любой окресности а есть бесконечно много точек Е \\
-3. Сущ посл-ть $(x_n), \forall n : x_n$
+\begin{enumerate}
+	\item а предельная точка Е 
+	\item В любой окресности а есть бесконечно много точек Е 
+	\item Сущ посл-ть $(x_n), \forall n : x_n$
+\end{enumerate}
 \begin{proof}
 	$ 1 \Rightarrow 2 $ \\
 	Пусть $ \dot{u}_{\eps} (a) \cap = {x_1 .. x_n} $ \\
@@ -178,6 +206,13 @@ $\\
 \Subsection{Предел функции}
 Пусть $ E \subset \R $ \\
 $ f : E \rightarrow \R $ \\
-a - пред. точка \\
-Говорят, предел $ f $ в а равен $y$ 
-Если $ \forall $ окресн. $ U_{\eps} (y) $ сущ $ \delta > 0 $ \\
+a - пред. точка E \\
+Говорят, предел $ f $ в а равен $y$  $ ( \lim\limits_{x \rightarrow a} f(x) = y $ или $ f(x) \xrightarrow{x \rightarrow a} y )$ \\
+1. (Предел по Коши) Если $ \forall $ окресн. $ U_{\eps} (y) $ сущ $ \delta > 0 $ \\
+$ f (\dot{U_{\delta}}(a) \cap E) \subset U_{\delta} (y) $ \\
+$ \forall \eps > 0 \exists \delta > 0 \ \forall x \in E \setminus \{a\} \ \ | x - a | < \delta \Rightarrow | f(x) - y | < \eps $ \\
+2. В любой окрестности a есть бесконечно много точек E \\
+3. Существует посл-ть $ (x_n) $ т.ч. $ \forall n: E \setminus \{a\}$ и $ x_n \rightarrow a $ \\
+$ x_n $ любая т. $ \dot{U_{\frac{1}{n}}} (a) \cap E  \ \ |x_n -a| < \dfrac{1}{n} $ \\
+$ x_n \rightarrow a $ 
+

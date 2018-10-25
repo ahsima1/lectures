@@ -37,25 +37,22 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 
 \begin{theorem}
 	Теорема о стягивающихся отрезках \\
-	Пусть заданы отрезки числовой прямой $ [a_i, b_i], i = 1, 2, 3,...$ \\
+	Пусть заданы отрезки числовой прямой $ [a_i, b_i], i = 1, 2, 3,...$ 
 	\begin{enumerate}
 		\item $ [a_i, b_i] \supset [a_{i+1}, b_{i+1}] $ 
-		\item 
-		% pic1
+		\item $ b_n - a_n \rightarrow 0 $ 
 	\end{enumerate}
+	Тогда $ \exists c \in \R : \bigcap_{n=1}^{\infty} [a_n, b_n] = \{ c \} $
 	\begin{proof}
 		Знаем $ \cap [a_n, b_n] \neq \emptyset $ \\
 		Предположим, что это не 1 элем. мн-во \\
 		Тогда $ \exists c, d \in  \cap [a_n, b_n], c < d $ \\
-		$ \forall n \in \N : c, d \in  [a_n, b_n] \Rightarrow a_n \leq c < d \leq b_n  \Rightarrow b_n - a_n \geq $
-		% pic2,3
+		$ \forall n \in \N : c, d \in [a_n, b_n ] \Rightarrow a_n \leq c < d \leq b_n \Rightarrow b_n - a_n \geq d -c > 0$ \\
+		Таким образом $ \bigcap_{n=1}^{\infty} [a_n, b_n] = \{ c \} $ - противоречие с $ b_n - a_n \rightarrow 0 $	
 	\end{proof}
 \end{theorem}
 \begin{definition}
-	Говорят, что $ b_n $ подпоследовательность $ a_n $ если \\
-	возр. посл-ть натуральных чисел $ m_i $ \\
-	$ \forall n \in \N$
-	
+	Говорят, что $ (b_n) $ подпоследовательность $ (a_n) $ если существует возрастающая посл-ть натуральных чисел $ m_i : \forall n, b_n = a_{m_n}$ 
 \end{definition}
 \begin{theorem}
 	Теорема Больцано-Вейерштрасса \\
@@ -92,33 +89,41 @@ $ \dfrac{x_{n+1}}{x_n} = a \cdot \dfrac{1}{n+1} \rightarrow 0 $
 	Аналогично для $ -\infty $ 
 \end{proof} 
 \begin{consequence}
-	%pic5
+	Пусть $ (x_n) $ - любая последовательность. Тогда в ней существует подпосл-ть $ (x_{m_i}) $ т.ч. $ x_{m_i} \rightarrow c $ для $ c \in \overline{\R} $ 
 \end{consequence}
 
 \begin{definition}
 	Пусть $x_n$ - последовательность. Она называется фундаментальной, если выполненое след. св-во \\
 	$ \forall \eps,  \exists N \in \N, \forall m,n \geq N : | x_m - x_n | < \eps $\\
-	Очевидно, сходящаяся последовательность фундаментальна. Можно взять предел и окресность $ \frac{\eps}{2} $ \\
+	Очевидно, сходящаяся последовательность фундаментальна. Можно взять предел и окрестность $ \frac{\eps}{2} $ \\
 	Фундаментальная $=$ сходящаяся в себе $=$ последовательность Коши.
 \end{definition}
 \begin{theorem}
 	Теорема Больцано-Коши(Критерий Коши) \\
-	Последовательность $x_n$ фундаментальна $ \Leftrightarrow $ сходится
+	Последовательность $(x_n)$ фундаментальна $ \Leftrightarrow (x_n) $ сходится
 	\begin{proof}
 		Пусть $ (x_n) $ - фундаментальна \\
 		1. Докажем, что $(x_n)$ - ограничена \\
 		По определению, $  \exists N \in \N \forall n \geq N : x_n \in (x_{N} - 1, x_N +1)$\\
-		$ a = min(x_N - 1, x_n, ..., )$ %pic6
-		2. По т. Б-В, $ (x_n)$ содержит сх. подпоследовательность $(x_{m_i}) $ \\
+		$ a = \min(x_N - 1, x_1, \dots, x_{N - 1} )$ \\
+		$ b = \max( x_N + 1, x_1, \dots , x_{N - 1}) $ \\
+		$ \Rightarrow \forall n \in \N : a \leq x_n \leq b$ \\
+		2. По т. Больцано-Вейерштрасса, $ (x_n)$ содержит сх. подпоследовательность $(x_{m_i}) $ \\
 		Пусть $ x_{m_i} \rightarrow c $ \\
 		Д-м, что $ x_n \rightarrow c $ \\
-		По опр фунд. посл $ \exists N \in \N  : \forall m, n \geq N : |x_m-x_n| < \frac{\eps}{2}$ \\
-		$\exists N' \in \N : \forall i \geq N' : |x_{m_i} -c | < \frac{\eps}{2} $ \\
-		Пусть i таково, что %pic7,8,9,10
-		
+		По опр фунд. посл $ \exists N \in \N  : \forall m, n \geq N : |x_m-x_n| < \dfrac{\eps}{2}$ \\
+		$\exists N' \in \N : \forall i \geq N' : |x_{m_i} -c | < \dfrac{\eps}{2} $ \\
+		Пусть i таково, что $ \left\{ \begin{array}{ll}
+		i \geq N' \\ m_i \geq N
+		\end{array} \right. $ \\
+		Рассмотрим любое $ m \geq N \ \ \begin{array}{ll}
+			| x_m - x_{m_i} | < \dfrac{\eps}{2} \\
+			| x_{m_i} - c | < \dfrac{\eps}{2} 
+		\end{array} $ \\
+		$ | x_m - c | = | x_m - x_{m_i} ) + (x_{m_i} - c) | \leq |x_m - x_{m_i} | + | x_{m_i} - c | < \dfrac{\eps}{2} + \dfrac{\eps}{2} = \eps $ \\
 	\end{proof}
 \end{theorem}
 I R как множество дедекиндовых сечений\\
-2 R как множество классов посл-тей коши\\
-M - мн-во последовательностей Коши рац. чисел %pic11
+II R как множество классов посл-тей коши\\
+
 
