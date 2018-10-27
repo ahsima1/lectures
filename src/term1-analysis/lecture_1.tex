@@ -235,15 +235,26 @@ $\left\{
 	\item $ \forall x, y \in \R, x \leq y $ или  $  y \leq x $ 
 \end{enumerate}
 	\end{tabular}
-\right.$
+\right.$ \\
+\begin{enumerate}[]
+	\item{5.} $\forall x,y,z \in \R : x \leq y : x + z \leq y + z $
+	\item{6.} $\forall x,y \in \R : 0 \leq z, 0 \leq x \Rightarrow 0 \leq x \cdot y $
+\end{enumerate} 
 
 \subsection{Аксиома полноты}
-Пусть $ X, Y \subset R, \forall x \in X \forall y \in Y x /leq y $ \\
-Тогда $ \exists c \in R $ 
+Пусть $ X, Y \subset R, \forall x \in X \  \forall y \in Y \ x \leq y $ \\
+Тогда $ \exists c \in R $ т.ч.
 \begin{enumerate}
 \item $ \forall x \in X : x \leq c $ 
 \item $ \forall y \in Y c \leq y $
 \end{enumerate}
+\begin{proof}
+	$ X = \{ q \in \Q | q > 0, q^2 < 2 \}$ \\
+	$ Y = \{ q \in \Q | q > 0, q^2 > 2 \} $ \\
+	$  x^2 < 2 < y^2 $\\
+	$ x^2 < y^2 $ \\
+	$ x < y $
+\end{proof}
 
 \section{Ограниченные множества}
 
