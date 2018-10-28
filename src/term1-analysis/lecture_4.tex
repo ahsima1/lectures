@@ -3,7 +3,7 @@
 	\begin{proof}
 		Пусть $ c $ такое число, что $  \lim \dfrac{x_{n+1}}{x_n} \leq c \leq 1 $ \\
 		$ \exists N, \forall n \geq N,  \dfrac{x_{n+1}}{x_n} < c $ \\
-		$ \forall m \in \N :  \dfrac{x_{n+1}}{x_n} = \prod_{i=0}^{m-1}  \dfrac{x_{n+1}}{x_n} < c^m $ \\
+		$ \forall m \in \N :  \dfrac{x_{n+1}}{x_n} = \prod_{i=0}^{m-1}  \dfrac{x_{n+1+i}}{x_{n+i}} < c^m $ \\
 		$ 0 < x_{n+m} < c^mx_n \underset{m \rightarrow \infty}{\rightarrow} 0 $ \\
 		$ \Rightarrow \lim\limits_{n \rightarrow \infty} x_{n+m} = 0 =  \lim\limits_{n \rightarrow \infty} x_{n} $
 
