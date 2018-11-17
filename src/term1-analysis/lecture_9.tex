@@ -1,0 +1,121 @@
+$ a^b\ $ \\
+$ a > 0, b \in \R $ \\
+$ 0^{-x} = \dfrac{1}{0^x} $ \\
+$ a < 0, b = \dfrac{p}{q} $\\
+$ \sqrt[q]{x} - $ обр ф-ция к 	$ y = x^q $ 
+\begin{lemma}
+	$ \lim\limits_{x \rightarrow 0} a^x = 1 \ \ a > 0 $ \\
+	$ \lim\limits_{n \rightarrow \infty} a^{\frac{1}{n}} = 1 $ \\ 
+	$ x \in [-1; 1] \Rightarrow \left\{ \begin{array}{l}
+		a^x \in [ a^{-1}; a ], a > 1 \\ a^x \in [a; a^{-1}], a < 1 
+	\end{array} \right. $\\
+	$ y = a^x $ %pic1
+\end{lemma} 
+\begin{theorem} Пусть $ a > 0 $ тогда $ y = a^x $ непрерывна на $ \R $ \\
+	$ \lim\limits_{x \rightarrow x_0} a^x = \lim\limits_{x \rightarrow x_0}  a^{x_0} \cdot a^{x-x_0} = a^{x_0} \cdot \lim\limits_{x \rightarrow x_0} a^{x-x_0} = a^{x_0} $ 
+\end{theorem}
+Предл Пусть $ a > 0, a \neq 1 $\\
+Тогда $ y, y=a^x $ суш обр ф-ция $ \log_a : (0, +\infty) \rightarrow \R $ которая непрерывна и строго монотонна \\
+Нужно проверить, что $ Im \ f = (0, +\infty) $
+
+Из св-в возведения в степень \\
+$ \log_a x= \dfrac{\ln x}{\ln a} $\\
+$ f(x) = a^x $ - показательная ф-ция \\
+$ f(x) = x^t $ - степенная ф-ция \\
+$ x^t = e^{t \cdot \ln x}$ \\
+$ \Rightarrow f(x) = x^t $ - непрерывная, возраст при $ t > 0 $, убывает при $ t < 0 $ \\
+
+\Subsection{Эквивалентные ф-ции и замечательные пределы}
+
+Пусть $ f, g : E \rightarrow \R, x_0 - $ пред. точка E, f,g экв-ны в окресности $ x_0 $ если $ \exists \dot{U}(x_0) $ и $ \phi : \dot{U} (x_0) \cap E \rightarrow \R $ т.ч. $ g(x) = f(x) \cdot \phi(x), x\in \dot{U} (x_0) \cap E $ \\
+Если $ \exists \dot{U}(x_0) $ т.ч. $ \forall x \in \dot{U} (x_0) \cap E : g(x_0) \neq 0 $\\
+То. $ f \sim_{x \rightarrow x_0} g \Leftrightarrow \dfrac{ f(x)}{g(x)} \rightarrow_{x \rightarrow x_0} 1 $ \\
+ $ \Rightarrow $ Очев $ \phi (x) \neq 0, \forall x \in U(x_0) \cap E \Rightarrow \dfrac{f(x)}{g(x)} = \dfrac{1}{\phi (x)} \rightarrow 1 $ \\
+$ \Leftarrow \dfrac{f(x)}{g(x)} \rightarrow_{x \rightarrow x_0} 1\Rightarrow g(x) = f(x) \cdot \dfrac{g(x)}{f(x)} \rightarrow 1 $ \\
+$ g(x) \neq 0 $ в окр $ x_0 \Rightarrow f(x) \neq 0 $ в окр $ x_0 $\\
+Св 1. $ f \sim g \Rightarrow g \sim f $ \\
+2. $ f \fim g , g \sim h \Rightarrow f \sim h $\\
+$ g(x) = f(x) \cdot \phi(x) $
+$ h(x) = g(x) \cdot \psi(x) \Rightarrow h(x) = f(x) (\phi(x)\psi(x))_{\Rightarrow 1} $\\
+1. Пусть $ g(x) = f(x) \cdot \phi(x), \phi(x) \rightarrow 1$%pic2
+3. 
+
+%pic3-16
+
+Предл. 4 $ \lim\limits_{x \rightarrow 0} \dfrac{(1+x)^p-1}{x} = p \ \ p \in \R $ \\
+$   \dfrac{(1+x)^p-1}{x} = \dfrac{\ln(1+x)}{x}_{\rightarrow 1} \cdot \dfrac{(1+x)^p - 1}{\ln((1+x)^p)}_{\rightarrow 1} \cdot \dfrac{\ln((1+x)^p)}{\ln(1+x)}_{=p} \rightarrow p$ \\
+Предл. 5 $ \lim\limits_{x \rightarrow 0} \dfrac{a^x-1}{x} = \ln a $ \\
+$ \dfrac{a^x-1}{x} = \dfrac{a^2 - 1}{\ln(a^x)}_{\rightarrow 1} \cdot \dfrac{\ln(a^x)}{x}_{=\ln(a)} $
+\begin{lemma}
+	Пусть $ f <a,b> \rightarrow <c,d> $ \\
+	$ x_0 \in <a,b>, \lim\limits_{x \rightarrow x_0} = y_0 \in <c,d> $ \\
+	$ g <c, d> \rightarrow \R $ непрерывна \\
+	Тогда $ \limits_{x \rightarrow x_0} (g \circ f)(x) = A $ \\
+	$ \lim\limits_{x \rightarrow x_0} g(f(x)) = g(\lim\limits_{x \rightarrow x_0} f(x)) $ 
+\end{lemma}
+
+\Subsection{Сравнение функций}
+
+$ f,g : E \rightarrow \R, a - $ пред тчк E \\
+Пусть $ \exists \dot{U} (a) $ и ф-я $ \phi E \rightarrow \R $ \\
+$ f(x) = \phi(x) g(x) $ на $ E \cap \dot{U} (a) $ \\
+$ \phi(x) \rightarrow_{x \rightarrow a} 0 $ \\
+Говорят $ f = o(g) $\\
+Предл сл усл экв (при $ x \rightarrow a $) \\
+1. $ f \sim g $ \\
+2. $ f = g + o(g) $\\
+3. $ f = g + o(f) $\\
+$1 \Rightarrow 2 \ \ f(x)= \phi(x) g(x) \ \ \phi(x) \rightarrow 1 $ \\
+$ = g(x) + (\phi(x) - 1)g(x) $ \\
+$ 2 \Rightarrow 1 \ \ $ ан-но \\
+$ 1 \Rightarrow 3 \ \ $ ан-но \\
+Примеры \\
+$ \sin(x) - x = o(x) $\\
+$ \sin(x) = x + o(x) $ \\
+$ \ln(1+x) = x + o(x) $ \\
+$ \cos(x) = 1 - \dfrac{x^2}{2} + o(x^2) $ \\
+Предл \\
+1. $ f \cdot o(g) = o(fg) $ \\
+2. $ f \sim g  \Rightarrow o(f) = o(g) $ \\
+1. $ o(g) (x) = g(x) \phi(x) \ \ \phi(x) \rightarrow 0 $ \\
+$ f(x) \cdot g(x) \cdot \phi(x) = o(fg) $\\
+2. $ h= o(f) $ \\
+$ h(x) = f(x) \phi(x), \phi(x) \rightarrow 0 $ \\
+$ f(x) = g(x) \psi (x), \psi(x) \rightarrow 1 $ \\
+$ \Rightarrow h(x) = g(x) (\phi(x) \psi(x))_{\rightarrow 0} = o(g) $
+
+\begin{definition}
+	$ f, g : E \rightarrow \R $ a - пред тчк E \\
+	Eсли сущ $ \dot{U} (a) $ и \\
+	$ \phi : \dot{U} (a) \cap E \rightarrow \R+ $ \\
+	$ f(x) = \phi(x) g(x) \forall x \in \dot{U} (a) \cap E $ \\
+	то $ f = O(g) ( $ при $  x \rightarrow a) $ \\
+	% pic17
+\end{definition}
+
+\Section{Производная}
+
+\begin{definition}
+	Пусть $ f : <a, b> \rightarrow \R $ \\
+	f называется дифференцируемой в $ x_0 \in <a, b> $ \\
+	если $ \exists k \in \R $ \\
+	$ f(x) = f(x_0) + k(x - x_0) + o(x - x_0) $ при $ x \rightarrow x_0 $\\
+	k - производная f в точке $ x_0 $
+	\begin{lemma}
+		Если f дифф в $ x_0 $ то $ f'(x_0) $ корректно определена 
+		\begin{proof}
+			$ f(x) = f(x_0) + k(x - x_0) + o(x - x_0) $ \\
+			$ = f(x_0) + \tilde{k}(x - x_0) + o(x - x_0) $ \\
+			$ \Rightarrow k(x-x_0) + o(x-x_0) = \tilde{k} (x -x_0) + o(x-x_0) $\\
+			$ \Rightarrow k+\dfrac{o(x-x_0)}{x - x_0} = \tilde{k} + \dfrac{o(x-x_0)}{x-x_0} $ 
+		\end{proof}$ \lim\lim\limits_{y \rightarrow y_0} g(y) = A $\\
+	\end{lemma}
+\end{definition}
+\begin{definition}
+	Произв $ f<a,b> \rightarrow \R $ в $ x_o \in <a,b> $ \\
+	наз $ \lim\limits_{x \rightarrow x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = f'(x_0) $ \\
+	Если $ f'(x_0) \in \R$, то дифф 
+\end{definition}
+
+
+
