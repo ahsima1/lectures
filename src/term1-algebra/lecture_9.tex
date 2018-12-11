@@ -1,0 +1,181 @@
+\Section{Наибольший обший делитель}
+
+R комм кольцо с 1 
+\begin{definition}
+	$ a_1, ..., a_n \in R $\\
+	$d $ - наиб общ делитель если \\
+	1. $ d | a_1, ..., d | a_n $ \\
+	2. $ \forall d' (d' | a_1, ..., d' | a_n) \Rightarrow d' | d $ \\
+\end{definition}
+Замечание Наибольшие общие делители определены с точностью до ассоцированности \\
+$ d' | d, d | d' \Rightarrow d \sim d' $ \\
+Если R - обл цел и $ d \sim d' $ то $ d' = d \cdot \eps, \eps in R^*, d = d' \cdot \eps^{-1} d' | a_1, ..., d' | a_n, d'' | a_1, ..., d'' | a_n, d'' | d | d' $ \\
+В $ \Z $ НОД можно выбрать для неотрицательных \\
+НОД определён не во всяком кольце
+
+\begin{theorem}
+	R - О.Г.И. $ a_1, ..., a_n \in  R $ \\
+	1. d - НОД $ (a_1, ..., a_n) $ \\
+	2. $ (d) =  (a_1, ..., a_n) $ \\
+	3. d - общий делитель, допускающий линейное представление \\
+	т.е. $ \exists x_1, ..., x_n \in R, d = a_1x_1 + ... + a_nx_n $ \\
+	\begin{proof}
+		$ 2 \Rightarrow 3 \ \ $ $ (d) =  (a_1, ..., a_n)  $\\
+		$ a_i \in  (a_1, ..., a_n)  = (d) = \{dr | r \in R \} $ \\
+		$ a_i = dr_i, d|a_i $ \\
+		$ d $ - общ делитель \\
+		$ d \in (d) =  (a_1, ..., a_n) = \{ a_1x_1, + ... + a_nx_n \} $\\
+		$ \Rightarrow \exists x_1, ..., x_n \in R, d = a_1x_1 + ... + a_nx_n $ \\
+		$ 3 \Rightarrow 1 \ \ d - $ общий делитель \\
+		$ d' - $ другой общий делитель \\
+		$   d = a_1x_1 + ... + a_nx_n, a_1 | d', a_n | d' \Rightarrow d' | d \Rightarrow d - $ НОД \\
+		$ 1 \Rightarrow 2  \ \  d - $ НОД $  (a_1, ..., a_n) $ \\
+		$ I =  (a_1, ..., a_n) $ \\
+		$ \exists m \in R : I = (m) $ \\
+		$ ? m \sim d $ \\
+		$ m = a_1x_1 + ... + a_nx_n $ \\
+		$ d | m $ \\
+		$ a_i \in m, m | a_i, m - $ общ делитель $ \Rightarrow m | d $ \\
+		$ m \sim d, R - $ О.Ц.  \\
+		$ \exists \eps \in R^*, m = d\eps, d = m\eps^{-1}, (m) = (d) $ \\
+		$ (d) =  (a_1, ..., a_n) $ \\
+	\end{proof}
+\end{theorem}
+
+Следствие 1 $ R - $ ОГИ \\
+$ \forall a_1, ..., a_n \in R \exists $ НОД $  (a_1, ..., a_n) $\\
+\begin{proof}
+	$  (a_1, ..., a_n)  = (d), d -$ НОД $  (a_1, ..., a_n) $ \\
+\end{proof}
+Следствие 2 $ R $- ОГИ \\
+$ d =$ НОД $  (a_1, ..., a_n) $\\
+$ \Rightarrow d $ допускает представление $ d = a_1x_1, ..., a_nx_n $ \\
+
+\Subsection{Взаимо простые элементы}
+
+$ R - $ комм кольцо с 1, Обл.цел. \\
+$ a_1, ..., a_n $ - вз. просты, если \\
+НОД $  (a_1, ..., a_n) = 1$\\
+Следует различать взаимно простые и попарно взаимно простые \\
+\begin{theorem}
+	$  (a_1, ..., a_n) $ вз просты $ \Leftrightarrow $ \\
+	$ \exists x_1, ..., x_n $ \\
+	$ \Rightarrow 1 = a_1x_1 + ... + a_nx_n $ \\
+	Д-во $ 1 = $ НОД $  (a_1, ..., a_n) $ \\
+	По сл.2 к пред теореме 1 допускает лин. представление \\
+	$ \Leftarrow 1 =  a_1x_1, ..., a_nx_n $ \\
+	$ 1 | a_1, ..., 1 | a_n -$ общ делител, по пред теореме 1 = НОД 
+\end{theorem}
+\begin{theorem}
+	R - ОГИ, a, b - взаимно просты \\
+	$ a | bc \Rightarrow a | c $ \\
+	\begin{proof}
+		$ \exists x, y, ax + by = 1, acx_{\divby a} + bcy_{\divby a} = c_{\divby a} $
+	\end{proof}
+\end{theorem}
+
+\Section{Евклидовы кольца}
+R - область целостности \\
+\begin{definition}
+	R - евклидово кольцо, если \\
+	$ \exists $ функция $ \lambda : R \setminus \{0\} \rightarrow N \cup \{0\} $ (евклидова норма), имеющая св-ва \\
+	$ \exists a \in R, \forall b \in R \setminus \{0\} $ \\
+	$ \exists a, r \in R, a = bq + r, $ и либо $ r = 0$ либо $ \lambda(r) , \lambda(b) $
+\end{definition}
+Пример $ \Z $ - евклидово \\
+$ \lambda(n) = |n| $ \\
+\begin{theorem}
+	Теорема о делении с остатком в кольце многочленов \\
+	R - коммут кольцо с 1 \\
+	$ f, g \in R[x] $ \\
+	$ n = \deg g, g = a_nx^n + ... + a_0, a_n \neq 0 $ \\
+	Пусть $ \exists q, r \in R[x] $ \\
+	$ f = g \cdot q = r $ и $ \deg r < \deg g $ \\
+	\begin{proof}
+		Индукция по степени многочлена $ m = \deg f $ \\
+		Тогда $ m < n $ \\
+		$ g = g \cdot 0 + f, \deg f = m < n = \deg g  $\\
+		$ q = 0, r = f $ \\
+		Переход $ m \geq n $ Предположим, что для всех многочленов степени < m теорема уже доказана  \\
+		$ f = b_mx^m+ ... + b_0 $ \\
+		$ f_1 = f - b_ma_n^{-1}x^{m-n}g $ \\
+		% pic1
+		$ \deg f_1 < \deg f $ \\
+		По инд. предположению $ f_1 g \cdot q_1 + r_1 $ \\
+		$ f = f_1 + b_ma_n^{-1} x ^{m-1}g $ \\
+		$ = g(q_1 + b _ma_n^{-1} x^{m-n}) + r_1 $\\
+		$ \deg r = \deg r_1 < \deg g $ 
+	\end{proof}
+\end{theorem}
+Сл. 1 К - поле $ \Rightarrow $ в $ K(x) $ выполнена теорема о делении с остатком \\
+$ \forall f,g \in K[x], g \neq 0, \exists q, r : f = gq+r, \deg r < \deg g $\\
+Сл.2 - К - поле, К[x] - евклидово \\
+$ \lambda(g) = \deg g $ \\
+Пример $ \Z[i] = \{a = bi| a, b \in \Z \} $\\
+$ \lambda(a + bi) = a^2 + b^2 $ \\
+\begin{proof}
+	$ z_1 = a + b_i, z_2 = c + d_i, z_2 \neq 0 $\\
+	$ z_1 = z_2q + r \ \ |r|^2 < |z_2|^2 $ \\
+	$ \dfrac{z_1}{z_2} = \dfrac{z_1 \overline{ z_2}}{|z_2|^2} \in \Q(i) $\\
+	$ \dfrac{z_1}{z_2} = a + b_i, a, b \in \Q $ \\
+	$ x \in \R, < x > $ - ближайшее целое число к x, $ | x - <x> | \leq \dfrac{1}{2} $ \\
+	$ q = <a> + < b> i \in \Z[i] $ \\
+	$ r = z_1 - z_2 q \in \Z[i] $ \\
+	$ \lambda(r) = |r|^2 = |z_1 - z_2 \cdot q |^2 = |z_2|^2 \left| \dfrac{z_1}{z_2} - q \right|^2 $ \\
+	%pic2
+\end{proof}
+\begin{theorem}
+	R - евклидово $ \Rightarrow R - $ ОГИ \\
+	\begin{proof}
+		I - идеал в R \\
+		$ I = \{0\} = (0) $ \\
+		$ I \neq 0 $ \\
+		$ < = \{ \lambda(a) a \in I \setminus \{0\} \} \neq 0 $ \\
+		$ < \subseteq \N \cup \{0\} $ \\
+		Выберем m - наименьший в L\\
+		$ \exists b \in I \setminus \{0\} \lambda(b) = m $ \\
+		$ I = (b)  \ \ b \in I, (b) \subseteq I $ \\
+		$ a \in I, a = bq+r, r = 0, $ или $ \lambda (r) < \lambda (b) $ \\
+		$ r = a - bq \in I $ \\
+		Если $ r= 0, a = bq \in (b) $ \\
+		Если $ r \neq 0, r \in I \setminus \{0\}$ \\
+		$ \lambda(r) \subset \lambda(b) = m$ \\
+		Невозможно в силу минимальности m 
+	\end{proof}
+\end{theorem}
+\Subsection{Алгоритм Евклида}
+$ a, b \in R, R - $ Евклидово \\
+$ b \neq 0 $ \\
+$ r_0 = a, r_1 = b $ \\
+$ r_0 = r_1q_1 + r_2, \lambda(r_2) < \lambda(r_1) $ \\
+$ r_{i-1} = r_i q_i + r_{i+1} \ \ \lambda (r_{i-1}) <  \lambda(r_i) $\\
+...\\
+$ r_{n-2} = r_{n-1} q_{n-1} + r_n $ - последний ненулевой остаток \\
+$ r_{n-1} = r_nq_n $\\
+\begin{lemma}
+	НОД $ (r_{i-1}, r_i) = $НОД $( r_i, r_i+1) $ \\
+	Достаточно д-ть, что $ (r_{i-1}, r_i) = ( r_i, r_i+1) $ \\
+	$ r_i \in (r_{i-1}, r_i) $\\
+	$ r_{i+1} = $ % pic4
+\end{lemma}
+$ (r_0, r_1) = (r_1, r_2) = ... = (r_{n-1}, r_n) = (r_nq_n, r_n) = (r_n) $\\
+Алгоритм завершает свою работу если $ \lambda (r_1) \subset \lambda (r_2) \subset ... \subset \lambda (r_n) \geq 0 $ \\
+Обратный ход алгоритма Евклида и линейное представление  \\
+$ d = r_n $ \\
+$ d = r_ix_i+r_{i+1}y_i $ \\
+$ i = n-2, ..., 0 $ \\
+%pic5
+
+
+
+
+
+
+
+
+
+
+
+
+
+

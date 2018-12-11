@@ -1,0 +1,219 @@
+Hardy, Wright Introduction to the theory of Numbers \\
+\Subsection{Дополнение о взаимно простых эл-тах в ОГИ}
+
+\begin{lemma}
+	R - ОГИ \\
+	$ a,b,c \in R $ \\
+	a и b вз просты, a и c вз просты \\
+	Тогда a и bc - взаимно просты \\
+	\begin{proof}
+		$ \exists u,v \in R, au + bv = 1 $ \\
+		$ \exists s,t \in R, as + ct = 1 $ \\
+		$ bv = 1 - au $ \\
+		$ ct = 1 - as $ \\
+		$ bcvt = (1-au)(1-ac) = 1 - au - as + a^2us $ \\
+		$ a(u+s-aus) + bcvt = 1 $ \\
+		$ \Rightarrow a, bc $ - взаимно просты 
+	\end{proof}
+\end{lemma}
+Сл. 1 R - ОГИ, $a, b, b_n \in R$ \\
+$ \forall i = 1,...,n, a, b_i - $ вз просты \\
+$ \Rightarrow a $ вз просто с $ \prod_{i=1}^{n} b_i $ \\
+\begin{proof}
+	Индукция по числу сомножителей 	
+\end{proof}
+Сл. 2 R - ОГИ \\
+$ a_1, ..., a_m, b_1,..., b_n $ \\
+$ \forall a_i, b_j, a_i, b_j $ вз просты \\
+$ \Rightarrow \prod_{i=1}^m a_i $ и $ \prod_{j=1}^n b_j $ вз просты \\
+
+\subsection{Составные, неприводимые и простые эл-ты в кольце}
+
+R - коммутативная, с 1, без делителей 0, область целостности \\
+$ \{0\} = R^* \} $ Мн-во ненулувых необратимых элементов
+\begin{definition}
+	$ a \in R \setminus (\{0\} \cup R^*) $ \\
+	a - ненулевой необратимый элемент кольца R называется составным если его можно представить в виде произведения необратимых сомножителей \\
+	В противном случае a называется неприводимым, $ a = bc \Rightarrow b \in R^* | c \in R^*$, второй сомножитель ассоцирован с a
+\end{definition}
+Составной - composite, Неприводимый - irreducible
+\begin{definition}
+	$ a \in R? a \neq 0 $ и необратим \\
+	a - простой, если $ \forall b,c \in R, a | bc \rightarrow a | b \cup a | c $
+\end{definition}
+В общем случае простота и неприводимость - разные понятия, в КГИ - совпадают \\
+Условие простоты \\
+$ bc \equiv 0 (mod (A)) \Rightarrow b \equiv 0 (mod(a)) \cup c \equiv 0 (mod(a)) $ \\
+$ [b][c] = 0 $ в $ R / (a) \Rightarrow [b] = 0 \cup [c] = 0$ \\
+Простой и $ \Leftrightarrow R / (a) $ - область целостности \\
+\begin{theorem}
+	1. R - оц, a - простой $ \Rightarrow a $ - неприводим 
+	\begin{proof}
+		$ a = bc $ \\
+		$ a | bc \Rightarrow a | b, a | c $ \\
+		Пусть $ a | b \Rightarrow b | a \Rightarrow a \sim b \Rightarrow \exersize u \in R^* a = bu $ //
+		$ a = bc, bc = bu, a \neq 0 \Rightarrow b \neq 0, \Rightarrow c = u \Rightarrow c \in R^* $ \\
+		$ a = bc, c \in R^* $
+	\end{proof}
+\end{theorem}
+Пример кольца где неприводимый не является простым \\
+$ \Z [\sqrt{5} i] = \{ a + b\sqrt{5}i | a,b \in \Z \} $ \\
+$ a = 1 + \sqrt{5} i $ \\
+$ \N (u + v\sqrt{5} i) = |u + v\sqrt{5}i|^2 = u^2 + 5v^2 $ \\
+$ N(z_1, z_2) = N(z_1)N(z_2) $ \\
+$ b | a \Rightarrow N(b) = N(a) $ \\
+$ N(a) = 6, N(b) = \{1,2,3,6\} $ \\
+$ (N(b), N(c)) \in \{ (1,6), -(2,3), -(3,2), (6,1) \} $ \\
+$ N(u + v\sqrt{5}i) = 1, u^2 + 5v^2 = 1, u \in \pm 1, v = 0 $ \\
+$ N(z) = 1 \Rightarrow z \in \pm 1, z \in R^* $ \\
+В $ \Z[\sqrt{5} i] $ нет эл с нормой 2 и 3 \\
+%pic1
+$ \Rightarrow a $ не простой \\
+\begin{theorem}
+	R - ОГИ, a неприводим в R $ \Rightarrow $ а простой \\
+	\begin{proof}
+		$ a | bc $ Если $ a | b $ то всё доказано \\
+		Пусть $ a \centernot| b $ Тк a неприводим, то делители а либо обратимы, либо ассоцированы с a \\
+		Но ассоциро с a не делят b \\
+		$ \Rightarrow $ общие делители a и b обратимые, $ GCD(a,b) = 1 $\\
+		$ a,b $ -вз просты $ \Rightarrow a | c $ т.е. $ a|b $ или $ a | c$ т.е. а - простой
+	\end{proof}
+\end{theorem}
+
+\Subsection{Факториальные кольца} 
+
+$ a = p_1,..p_n$ $ p_i$ - необратимы \\
+$ a = (\eps_1p_1), ..., (\eps_np_n) $ \\
+$ \eps_i \in R^*, \eps_1,.., \eps_n = 1 $\\
+\begin{definition}
+	R - ОЦ, R - факториальное кольцо, если любой ненулевой необратимый элемент раскладывается в произведение неприводимых, причём это разложение единственно с точностью дл порядка следования и ассоцированности сомножителей \\
+	$ a = p_1, ... p_n = q_1,...,q_m , p_i, q_i $ - неприводимы $ \Rightarrow n = m $ и существует $ \varsigma \{1,..,n\} $ \\
+	$ p_i \sim q_{\varsigma_{(i)}} , i = 1,...,n $
+\end{definition}
+Если R факториально, то в нём выполнена осн теорема арифметики \\
+Если в каждом классе ассоцированных элементов выберем  
+$ a \neq 0, a = \eps \prod_{i=1}^{n} q_i, \eps \in R^* $ 
+% pic?
+
+$ R - $ факториальное \\
+$ b | a, b = ac $ \\
+$ a = \eps_1 \prod q^{\alpha_i}_{i} $ \\
+$ b = \eps_2 \prod q^{\beta_i}_{i} $\\
+$ c = \eps_3 \prod q^{\gamma_i}_{i} $ \\
+$ bc = \eps_2\eps_3 \prod q_i^{\beta_i + \gamma_i} $\\
+$ b | a \Leftrightarrow \forall i, \alpha_i \geq \beta_i $ \\
+$ a = \eps_1 \prod q_i^{\alpha_i} $ \\
+$ f = \eps_2 \prod q_i^{\phi_i} $ \\
+НОД $(a,f) = \prod q_i^{\min(\alpha_i, \phi_i)} $ \\
+НОК $ a_i, .., a_n $ \\
+$ l $ - НОК($a_1,..., a_n$) \\
+Ecли $ a_i | l \forall i, a_i | l' \forall i \Rightarrow l | l' $ \\
+НОК(a, f) = $ \prod q_i^{\max a_i, \phi_i} $ \\
+НОД(a,f)НОК(a,f) ассоцировано с af \\
+Если $ a,f \in \N $ то равенство а не ассоцир \\
+\begin{theorem}
+	R - факториально, $ R[x] $ - тоже факториально \\
+	$ \Z, \Z[x], \Z[x, x_2], K[x], K[x_1, x_2] $
+\end{theorem}
+Пример кольца, не являюшегося факториальным
+$ R = \Z[\sqrt{-5}i] $ \\
+$ 6 = 2 \cdot 3 = (1 + \sqrt{5}i)(1 - \sqrt{5}i) $ \\
+2 и 3 неприводимы\\
+$ 2 = a \cdot b$\\
+$ N(a) - 1,4,2 $ \\
+$ N(b) - 4,1,2 $ \\
+$ 3 = a \cdot b $ \\
+$ N(a) - 1,9,3 $ \\
+$ N(b) - 9,1,3 $ \\
+$ N(2) = 4, N(3) = 9, N(1 \pm \sqrt{5}i)  = 6 $ \\
+\Subsection{Возрастающие цепи идеалов в ОГИ} 
+
+R - кольцо, $ I_1, I_2 $ - идеалы \\
+$ I \subseteq I_2 \subseteq I_3 ... $ \\
+Цепь идеалов стабилизируется если $ \exists N $ начиная с котороро $ I_n = I_{n+1} ... $ \\
+Условие стабилизации цепи идеалов (обрыва цепи) \\
+Обрыв - любая посл строго возраст цепей идеалов обрывается \\
+\begin{theorem}
+	$ R - $ ОГИ $ \Rightarrow $ в R выполнено условие обрыва цепей идеалов \\
+	\begin{proof}
+		$ I_1 \subseteq I_2, ... $ \\
+		$ I = \bigcup_j I_j $ \\
+		$ a, b \in I, \exists i, a \in I_i,  \exists j : b \in I_j$ \\
+		$ a,b \in I_{\max(i,j)} $ \\
+		$ a \pm b \in  I_{\max(i,j)} \subset I $ \\
+		$ r \in R, a\in I, \exists j : a \i I_j, ra \in I_j \subset I $\\
+		$ \exists z \in R, I = (z) $ тк R - ОГИ \\
+		$ z \in I \Rightarrow \exists j : z \in I_j $ \\
+		$ (z) \subseteq I_j \subseteq (I_{j+1}) \subseteq ... \subseteq I = (z) $ \\
+		$ \Rightarrow (z) = I_j = I_{j+1} .. = I = (z) $		
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}
+	R - ОГИ $ \Rightarrow $ R - факториальное \\
+	\begin{proof}
+		1. Существование \\
+		1.1) Всякий ненулевой необратимый делится хотя бы на 1 неприводимый \\
+		1.2) Всякий ненулевой необр есть произведение неприводимых \\
+		1) $ a_1 \in R, a \neq 0, a \notin R^*, a_1 -$ неприводим ок\\
+		$ a_1 $ составной $ a_1 = a_2b_1, a_2, b_1 \notin R^* $ \\
+		$ a_2 $ неприводимый - ок \\
+		$ a_2 $ - составной $ a_2 = a_3b_2, a_3,b_2 \notin R^* $ \\
+		Если остановились на каком-то шаге n, то $a_n$ неприводим,  \\
+		$ a_n | a_{n-1} | ... | a_1, a_n | a_1 $ \\
+		Покажем, что процесс обязательно оборвётся \\
+		$ a_1 \divby a_2 \divby a_3 ... $ Оба сомножителя необратимы, \\
+		$ a_{i+1} \centernot\sim a_i $ \\
+		$ (a_1) \subsetneqq (a_2) \subsetneqq (a_3)  $ \\
+		Невозможно т.к. в ОГИ выполнено условие обрыва возрастающих идеалов \\
+		1.2) $ a_1 \in R, a_1 \neq 0, a_1 \notin R^* $ \\
+		$ \exists $ неприводимый $ p_1 | a_1 $ \\
+		$ a_1 = p_1 a_2 $ \\
+		Если $ a_2 \in R^* $ заменим p на ассоц с ним $ p_1a_2 $ и остановимся \\
+		$ a_2 \notin R^*$ \\
+		$ \exists $ неприводимый $ p_2 | a_2 $ \\
+		$ a_2 = p_2 a_3 $ \\
+		Если $ a_2 \in R^* $ заменим p на ассоц с ним $ p_2a_3$ и остановимся \\
+		Если остановились, $ a_1 = p_1a_2 = p_1p_2a_3 = .. = p_1p_2...(p_na_n) $ -  неприводимые
+		Покажем, что процесс обрывается \\
+		$ \forall i, p_i $ - неприводим, $ a_i $ - необратим, \\ 
+		$ a_1 \divby a_2 \divby a_3 $ \\
+		$ (a_1) \subsetneqq (a_2) \subsetneqq (a_3)  $ \\
+		Невозможно т.к. в ОГИ выполнено условие обрыва возрастающих идеалов \\
+		2. Единственность \\
+		$ a = p_1 .. p_n = q_1 .. q_m $ \\
+		Н.У.О. $ n \leq m $ \\
+		Индукция по n \\
+		База $ n = 1, p_1 = q_1, ... q_m $ \\
+		$ p_1 | q_1, ..., q_m $ \\
+		p неприводим, R - ОГИ $\Rightarrow$ p - прост\\
+		$ \Rightarrow \exists i : p | q_i $ \\
+		Н.У.О. $ i = m $ \\
+		$ p_1 | q_m $ \\
+		$ q_m = u \cdot p_1 $ \\
+		$ p_1 = q_1, q_{m-1} \cdot u \cdot p_1 $ \\
+		$ 1 = \underbrace{q_1 ... q_{m-1}}_{\text{нет}} u $ \\
+		$ u = 1, m = 1, q_1 = p_1 $ \\
+		Инд переход $ n \geq 2 $ \\
+		$ p_1, ..., p_n = q_1,..., q_m $ \\
+		$ p_n | q_1 ... q_m $ \\
+		$ \Rightarrow \exists i : p_i \neq q_i, i = m $ \\
+		$ p_n | q_m $ \\
+		Делители $ q_m $ обратимы либо ассоцированы $p_n$ - необратимо $ \Rightarrow p_n \sim q_m $ \\
+		$ pq_m = p_n\varepsilon, \varepsilon \in R^* $ \\
+		$ p_1, ..., p_n = q_1,..., q_{m-1} \cdot p_n \cdot \varepsilon $\\
+		$ p_1, ..., ... p_{n-1} = q_1, ..., q_{m-1} \eps $ \\
+		$ q_1 = q_1...q_{m-2} (q_{m-1} \eps) $ \\
+		По инд предположению $ n-1 = m-1 \Rightarrow n = m $ \\
+		$ \exists \varsigma $ перестановка $ \{1, ..., n-1\}$ 
+		$ p_i \sim q_{\varsigma(i)} i = 1, ..., n-1 $ 
+	\end{proof}
+\end{theorem}
+
+
+
+ 
+ 
+ 
+ 
+ 

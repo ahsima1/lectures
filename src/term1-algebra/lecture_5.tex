@@ -168,8 +168,9 @@ $ f = \sum_{i=0}^{n} a_i x^i $ \\
 	\begin{proof}
 		Индукция по n \\
 		$ n = 0 : 1 $ \\
-		$ (x+y)^{n+1} = (x+y)^n(x+y) =  ( \sum_{k=0}^{n} C_n^k x^k y^{n-k} )(x+y) = \sum_{k={0}}^{n} C_n^k x^{k+1} y^{n-k} + \sum_{k=0}^{n} C_n^k x^ny^{n+1-k} = C^n_n x^{n+1} + \sum_{k=0}^{n-1} C_n^k x^{k+1} y^{n-k} + \sum_{k=1}^{n} C_n^k x^k y^{m+1-k} +C_n^0 y^{n+1} = C^n_n + \sum_{k'=1}^{n} C_n^{k'-1} \cdot x^{k'}y^{n+1-k'} + 
-			\sum_{k=1}^n C_n^k x^ky^{n+1-k}+C_n^0y^{n+1} =  $
+		
+		
+		$ (x+y)^{n+1} = (x+y)^n(x+y) =  ( \sum_{k=0}^{n} C_n^k x^k y^{n-k} )(x+y) = \\ \sum_{k={0}}^{n} C_n^k x^{k+1} y^{n-k} + \sum_{k=0}^{n} C_n^k x^ny^{n+1-k} =\\ C^n_n x^{n+1} + \sum_{k=0}^{n-1} C_n^k x^{k+1} y^{n-k} + \sum_{k=1}^{n} C_n^k x^k y^{m+1-k} +C_n^0 y^{n+1} =\\ C^n_n + \sum_{k'=1}^{n} C_n^{k'-1} \cdot x^{k'}y^{n+1-k'} + \sum_{k=1}^n C_n^k x^ky^{n+1-k}+C_n^0y^{n+1} =  $
 			%pic2 
 	\end{proof}
 \end{theorem}

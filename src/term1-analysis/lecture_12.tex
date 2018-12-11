@@ -1,0 +1,111 @@
+\Subsection{Производные высших порядков}
+
+\begin{definition}
+	$ f : (a,b) \rightarrow \R, x_0 \in (a,b) $ \\
+	Пусть f дифф-ма в окр $x_0 $ \\
+	$ f' : (a', b') \rightarrow \R \ \ (a', b') \subset (a,b), x_0 \in (a',b') $ \\
+	$ f'' : (a'', b'') \rightarrow \R \ \  (a'', b'') \subset (a',b'), x_0 \in (a'',b'') $ \\
+	$ f''', f^{IV}, f^{(n)} $
+\end{definition}
+
+Предложение: Пусть f,g n раз дифф-мы в $x_0$ \\
+1. $ \forall \alpha, \beta \in \R : (\alpha f + \beta g)^{(n)}_{(x_0)} = \alpha f^{(n)} (x_0) + \beta g^{(n)} (x_0)  $\\
+2. $ (fg)^{(n)} = \sum_{k=0}^{n} C^k_n f^{(n-k)} (x_0) \cdot g^{(k)} (x_0) $\\
+3. Пусть f n раз дифф-ма в $ \alpha x_0 + \beta (\alpha \beta \in \R) $ \\
+$ g(x) = f(\alpha x + \beta) $ \\
+$ g(x) = f(\alpha x + \beta) $ \\
+Тогда g n раз дифф-ма в $x_0$ \\
+$ g^{(n)} (x_0) = \alpha^n\cdot f^{(n)} (\alpha x_0 + \beta) $ \\
+\begin{proof}
+	1. Очевидно \\
+	2. Индукция по n \\
+	$ n = 1 : (fg)'(x_0) = f'(x_0)g(x_0) + f(x_0) f'(x_0) $ \\
+	$ (fg)^{(n)} (x_0) = ((fg)^{(n+1)})' (x_0) $ \\
+	$ = (\sum_{k=0}^{n-1} C^k_{n-1} \cdot f^{(n-1-k) (x_0) g^{(k)} (x_0)} )' \\
+	= \sum_{k}^{n-1} C^k_{n-1} (f^{(n-k)} (x_0) g^{(k)} (x_0) + f^{(n-1-k)} (x_0) g^{(k+1)} (x_0))  $\\
+	$ =  \sum_{k=0}^{n} C^k_n f^{(n-k)} (x_0) \cdot g^{(k)} (x_0) $\\
+	%pic1
+	3. По индукции  $ (\alpha f^{(n)} (\alpha x_0 + \beta) )' = \alpha^n f^{(n+1)} (\alpha x_0 + \beta) \cdot \alpha $ 
+\end{proof}
+
+$ ((x - x_0)^m)^{(k)} = \dfrac{m!}{(m-k)!} (x-x_0)^{m-k}, k \leq m, k > m, 0 $
+$ (x^m)^{(k)} = m(m-1)...(m-k+1)x^{m-k} $ \\
+$ k > m : (x^m)^{(k)} = 0 $ \\
+
+\Subsection{Формула Тейлора}
+
+$ f $ n раз дифф-ма в $x_0$ \\
+Многочлен Тейлора степени n (степени $\leq n$) в точке $x_0$ \\
+$ f(x_0) + \dfrac{f'(x_0)}{1!} (x - x_0) + \dfrac{f''(x_0)}{2!} (x-x_0)^2 + ... + \dfrac{f^{(n)} (x_0)}{n!} (x-x_0)^n $ \\
+$ f = T_{x_0, n} + R_{x_0, n} f' $ \\
+Предложение f - многочлен степени $ \leq n$ \\
+Тогда f совпадает с $ T_{x_0, n} f $ \\
+%pic2
+
+\begin{lemma}
+	Пусть g n раз дифф-ма в $x_0$, и $ g(x_0) = g'(x_0) = .. = g^{(n)}(x_0) = 0 $ \\
+	Тогда $ g(x) = o((x - x_0)^n) $ при $ x \rightarrow x_0 $ \\
+	$ \lim\limits_{x \rightarrow x_0} \dfrac{g(x)}{(x-x_0)^n} = \lim\limits_{x \rightarrow x_0} \dfrac{g'(x)}{n((x-x_0)^{n-1})} (\text{при условии что существ}) = \lim\limits_{x \rightarrow x_0} \dfrac{g''(x)}{n(n-1)(x-x_0)^{n-2}} = ... = \lim\limits_{x \rightarrow x_0} \dfrac{g^{(n-1)}(x)}{n!(x-x_0)} $ \\
+	$ g^{(n-1)} (x) = (g^{(n-1)} (x_0))_{=0} + (g^{(n)} (x_0))_{=0} (x - x_0) + o(x - x_0) $ \\
+	Т.е $ g^{n-1} (x) = o(x-x_0) $  
+\end{lemma}
+
+\begin{theorem}
+	Формула Тейлора с остатком в форме Пеано \\
+	f n раз дифф-ма в т. $ x_0 $ \\
+	Тогда $ f(x) = T_{x_0, n} f + o((x-x-0)^n) $ \\
+	\begin{proof}
+		$ g(x) = f(x) - T_{x_0, n} f(x) $ \\
+		$ g(x_0) = 0 $ \\
+		$ (T_{x_0,n} f)^{(k)} = f^{(k)} (x_0) $ \\
+		$ \Rightarrow g^{(k)} (x_0) = 0 , k = 1..n $\\
+		$ \Rightarrow g(x) = o((x - x_0)^n) $ 
+	\end{proof}
+\end{theorem}
+
+Пример. 
+1. $ e^x = 1 + \dfrac{x}{1!} + \dfrac{x^2}{2!} + ... + \dfrac{x^n}{n!} + o(x_n) $ \\
+2. $ \sin x = x - \dfrac{x^3}{3!} + \dfrac{x^5}{5!} - ... + (-1)^n \dfrac{x^{2n+1}}{(2n+1)!} + o(x^{2n-2}) $ \\
+3. $ \cos x = 1 - \dfrac{x^2}{2!} + \dfrac{x^4}{4!} - ... + (-1)^n \dfrac{x^{2n}}{(2n)!} + o(x^{2n+1}) $ \\
+4. $ \ln (1+x) = \sum_{k=1}^{n} \dfrac{(-1)^{n-1} \cdot  (k-1)!}{k!} x^k + o(x^{n+1}) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - ...+(-1)^{n-1} \dfrac{x^n}{n} + o(x^{n+1})$ \\
+5. $f(x) = (1+x)^p = 1 + px + \dfrac{p(p-1)}{2} x^2 + ... + C^n_p x^n+ o(x^{n+1}) $ \\
+
+\begin{theorem}
+	Формула Тейлора с остатком в форме Лагранжа \\
+	Пусть $ f : (a,b) \rightarrow \R $ и n+1 раз дифф-ма на $(a,b) $ \\
+	$ x, x_0 \in (a,b) $\\
+	Тогда $ \exists c \in (x_0, x) (x - x_0) $ \\
+	$ f(x) = T_{x_0,n} f(x) + \dfrac{f^{(n+1)} (c)}{(n+1)!}(x-x_0)^{n+1} $\\
+	\begin{proof}
+	$	f(x) = 	T_{x_0,n} f(x) + M\cdot (x - x_0)^{n+1}  $ \\
+	$ g(t) = f(t) - T_{x_0,n} f(t) - M(t-x_0)^{n+1} $ \\
+	$ g \ n+1 $ дифф-ма на $(a,b)$ \\
+	Достаточено д-ть, что $ \exists c \in (x_0, x) : g^{(n+1)} (c) = 0 $ \\
+	$ g^{(n+1)} (c) = f^{(n+1)} (c) - (n+1)!\cdot M $ \\
+	$ g^{(n+1)} (c) = 0 \Rightarrow M = \dfrac{f^{(x+1)} (c)}{(n+1)!} $ \\
+	Легко видеть, что $ g(x_0) = g'(x_0) ... = g^{(n)}(x_0) = 0 $ \\
+	$ g(x) = 0 $ по опред M \\
+	$ g $ определена на $ [x_0, x] $ \\
+	$ g(x_0) = g(x) $ \\
+	$ g $ дифф-ма на $ (x_0, x) $\\
+	$ \Rightarrow $ по т. Ролля $ \exists x_1 \in  (x_0, x) : g'(x_1) = 0 $ \\
+	$ g(x_1) = g(x_1) $ \\
+	$ g $ дифф-ма на $(x_0, x_1)$\\
+	$ \Rightarrow $ по т. Ролля $ \exists x_2 \in  (x_0, x_1) : g'(x_2) = 0 $ \\
+	Повторим n раз \\
+	$ \exists x_{n+1} \in (x_0, x_n) : g^{(n)} (x_n) = 0 $ \\
+	$ c = x_{n+1} $
+	\end{proof}
+\end{theorem}
+
+Сл. 1 Пусть $ | f^{(n+1)} (t) | \leq M, \forall t \in (x_0, x) $ \\
+Тогда $ |R_{x_0, n} f(x) \leq \dfrac{M|x-x_0|^{n+1}}{(n+1)!} = O((x-x_0)^{n+1}) $ \\
+Сл. 2 Пусть $  | f^{(n+1)} (t) | \leq M, \forall t \in (a, b) \forall n \in \N $ \\
+Тогда $ T_{n, x_0} f(x) \rightarrow_{n \rightarrow \infty} f(x_0) \forall x_0, x \in (a,b) $ \\
+$   |R_{x_0, n} f(x) \leq \dfrac{M|a-b|^{n+1}}{(n+1)!} \rightarrow 0 $ \\
+
+
+
+
+
+

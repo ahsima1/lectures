@@ -1,0 +1,179 @@
+\Subsection{Линейные уравнения и линейные сравнения в ОГИ. Линейные уравнения в кольцах вычетов}
+
+\begin{theorem}
+	 R - ОГИ $ ax+by=c $ разрешимо, если $  GCD(a, b) | c $ \\
+	Все решения имеют вид $ x = x_0 + \dfrac{b}{d} t, y = y_0 - \dfrac{a}{d}t $ \\
+\end{theorem}
+Сл. 1 R - ОГИ, $a, b, c \in  R $ \\
+$ ax \equiv c (\mod b) $ \\
+\begin{theorem}
+	1. R - ОГИ, Сравнение разрешимо \\
+	$ \Leftrightarrow GCD(a, b) | c $ \\
+	2. $ R = \Z, d = GCD(a, b) $ \\
+	$ d | c $  \\
+	$ ax \equiv c \mod b, x_0 $ частное решение \\
+	Имеет d решений, $ x \equiv x_0 + \dfrac{b}{d}t (\mod b), t = 0...d-1$\\
+	$ ax \equiv c (\mod b) $ \\
+	$ \Leftrightarrow b | ax - c $ \\
+	$ \Leftrightarrow \exists y \ \ ax - c = by $ \\
+	$ \Leftrightarrow \exists y \ \ ax - by = c $ \\
+	Это ур-е разрешимо $ \Leftrightarrow $ НОД$(a,b)$ = НОД$(a, -b)  | c$ \\
+	$ x_0, y_0 $ - простые решения \\
+	Общ решения $ x = x_0 + \dfrac{b}{d}t , y = y_0 + \dfrac{a}{d}t, t \in R, R = \Z, x_t = x_0 + \dfrac{b}{d} t, t = 0, ... ,d-1 $ \\
+	a) $ x_t, x_{t'} $ попарно несравнимы по  $ \mod b $ если $ 0 \leq t \neq t' < d $ \\
+	б) Любое другое решение $ x_{t'} $ сравнимо с одним из $ x_t, 0 \leq t < d $ \\
+	в) $ 0 \leq t, t' < d $ \\
+	$ x_t \equiv x_{t'} (\mod b) $ \\
+	$ \dfrac{b}{d} (t - t') \equiv 0 (\mod b) $ \\
+	$ b | \dfrac{b(t - t')}{d}  \ \ db | b(t-t'), d | (t - t'), t = t' $ \\
+	
+	$ t' = dq + t, 0 \leq t < d $ \\
+	$ x_{t'} = x_0 + \dfrac{b}{d} t' = x_0 + \dfrac{b}{d} (dq+t) $ \\
+	$ = x_0 + \dfrac{b}{d} t + bq = x_t + bq \equiv x_t (\mod b) $ \\
+ \end{theorem}
+
+
+$ R - $ ОГИ $ b \neq 0, a,c \in R $ \\
+$ R / (b) $ \\
+$ [a] \cdot x = [c] $ ур-ние в $ R/(b) $ \\
+\begin{theorem}
+	1. $ [a]x = c $ разрешимо $ \Leftrightarrow GCD(a,b) | c $ \\
+	2. $ R = \Z, d = GCD(a, b), d | c $ \\
+	$ x_0 - $ частное решение \\
+	Все решения $ x_0 + \left[\dfrac{b}{d}\right] \cdot [t], 0 \leq t < d$\\
+	\begin{proof}
+		%pic1,2
+	\end{proof}
+\end{theorem}
+Следствие R - ОГИ $ b \neq 0, b \in R $ \\
+$ a \in R, a, b $ вз просты \\
+В $ R / (b) $ \\
+Ур-е $ [a] \cdot x = [c] $ разрешимо при любой правой части единственным образом \\
+\begin{proof}
+	Ур-е разрешимо \\
+	Пусть $ x, x'$ два решения \\
+	$ [a] (x - x') = [0] $ \\
+	$ x  = [X], x' = [X'], X, X' \in R $ \\
+	$ a (X - X') \equiv 0 (\mod b) $ \\
+	$ b | a(X - X') $ \\
+	$b, a $ вз просты $ \Rightarrow X \equiv X' (\mod b) $ \\
+	$ x = [X] = [X'] = x' $
+\end{proof} 
+Cл. R - ОГИ, $b \neq 0,  [a] \in R / (b) $ обратим в  $ R/(b) \Leftrightarrow a,b $ вз просты \\
+$ [a] $ оброатим в $ R/(b) \Leftrightarrow [a]x = [1] $ разрешим $ \Leftrightarrow GCD(a,b) | 1 \Leftrightarrow a, b $ вз просты \\
+\begin{theorem}
+	R - ОГИ, $ b \neq 0$ \\
+	$ R / (b) $ - поле $ \Leftrightarrow $ b - неприводим \\
+	\begin{proof}
+		1. $ R \setminus \{0\} = \{\text{Обратимые}\} \cup \{\text{Неприводимые}\} \cup \{\text{Составные}\} $ \\
+		$ b \in R^*, (b) = R, R / (b) - $ одноэлем - не поле \\
+		$ b $ составное $ b = n \cdot m, n, m $ не обратимые, в частности $ b \centernot| n, b \centernot| m $ \\
+		$ b $  - неприв, $ [0] \neq [a] \in R / (b), b \centernot| a $ \\
+		Делитель b либо обратим, либо ассоцировани с b $ \Rightarrow $ обшие делители b и a только обратимые $ \Rightarrow $ b и a взаимно просты $ \Rightarrow [a] $ обратим в $ R / (b) $ \\
+		$ \Rightarrow R/(b) $ поле \\
+		2. Была т-ма \\
+		R - о.ц., I - идеал в R \\
+		$ R / I $ - поле $ \Leftrightarrow $ I - максимальный идеал \\
+		$ b \in R^*, (b) = R, $ не подходит \\
+		$ b $ - составное $ b = nm, n, m \notin R^* $ n,m не ассоц с b \\
+		$ n | b $ \\
+		$ (b) \subsetneqq (n) \subsetneqq R \Rightarrow b $ не макс \\
+		$ b $ неприводим \\
+		$ (b) \subseteq Y \subseteq R $ \\
+		$ \exists n, Y = (n) $ \\
+		$ n | b \ \ b = n\cdot m $ \\
+		т.к. b неприводим то либо $ n \in R^*, $ либо $ m \in R^* $ \\
+		$ n \in R^*, Y= (n) = R $ \\
+		$ m \in R^*, b \sim n , Y = (n) = (b) $ \\
+		$ \Rightarrow (b) $ - максимальный  
+	\end{proof}
+\end{theorem}
+Сл. $ R = \Z , n \in \N $ \\
+$ Z / n\Z $ - поле $ \Leftrightarrow $ n - простое число \\
+Поля: $ \Z/2\Z , \Z/3\Z, \Z/5\Z $ \\
+Пример: $ \Z[i], p \in \N, p $ простое \\
+$ p \equiv 3(4) $ \\
+Тогда p - неприводимый элемент в $ \Z[i] $ \\
+и $ \Z[i] /(p) $ - поле из $p^2$ эл-тов \\
+\begin{proof}
+	$ p = (a+bi)(c + di)  $ \\
+	$ N(z) = |z|^2 $ \\
+	$ p^2 = (a^2 + b^2)(c^2 + d^2) $ \\
+	$ a^2 + b^2 = 1, c^2 + d^2 = p^2 $ \\
+	$ (a, b) \in \{(0, \pm 1), (\pm 1, 0) \} $ \\
+	$ a + bi \in \{1, -1, i, -i\} $ \\
+	$ = (\Z[i])^* $ \\
+	$ a^2 + b^2 = p, c^2 + d^2 = p $ \\
+	$ a^2 \equiv 0, 1 (4) $ \\
+	$ b^2 \equiv 0, 1 (4) $ \\
+	По mod 4: \\
+	$ a^2 + b^2 $ может быть 0,1,2 \\
+	Но $ p \equiv 3(4) \Rightarrow p \neq a^2 + b^2 $ 
+\end{proof}
+
+P неприв $ \Z [i] $ \\
+$ \Z [i] / (p) $ - поле \\
+$ \{ [u + vi] | u, v \in \Z, 0 \leq u \leq p-1, 0 \leq v \leq p-1 \}$ \\
+Мн-во всех попарно различных классов вычетов по mod  \\
+$ x \in \Z[i] /(p) \ \ x = [a + bi] $ \\
+$ a = pq + u $ \\
+$ b = ps + v, 0 \leq u,v < p $ \\
+$ [a + bi] = [pq + u + (ps + v) i] $ \\
+$ = [u+vi] + [pq + psi] $ \\
+$ = [u+vi] + [p] \cdot [q+si] = [u+vi] $ \\
+$ 0 \leq u, u', v, v' < p  \ \ [u + vi] = [u' + v'i] $ \\
+$ p | u - u' + (v - v')i $ в $ \Z [i] $ \\
+$ u - u' + ( v - v') i = p(c+di) $ \\
+$ u - u' = pc $ \\
+$ v - v' = pd $ \\
+$ p | (u - u') $ в $ \Z $ \\
+$ p | (v - v') $ в $ \Z $ \\
+$ u = u', v = v' $ \\
+$ | \Z[i] / (p) | = p^2 $ \\
+$ [a + bi] = [a] + [b][i] $ \\
+$ p \equiv 3 (4) $  Поле из $p^2$ элементов \\
+$ a + bi, a, b \in \Z /p\Z $ 
+
+Замеч $ p \equiv 1 (4), x^2 = -1 $ разрешимо в $ \Z / p\Z $ \\
+Поэтому добавить $ \sqrt{-1} $ не можем \\
+
+\Subsection{Китайская теорема об остатках} 
+
+(*) $ \left\{\begin{array}{cc}
+x \equiv a_1 (\mod n_1) \\
+...
+x \equiv a_k (\mod n_k) \\
+\end{array}  \right. $ \\
+Вопрос: когда (*) - разрешимо? Как выглядят решения? \\
+\begin{theorem}
+	R - ОГИ \\
+	Пусть $ n_1, ..., n_k $ - взаимно просты. Тогда при любом наборе a система разрешима \\
+	Причём если $ x, x' $ - решения \\
+	$ x \equiv x'(\mod n_1...n_k) $ 
+	\begin{proof}
+		Единств (по $\mod n_1...n_k$ ) \\
+		$ \forall i \ \ x \equiv a_i (\mod n_i) $ \\
+		$ \ \ \ \ x' \equiv a_i (\mod n_i) $ \\
+		$ x \equiv x' (\mod n_i) $ 
+		$ \forall i, n_i | x - x' $ \\
+		%pic5,6
+		Существование решения \\
+		%pic 7,8
+		$(*) =  \left\{\begin{array}{cc}
+		x \equiv a_1 (\mod n_1) \\
+		...
+		x \equiv a_k (\mod n_k) \\
+		\end{array}  \right. $ \\
+		$(*^i) $ \\
+		$ x = \sum_{s = 1}^{k} a_s \cdot x^{(s)} $ - реш (*) \\
+		$ n_i \ \ x_{n_i} \equiv \sum_{s = 1}a_s x^{(s)} = a_1 \cdot 0 + .. + a_i \cdot 1 + a_k \cdot 0 \equiv a_i (\mod n_i)$ \\
+		$ s = i, x^{(i)}  \ \ x^{(i)} \equiv 1 (n_i) $ \\
+		$ s \neq i, x^{(s)} \equiv 0(n_i) $ \\
+ 	\end{proof}
+\end{theorem}
+
+
+
+
+
+

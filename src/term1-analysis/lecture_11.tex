@@ -1,0 +1,252 @@
+\begin{theorem}
+	Пусть $ f : <a, b> \rightarrow \R $, строго монотонна и непрерывна \\
+	$ x_0 \in <a,b> $ \\
+	$ f $ дифф-ма в $ x_0,  f'(x_0) \neq 0 $ \\
+	Тогда обратная к f ф-я дифф-ма в $ f(x_0) $ \\
+	$ (f^{-1})'(f(x_0)) = \dfrac{1}{f'(x_0)} $ \\
+	\begin{proof}
+		$ f(x) - f(x_0) = \phi(x) \cdot (x - x_0) \ \ \phi $ непр в $ x_0 $ \\
+		Из монотонности $ \phi(x) \neq 0 $ при $ x \neq x_0 $ \\
+		$ \phi(x_0) = f'(x_0) \neq 0 $
+		$ \dfrac{1}{\phi(x)} $ опр на $ < a, b> $ и непрерывн в $ x_0 $ \\
+		$ g = f^{-1}, y = f(x), y_0 = f(x_0) $ \\
+		$ y - y_0 = f(x) - f(x_0) = \phi(x) (x - x_0) = \phi(x)( g(y) - g(y_0) ) \Rightarrow g(y) - g(y_0) = \dfrac{1}{\phi(x)} \cdot (y - y_0) $\\
+		$ \phi \circ g $ непрерывн в $ y_0 $ т.к. g непр в $y_0$, $ \phi $ непрерывн в $ g(y_0) = x_0 $ \\
+		$ \Rightarrow g $ дифф в $y_0, g'(y_0) = \dfrac{1}{\phi(g(y_0))} = \dfrac{1}{f'(x_0)}$ \\ 
+  	\end{proof}
+\end{theorem}
+
+\subsection{Производные элементарных ф-ций}
+
+Предложение: Пусть $ a > 0, f(x) = a^x $ \\
+Тогда $ f'(x) = \ln a \cdot a^x $ \\
+\begin{proof}
+	$ x_0 \in \R $ \\
+	$ \dfrac{f(x) - f(x_0)}{x - x_0} = \dfrac{a^x - a^{x_0}}{x - x_0} = a^{x_0} \cdot \dfrac{a^{x-x_0} - 1}{x - 1} \rightarrow_{x \rightarrow x_0} a^{x_0} \cdot \ln a $
+\end{proof}
+
+
+$\begin{array}{|c|c|}
+\hline
+f(x)	& f'(x)  \\ 
+\hline
+x	& 1 \\ 
+\sin x	& \cos x \\ 
+a^x	& \ln a \cdot a^x \\ 
+	\hline 
+x^n	& nx^{n-1}  \\ 
+\log_a x & \dfrac{1}{x \cdot \ln a}  \\
+\hline
+\end{array} $ $ a > 0, a \neq 1, \log_a : (0, +\infty) \rightarrow \R, \log_a' (a^{x_0}) = \dfrac{1}{\ln a \cdot a^{x_0}}, \log_a (x) = \dfrac{1}{x \ln a}, x > 0$ \\
+$ f(x) = x^p = e^{\ln(x^p)} = e^{p \ln x} $\\
+$ f'(x) = e^{p \ln x} \cdot \dfrac{p}{x} = x^p \cdot \dfrac{p}{x} = p \cdot x^{p-1} $\\
+$ (\cos x)' = \cos (x + \dfrac{\pi}{2} \cdot (x + \dfrac{\pi}{2}))' = -\sin x $ \\
+$ (\tan x)' = (\dfrac{\sin x}{\cos x}) = \dfrac{1}{(\cos x)^2} $ \\
+$ (\cot x)' = (\dfrac{\cos x}{\sin x}) = \dfrac{-\sin^2 x - \cos^2 x}{\sin^2 x} = \dfrac{-1}{\sin^2 x}  $\\
+$ (\arcsin(x))' = \dfrac{1}{\cos(\arcsin(x))} = \dfrac{1}{\sqrt{1 - x^2}} $ \\
+$ \sin \theta = x $ \\
+$ (\cos \theta )^2 = 1 - x^2 q	$\\
+$ (\arctan x)' = \cos^2 (\arctan x) $ \\
+$ \tan \theta = x $ \\
+$ (\cos \theta)^2 = \dfrac{1}{1 + x^2} $ \\
+
+\begin{theorem}
+	Теорема Ферма \\
+	$ f : <a, b> \rightarrow \R $ \\
+	Дифф-ма в $ x_0 \in (a, b) $ \\
+	Если $ f(x_0) = \max f(x) $ или $ f(x_0) = \min f(x), $ то $ f'(x_0) = 0 $ \\
+	\begin{proof}
+		Можно считать $ f(x_0) = \max f(x) $ \\
+		$ x > x_0, \dfrac{f(x) - f(x_0)}{x- x_0} \leq 0 \Rightarrow \lim\limits_{x \rightarrow x_0+} \dfrac{f(x) - f(x_0)}{x- x_0} \leq 0 $ \\
+		$ x < x_0, \dfrac{f(x) - f(x_0)}{x- x_0} \geq 0 \Rightarrow \lim\lim\limits_{x \rightarrow x_0 -} \dfrac{f(x) - f(x_0)}{x- x_0} \geq 0 = f_-'(x_0) $ \\
+		$ f_-'(x_0) = f_+'(x_0) \Rightarrow f'(x_0) = 0 $
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}
+	Теорема Ролля \\
+	$ f : [a, b] \rightarrow \R $ непр на $ [a, b] $, дифф на $ (a, b) $ \\
+	Если $ f(a) = f(b),$ то $ \exists c \in (a, b) : f'(c) = 0 $ \\
+	\begin{proof}
+		По т. Вейерштрасса $ \exists p \in [a, b] : f(p) = \max_{x \in [a,b]} f(x) $ \\
+		$ \exists q, f(q) = \min_{x \in [a,b]} f(x) $ \\
+		1. $ p, q \in \{a, b\} \Rightarrow f(p) = f(q) \Rightarrow \forall x \in [a. b], f(x) = f(p) \Rightarrow \forall c \in [a, b] : f'(c) = 0$ \\
+		2. $ p \in (a, b) $ или $ q \in (a, b) $ \\
+		Тогда для $ c = p ( c = q ) $ вып условие т. Ферма $ \Rightarrow f'(c) = 0 $
+	\end{proof}
+	Замечание: нельзя отменить условие дифф-ти на $ (a,b) $ \\
+	$ f(x) = |x| $ на $ [-1, 1] $
+\end{theorem}
+
+\begin{theorem}
+	Теорема Лагранжа \\
+	$ f : [a, b] \rightarrow \R $ непр на $ [a, b] $, дифф на $ (a, b) $ \\
+	Тогда $ \exists c \in (a, b) $ т.ч. $ f(b) - f(a) = f'(c) (b - a) $ \\
+	\begin{proof}
+		$ g(x) = f(x) - \dfrac{f(b) - f(a)}{b -a } \cdot (x - a) $ \\
+		$ g(a) = f(a) $ \\
+		$ g(b) = f(b) -  \dfrac{f(b) - f(a)}{b -a } \cdot (b - a) = f(a) $\\
+		По т. Ролля $ \exists c \in (a, b) : g'(c) = 0 $ \\
+		$ g'(c) = f'(c) - \dfrac{f(b) - f(a)}{b -a } $\\
+		$ \Rightarrow f'(c) = \dfrac{f(b) - f(a)}{b -a }  $ 
+	\end{proof}
+	Следствие Пусть $ f : [a, b) \rightarrow \R $ непр, дифф на $ (a, b) $ \\
+	$ \forall x \in (a, b) m \leq f'(x) \leq M $\\
+	Тогда $ m \leq \dfrac{f(b) - f(a)}{b -a} \leq M $
+\end{theorem}
+
+\begin{theorem}
+	Теорема Коши \\
+	Пусть $  f,g : [a, b] \rightarrow \R $ непр на $ [a, b] $, дифф на $ (a, b), f'(g) \neq 0 \forall x \in (a, b) $ \\ 
+	Тогда $ \exists c \in (a, b) : \dfrac{f(b) - f(a)}{g(b) - g(a)} = \dfrac{f'(c)}{g'(c)} $ \\
+	\begin{proof}
+		$ g(b) \neq g(a) $ ввиду теоремы Ролля \\
+		$ h(x) = f(x) - \dfrac{f(b) - f(a)}{g(b) - g(a)} \cdot (g(x) - g(a)) $ \\
+		$ h(a) = f(a) = h(b) $\\
+		$ h(x) $ непр на $ [a, b] $, дифф на $ (a, b) $ \\ 
+		По т. Ролля $ \exists c \in (a, b) : h'(c) = 0 $ \\
+		$ h'(c) = f'(c) - \dfrac{f(b) - f(a)}{g(b) - g(a)} \cdot g'(c)  $ \\
+		$ f'(c) = \dfrac{f(b) - f(a)}{g(b) - g(a)} \cdot g'(c) $ \\
+		$ \dfrac{f(b) - f(a)}{g(b) - g(a)} = \dfrac{f'(c)}{g'(c)} $
+	\end{proof}
+\end{theorem}
+Предл:  $ f : <a, b> \rightarrow \R $ непр на $ <a, b> $, дифф на $ (a, b) $ \\
+Тогда \\
+1. $ f $ возрастает на $ <a, b> \Leftrightarrow f'(x) \geq 0 \forall x \in (a, b) $ \\
+2. $ f'(x) > 0 $ на $ (a, b) \Rightarrow f $ строго возрастает на $ <a, b> $ \\
+\begin{proof}
+	1. $ \Rightarrow $ Пусть $ x_0 \in (a, b) $ \\
+	$ x > x_0 \ \dfrac{f(x) - f(x_0)}{x - x_0} \geq 0 $\\
+	$ \Rightarrow $ по т. о предельном переходе в нер-ве $ f'(x_0) \geq 0 $ \\
+	%$ x < x_0 \ \dfrac{f(x) - f(x_0)}{x - x_0} \geq 0 
+	1. $ \Leftarrow, 2 \ x_0, x_1 \in <a,b> , x_0 < x_1 $ \\
+	$ [x_0, x_1] \subset <a,b> $ \\
+	f непр на $ [x_0, x_1], $ дифф на $ (x_0, x_1) $ \\
+	По т. Лагранжа $ \exists c \in (x_0, x_1) : f(x_1) - f(x_0) = f'(c) (x_1 - x_0) $ \\
+	сл. 1 $ f(x_1) - f(x_0) \geq 0 $ \\ 
+	сл. 2 $ f(x_1) - f(x_0) > 0 $ \\ 
+\end{proof}
+
+Сл. 1 $ f : <a, b> \rightarrow \R $, непр, дифф на $(a,b) $\\
+Тогда $ f $ пост на $ <a,b> \Leftrightarrow f'(c) = 0 \forall c \in (a,b) $ \\
+Сл. 2 Пусть $ f, g : [a, b> \rightarrow \R, b \in \R \cup \{+\infty \} $\\
+непр на $ [a, b> $ дифф на $ (a,b)$\\
+Предпол, $ f(a) = g(a) $ и $ \forall x \in (a,b) : f'(x) < g(x) $ \\
+Тогда $ f(x) < g(x) \forall x \in (a,b) $ \\
+\begin{proof}
+	$ h(x) = g(x) - f(x) $ \\
+	$ h'(x) = g'(x) - f'(x) > 0, \forall x \in (a,b) $\\
+	h строго возр на $ [a, b) $ (при $b = +\infty $) $ b_0 > a, b_0 \in \R \Rightarrow $ на $ [a, +\infty] $ \\
+	$ h(a) = 0 $ \\
+	$ \Rightarrow \forall x \in (a,b) ; h(x) > 0 $ \\
+	т.е. $ g(h) > f(x) $ 
+\end{proof}  
+
+\begin{theorem}
+	Теорема Дарбу
+	Пусть $ f : [a,b] \rightarrow \R, $ дифф-ма на $ [a, b] $ \\
+	Тогда $ \forall t: f'(a) < t < f'(b) $ \\
+	Найдётся $ c \in (a, b) : f'(c) = t $ \\
+	\begin{proof}
+		Пусть сперва $ t = 0 $ \\
+		f - непрерывна $ \Rightarrow \exists c \in [a,b] : f(c) = \min_{x \in [a,b]} f(x)  $ \\
+		Если $ c \in (a,b) $ то по т. Ферма $f'(c) = 0$\\
+		При $ c = a \ \ 0 = t > f'(a) = \lim\lim\limits_{x \rightarrow a_+} \dfrac{f(x) - f(a)}{x - a} \geq 0  $ \\
+		Случай $ c = a $ невозможен, аналогично невозможен $с = b$ \\
+		Общий сл. $ g(x) = f(x) - tx $ \\
+		$ g'(x) = f'(x) - t $ \\
+		$ f'(a) - t (= g'(a)) < 0 < f'(b) - t = g'(b) $ \\
+		По рассм случаю $ \exists c \in (a, b) : g'(c) = 0 \Rightarrow f'(c) = t $ \\		
+	\end{proof}
+\end{theorem}
+Следств 1.  Пусть $ f : <a,b> \rightarrow \R,$ дифф, $ \forall x \in <a,b> : f'(x) \neq 0 $ \\
+Тогда f - строго монотонна 
+\begin{proof}
+	Предположим не строго монотонная \\
+	$ \exists c_1 \in (a, b) : f'(c_1) \leq 0 $ \\
+	и $ \exists c_2 \in (a, b) : f'(c_2) \geq 0 $ \\
+	$ \Rightarrow f'(c_1) < 0, f'(c_2) > 0 $ \\
+	Применим т. Дарбу к f на $ [c_1, c_2] $ или $ [c_2, c_1] $ \\
+	$ \Rightarrow c \in [c_1, c_2] : f'(c) = 0 $ - против условия
+\end{proof} 
+
+Сл. 2 Пусть $ f : <a,b> \rightarrow \R $ - дифф-ма \\
+Тогда $ f'(<a,b>) $ - промежуток \\
+
+\begin{proof}
+	$ m = \inf_{c \in <a,b>} f'(c) , M = \sup_{c \in <a,b>} f'(c) $ \\
+	Д.м. $ \forall t \in (m, M) \exists c \in <a,b>  f'(c) = t,  t < m  \Rightarrow \exists c_2 \in <a,b>  : f'(c_2) > t $ \\
+	$ t > m \Rightarrow \exists c_1 \in <a,b> : f'(c_1) < t $ \\
+	По т. Дарбу $ \exists c \in (c_1, c_2), f'(c) = t $ \\
+	То $ f'(<a,b>) \supset (m, M) \Rightarrow f'(<a,b>) = (m, M] $ или $ [m, M] $ 
+\end{proof}
+
+Пример: нер-во Бернулли \\
+$ (1+x)^p \geq 1 + px, p > 1, x > -1 $ \\
+$ f(x) = (1+x)^p, g(x) = 1 + px $ \\
+$ x \geq 0 $ \\
+$ x = 0, f(0) = g(0)  $ \\
+$ f'(x) = p(1+x)^{p-1}, g'(x) = p $\\
+$ f'(x) > g'(x) \Rightarrow \forall x > 0: f(x) > g(x) $ \\
+$ x < 0 $ \\
+$ -1 < x < 0, f'(x) < g'(x) \Rightarrow f(x) > g(x) $ при $ x < 0 $ \\
+
+Пример 2 $ \sin x < x, \forall x > 0 $ \\
+$ \cos x = \cos^2 \dfrac{x}{2} - \sin^2 \dfrac{x}{2} = 1 - 2\sin^2 \dfrac{x}{2} > 1 - 2 \left(\dfrac{x}{2}\right)^2 = 1 - \dfrac{x^2}{2} $ \\
+$ \sin x > x - \dfrac{x^3}{6}, x > 0 $ \\
+$ f(0) = g(0) = 0 $ \\
+$ f'(x) = \cos x $ \\
+$ g'(x) = 1 - \dfrac{x^2}{2} $ \\
+$ f'(x) > g'(x) $ \\
+$ \forall x > 0 \Rightarrow \forall x > 0\sin x > x - \dfrac{x^3}{6} $ \\
+
+
+
+\Section{Правило Лопиталя}
+
+\begin{theorem} (Правило Лопиталя для $ \dfrac{\infty}{\infty} $ )\\
+	Пусть $ -\infty \leq a < b \leq +\infty $ \\
+	$ f, g (a, b) \rightarrow \R $ дифф-мы \\
+	$ g'(x) \neq 0 $ при всех $ x \in (a, b) $\\
+	$ \lim\limits_{x \rightarrow a} g(x) = \infty $ \\
+	Если  $ \lim\limits_{x \rightarrow a} \dfrac{f'(x)}{g'(x)} = l \in \overline{R}, $ то $ \lim \dfrac{f(x)}{g(x)} = l $ 
+	\begin{proof}
+		$ x_n \rightarrow a, x_1 > x_2 > ... $ \\
+		$ \forall x \in (a,b) : g'(x) \neq 0 \Rightarrow g $ строго монотонная \\
+		$ \Rightarrow g(x_n) $ - строго монотонная посл \\
+		$ \Rightarrow g(x_n) $ одного знака при дост. больших n \\
+		$ \Rightarrow g(x_n) \rightarrow +\infty $ или $  g(x_n) \rightarrow -\infty $ \\
+		$ \dfrac{f(x_{n+1}) - f(x_n)}{g(x_{n+1}) - g(x_n)} = \dfrac{f'(c_n)}{g'(c_n)} $ для нек $ c_n \in (x_n+1, x_n) $ по т. Коши, $ c_n \rightarrow a \Rightarrow \dfrac{f'(c_n)}{g'(c_n)} \rightarrow l $ \\
+		По т. Штольца $ \dfrac{f(x_n)}{g(x_n)} \rightarrow l $ \\
+		По Гейне $ \lim\limits_{x \rightarrow b} \dfrac{f(x)}{g(x)} = l$
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}(Правило Лопиталя для $ \dfrac{0}{0} $ )\\
+	Пусть $ -\infty \leq a < b \leq +\infty $ \\
+	$ f, g (a, b) \rightarrow \R $ дифф-мы \\
+	$ g'(x) \neq 0 $ при всех $ x \in (a, b) $\\
+	$ \lim\limits_{x \rightarrow a} f(x) = \lim\limits_{x \rightarrow a} g(x) = 0 $ \\
+	Если  $ \lim\limits_{x \rightarrow a} \dfrac{f'(x)}{g'(x)} = l \in \overline{R}, $ то $ \lim \dfrac{f(x)}{g(x)} = l $ 
+\end{theorem}
+
+Пример: Докажем, что $ \dfrac{\ln x}{x^p} \rightarrow_{x \rightarrow \infty}  0 \forall p > 0 $ \\
+$ f'(x) = \dfrac{1}{x}, g'(x) = px^{p-1} $ \\
+$ \dfrac{f'(x)}{g'(x)} = \dfrac{1}{px^p} \rightarrow 0 \Rightarrow  \dfrac{\ln x}{x^p} \rightarrow_{x \rightarrow \infty} 0 $\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

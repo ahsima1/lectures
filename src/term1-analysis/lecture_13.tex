@@ -1,0 +1,227 @@
+$ f \ \ f^{(n)} (x_0) \ \ x_0 \in <a,b> $ \\
+$ \sum_{n=0}^{\infty} \dfrac{f^{(n)} (x_0)}{n!} (x - x_0)^n $ \\
+Сл. 3. Пусть f беск число раз дифф-ма на $ (a, b) , | f^{(n)} (t) | \leq M, \forall t \in (a, b), \forall n \in \N $ \\
+Тогда $ f(x) = \sum_{n=0}^{\infty} \dfrac{f^{(n)} (x_0)}{n!} (x - x_0)^n \ \ \forall x_0, x \in (a, b) $ \\
+Пр. 1. $ e^x = \sum_{n=0}^{\infty} \dfrac{x^n}{n!} \forall x \in \R $ \\
+$ (e^x)^{(n)} = e^x, \ \ (a,b) \Rightarrow (e^a, e^b) $ \\
+2. $\cos x = \sum_{n=0}^{\infty} \dfrac{(-1)^nx^{2n}}{(2n)!}  \ \ \forall x \in \R $ \\
+3. $\sin x = \sum_{n=0}^{\infty} \dfrac{(-1)^nx^{2n+1}}{(2n+1)!}  \ \ \forall x \in \R $ \\
+Сл. 4. - e - иррационально \\
+\begin{proof}
+	Пусть $ e = \dfrac{m}{n}, m,n \in \N, $ очев $n \neq 1 $\\
+	$ x_0 = 0 $ \\
+	$ e = 1 + \dfrac{1}{1!} + \dfrac{1}{2!} + \dfrac{1}{3!} + ... + \dfrac{1}{n!} + ... $  \\
+	$ f(x) = f(x_0) + \sum_{i=1}^{n} \dfrac{f^{(i)} (x_0)}{i!}(x-x_0)^i + \dfrac{f^{(n+1)} (c)}{(n+1)!} (x - x_0)^{n+1}$ \\
+	$ m(n-1)! = n! + \dfrac{n!}{1!} + \dfrac{n!}{2!} + ... + 1 + ... \dfrac{e^c}{n+!} $\\
+	$ \dfrac{e^c}{n+1} \in \Z, \Rightarrow \dfrac{e^c}{n+1} \geq 1, e > e^c \geq 3 \forall n $ - невозможно
+\end{proof}
+\subsection{Экстремумы функций}
+
+$ f : E \rightarrow \R, E \subset \R, x_0 \in E  $\\
+$ x_0 - $ точка локального минимума, если $ \exists \delta > 0 $ \\
+$ \forall x \in (x_0 - \delta, x_0 + \delta) \cap E : f(x) \geq f(x_0) $ \\
+$ x_0 - $ точка локального максимума, если $ \exists \delta > 0 $ \\
+$ \forall x \in (x_0 - \delta, x_0 + \delta) \cap E : f(x) \leq f(x_0) $ \\
+$ x_0 - $ точка строгого локального минимума, если $ \exists \delta > 0 $ \\
+$ \forall x \neq x_0 \in (x_0 - \delta, x_0 + \delta) \cap E : f(x) > f(x_0) $ \\
+$ x_0 - $ точка строгого локального максимума, если $ \exists \delta > 0 $ \\
+$ \forall x \neq x_0 \in (x_0 - \delta, x_0 + \delta) \cap E : f(x) < f(x_0) $ \\
+\begin{theorem}
+	О необходимом условии экстремума \\
+	Пусть $ f : <a,b> \rightarrow \R, x_0 \in (a, b) $ \\
+	f дифф-ма в $x_0$\\
+	Если $ x_0 $ - т. экстремума f то $ f'(x_0) = 0 $ \\
+	\begin{proof}
+		Считаем, $ x_0 $ - т. максимума \\
+		$ \Rightarrow \exists \delta > 0 : \left\{ \begin{array}{c} ( x_0 - \delta, x_0 + \delta) \subset (a, b) \\ \forall x \in ( x_0 - \delta, x_0 + \delta) \subset (a, b) : f(x) \leq f(x_0) \end{array} \right.$ \\
+		Применима т. Ферма к $( x_0 - \delta, x_0 + \delta) \subset (a, b)$ \\
+		Получим $ f'(x_0) = 0 $
+	\end{proof}
+	1. Достаточности нет $ f(x) = x^3 $ \\
+	2. Существенна дифф-ть $ f(x) = |x| $ \\
+	3. Сущ-но $ x_0 \neq a, b, f(x) = x $ на $ [0, 1] $
+\end{theorem}
+$ f : [a, b] \rightarrow \R $ \\
+$ f(x_0), $ наиб зн f на $ [a,b] \Rightarrow x_0 - $ точк локального макс  \\
+$\Rightarrow \left[ \begin{array}{cc}
+x_0 = a \\
+x_0 = b \\
+f \text{не дифф-ма на } x_0 \\
+f'(x_0) = 0 
+\end{array}  \right.$ 
+\begin{theorem}
+	Теорема о дост. условии экстремума в терминах 1-й производной \\
+	Пусть $ f : <a,b> \rightarrow \R, x_0 \in (a,b),\\
+	f $ непрерывна в $ x_0 $ и дифф-ма на $  ( x_0 - \delta, x_0) \cup ( x_0, x_0 + \delta) $ \\
+	1. Eсли $ f'(x) < 0 $ на $ (x_0 - \delta, x_0) $ и $ f'(x) > 0 $ на $ (x_0, x_0 + \delta) $ \\
+	То $ x_0 $ - строгого минимума \\
+	2. Eсли $ f'(x) > 0 $ на $ (x_0 - \delta, x_0) $ и $ f'(x) < 0 $ на $ (x_0, x_0 + \delta) $ \\
+	$ x_0 $ - строгого максимума \\
+	\begin{proof}
+		% pic1
+	\end{proof}
+\end{theorem}
+\begin{theorem}
+	Теорема о дост. условии экстремума в терминах 2-й производной \\
+	Пусть $ f : <a,b> \rightarrow \R, x_0 \in (a,b),\\
+	f $ дважды дифф в $ x_0 $ \\
+	$ f'(x_0) = 0 $ \\
+	1. Если $ f''(x_0) > 0, $ то $ x_0 $ - т.строго минимума \\
+	2. Если $ f''(x_0) < 0, $ то $ x_0 $ - т.строго максимума \\
+	\begin{proof}
+		$ f(x) = f(x_0) + f'(x_0) \cdot (x - x_0) + \dfrac{f''(x)}{2} (x - x_0)^2 + o((x-x_0)^2) = $\\
+		$ f(x) - f(x_0) = \dfrac{f''(x_0)}{2} (x-x_0)^2 (1 + o(1))  $ \\
+		$ \Rightarrow f(x) - f(x_0) > 0$ в нек. окр $ x_0 $ 
+ 	\end{proof}
+\end{theorem}
+\begin{theorem}
+	Теорема о дост. условии экстремума в терминах n-й производной \\
+	Пусть $ f : <a,b> \rightarrow \R, x_0 \in (a,b),\\
+	f $ n раз дифф в $ x_0 $ \\
+	$ f'(x_0) = f''(x_0) = ... = f^{(n-1)} = 0, f^{(n)} \neq 0 $ \\
+	1. Если n - чётно, $ f^{(n)} > 0, x_n $  строго минимума \\
+	2. Если n - чётно, $ f^{(n)} < 0, x_n $  строго максимума \\
+	1. Если n - нечётно $ x_n $ не явл точкой экстремума \\
+	\begin{proof}
+		... \\
+		$ f(x) - f(x_0) = \dfrac{f^{(n)} (x_0)}{n!} (x-x_0)^n + o((x-x_0)^n) $\\
+		$ f(x) - f(x_0) = \dfrac{f^{(n)} (x_0)}{2} \left((x-x_0)^n (1 + o(1)) \right)_{>0 \text{в нек проколотой окр x}} $ \\
+		$ n $ чётно $ \Rightarrow x_0 $ тчк стр мин (макс) \\
+		При нечётном n cущ $ \delta > 0 $ т.ч. $ g(x) > 0 $ на $ U_{\delta} (x_0) $ \\
+		$ \Rightarrow \left\{ \begin{array}{cc}
+			f(x) - f(x_0) > 0 \text{при} x \in (x_0, x_0 + \delta) \\
+			f(x) < f(x_0) < 0 \text{при} x \in (x_0 - \delta, x_0)
+		\end{array} \right.  $ \\
+		$ \Rightarrow x_0$ не тчк. экстремума  
+	\end{proof}
+\end{theorem}
+Если все производные =0 \\
+\Subsection{Выпуклые функции}
+\begin{definition}
+	$ f : <a,b> \rightarrow \R $ наз выпуклой [вниз], если $ \forall x,y \in <a,b> , \forall \lambda \in (0,1) $ \\
+	$ f(\lambda x + (1- \lambda) y) \leq \lambda f(x) + (1 - \lambda) f(y) $ \\
+\end{definition}
+\begin{definition}
+	$ f : <a,b> \rightarrow \R $ наз вогнутой [выпуклой вверх], если $ \forall x,y \in <a,b> , \forall \lambda \in (0,1) $ \\
+	$ f(\lambda x + (1- \lambda) y) \geq \lambda f(x) + (1 - \lambda) f(y) $ \\
+\end{definition}
+Предложение: Пусть $ f : <a,b> \rightarrow \R $ \\
+Тогда эквивалентны условия \\
+1. $ f $ выпукла на $ <a,b> $ \\
+2. $ \forall u, v, w \in <a,b> , u < v < w $ \\
+$ f(v) \leq \dfrac{w - v}{w - u} f(u) + \dfrac{v - u}{w - u} f(w) $ \\
+3. $\dfrac{f(v) - f(u)}{v - u} \leq \dfrac{f(w) - f(v)}{w - v}$
+\begin{proof}
+	%pic2
+	$ 1 \Leftrightarrow 2$ Положим $ x = u, y = w, \lambda = \dfrac{w - v}{w - u} \Rightarrow 1 - \lambda = $ 
+	$ 2 \Leftrightarrow 3 $ 
+\end{proof}
+\begin{lemma}
+	О трёх хордах \\
+	Пусть $ f : <a,b> \rightarrow \R $ выпуклая, $ u < v < w, u, w \in <a,b>$ \\
+	Тогда $ \dfrac{f(v) - f(u)}{v - u} \leq \dfrac{f(w) - f(u)}{w- u} \leq \dfrac{f(w)- f(v)}{w - v} $ \\
+	\begin{proof}
+		(1) $ \Leftrightarrow (w - u) f(v) \leq (f(w) - f(u))(w - u) + f(u) (w- u) = f(u) (w - v) + f(v) (v - u) \Leftrightarrow "2" $ в предложении \\
+		(2) $ \Leftrightarrow "2" $ в предложении
+	\end{proof}
+\end{lemma}
+Сл. 1 Пусть $ f : <a,b> \rightarrow \R$ вып, $ x_0 \in <a,b> $ \\
+$ F (x) = \dfrac{f(x) - f(x_0)}{x - x_0} $ возрастает на $ <a,b> \setminus \{x_0\} $ \\
+Сл. 1 Для строго выпуклой F строго возрастает \\
+\begin{proof}
+	$ x < y $ \\
+	1. $ x_0 < x < y,  \dfrac{f(x) - f(x_0)}{x - x_0}  \leq \dfrac{f(y) - f(x_0)}{y - x_0} $ \\
+	2. $ x < y < x_0, \dfrac{f(x_0) - f(x)}{x_0 - x}  \leq \dfrac{f(x_0) - f(y)}{x_0 - y}  $ \\
+	3. $ x < x_0 < y, \dfrac{f(x_0) - f(x)}{x_0 - x} \leq  \dfrac{f(y) - f(x_0)}{y - x_0} $ 
+\end{proof}
+Предложение. Пусть $ f : <a,b> \rightarrow \R $ выпукл \\
+Тогда во всех $ x \in (a, b) $ сущ кон. $ f_-' $ и $ f_+' $ \\
+причём $ f_-' (x) \leq f_+'(x) $ \\
+\begin{proof}
+	Сущ-е $ f_-' (x) $ \\
+	Зафикс $ x_0 \in (a, b) $ \\
+	$ F(x) = \dfrac{f(x) - f(x_0)}{x - x_0} $ возрастает на $ (a, x_0) \cup (x_0, b) $ \\
+	Для $ x \neq x_0 \in \left( \dfrac{a + x_0}{2}, \dfrac{b+ x_0}{2} \right) $ \\
+	$ F(\dfrac{a + x_0}{2}) \leq F(x) \leq F(\dfrac{b + x_0}{2}) $ \\
+	F монотонна и ограничена \\
+	Сущ $ \lim\limits_{x \rightarrow x_{0-}} F(x) =  f_-' (x)$ \\
+	и сущ. $ \lim\limits_{x \rightarrow x_{0+}} F(x) =  f_+' (x)$ \\
+	Зафикс $ x_1 < x_0 $ \\
+	Тогда $ F(x_1) \leq F(y) \forall y > x_0 $ \\
+	$ \Rightarrow F(x_1) \leq \lim\limits_{y \rightarrow x_{0+}} F(y) =  f_+' (x) $ \\
+	$ \Rightarrow \lim\limits_{x_1 \rightarrow x_{0-}} F(x_1) =  f_-' (x_0) \leq   f_+' (x_0) $
+\end{proof}
+Сл. Пусть $ f : (a, b) \rightarrow \R $ выпукл. Тогда f непрерывна на $ (a,b) $ \\
+\begin{proof}
+	$ x_0 \in (a, b) $ \\
+	Сущ $ f_-' (x_0) \Rightarrow $ f непрерывна слева в $x_0$ \\
+	Ан-но f непрерывна справа в $x_0$  \\
+\end{proof}
+\begin{theorem}
+	Пусть $ f : <a,b> \rightarrow \R $ дифф-ма \\
+	Тогда f выпукла $ \Leftrightarrow f(x) \geq f(x_0) + f'(x_0)(x - x_0) $ для всех $ x_0, x \in <a,b> $ \\
+	$ \Rightarrow $ Пусть сперва $ x > x_0 $ \\
+	$ y \in (x_0, x) $ \\
+	$ f'(x_0) \leftarrow_{y \rightarrow x_0} \dfrac{f(y) - f(x_0)}{y - x_0}_{\text{монотонная ф-ция y}} \leq \dfrac{f(x) - f(x_0)}{x - x_0} $ \\
+	$ \Rightarrow f(x_0) \leq \dfrac{f(x) - f(x_0)}{x - x_0} $ \\
+	$ f(x) - f(x_0) \geq f'(x) (x - x_0) $ \\
+	2. $ x < x_0 $ \\
+	$ y \in (x, x_0) $ \\
+	%pic3
+	$ \Leftarrow $ Пусть $ u < v < w $ \\
+	$ f(u) \geq f(v) + f'(v) (u - v) $ \\
+	$ f(w) \geq f(v) + f'(v) (w - v) $ \\
+	$ (w - v) f(u) + (v - u) f(w) \geq f(v) (w - u) $ \\
+	Зам - ан утверждение для строгой выпуклости (упражн)
+\end{theorem}
+
+\begin{theorem}
+	Пусть $ f ; <a,b> \rightarrow \R $ \\
+	непрерывна на  $ <a,b> $ и дифф-ма на  $ (a,b) $ \\
+	Тогда $ f $ (строго) возрастает $ \Leftrightarrow  f' $ (строго) возрастает на $ (a,b) $ \\
+	\begin{proof}
+		$ x_2 < x_3 $ Надо д-ть. что $ f'(x_2) \leq f'(x_3) $ \\
+		$ x_1 < x_2 < x_3 < x_4 $ \\
+		$ \dfrac{f(x_2) - f(x_1)}{x_2 - x_1} \leq \dfrac{f(x_3) - f(x_2)}{x_3 - x_2} \leq \dfrac{f(x_4) - f(x_3)}{x_4 - x_3} $\\%pic4
+		$ f'(x_2) \leq \dfrac{f(x_3) - f(x_2)}{x_3 - x_2} \leq f'(x_3) $ 
+			Для строгой выпуклости \\
+		$ x_2 < x_{2.5} < x_3 $ \\
+		$ f'(x_2) \leq  \dfrac{f(x_{2.5}) - f(x_2)}{x_{2.5} - x_2} <  \dfrac{f(x_3) - f(x_2)}{x_3 - x_2} \leq f'(x_3) $
+		$ \Leftarrow $ Пусть $ u < v < w $ \\
+		Нужно проверить $ \dfrac{f(v) - f(u)}{v - u} \leq \dfrac{f(w) - f(v)}{w - v}  $ \\%pic5
+		$ f'(p) \leq f'(q) $ \\
+		Строгая выпукл аналогично
+	\end{proof}
+\end{theorem}
+
+\begin{theorem}
+	Критерий выпуклости для дважды дифф-й функции \\
+	Пусть f непрерывна и дважды дифф-ма на $ (a, b)$ \\
+	1. f выпукла $ \Leftrightarrow  f'' \geq 0$ на $ (a, b) $ \\
+	2. Если $ f''(x) > 0 $ на $ (a, b) $ то f строго выпукл \\
+	\begin{proof}
+		1. $ f $ выпукла $ \Leftrightarrow  f' $ выпукла на $  (a,b) $ \\ 
+		$ \Leftrightarrow f''(x) > 0 $ при $ x \in (a, b) $ \\
+		2. $ f''(x) > 0 \Rightarrow f' $ строго возраст на $ (a, b) \Rightarrow f $ строго выпукла на $ (a, b) $ 
+	\end{proof}
+\end{theorem}
+Примеры \\
+1. $ f(x) = a^x, a > 0, x\in \R $ \\
+$ f'(x) = \ln(a) \cdot a^x $ \\
+$ f''(x) = (\ln(a)^2 a^x), \geq 0 \forall x \in \R, > 0 (a \neq 1) $ \\
+$ \Rightarrow f $ строго выпукла $ (a \neq 1) $ \\
+2. $ f(x) = \ln x \ x > 0  $ \\
+$ f'(x) = \dfrac{1}{x} , f''(x) = -\dfrac{1}{x^2} < 0 $ \\
+$ \Rightarrow f $ строго вогнута \\
+3. $ f(x) = x^p, x>0, p \in \R $ \\
+$ f'(x) = px^{p-1} $ \\	Для строгой выпуклости \\
+$ x_2 < x_{2.5} < x_3 $ \\
+$ f'(x_2) \leq  \dfrac{f(x_{2.5}) - f(x_2)}{x_{2.5} - x_2} <  \dfrac{f(x_3) - f(x_2)}{x_3 - x_2} \leq f'(x_3) $
+$ f''(x) = p(p-1)x^{p-2} $ \\
+$ < 0, 0 < p < 1, =0, p = 0,1, >0, p < 0 \cup p > 1 $ \\
+f строго выпукла $ \Leftrightarrow p< 0 $ или $ p > 1 $ \\
+f строго вогн $ \Leftrightarrow 0 < p < 1 $ \\
+4. $f(x) = \sin(x) $ \\
+$ f''(x) = -\sin x > 0 $ на $ (\pi, 2\pi) $ \\
+$ \Rightarrow \sin(x) $ выпукл на $ (\pi,2\pi) $ \\ 
+
