@@ -1,0 +1,100 @@
+$ f(x) \geq f(x_0) + f'(x) (x-x_0) $ \\
+\begin{definition}
+	Пусть f определена  в окр-ти $x_0$, дифф-ма в $x_0$ Говорят, что $x_0$  точка перегиба, если $ f(x) - f(x_0) - f'(x_0) (x-x_0) $ меняет знак при переходе через $x_0$ \\
+\end{definition}
+Предл. Необходимое усл-е точки перегиба \\
+Пусть f дважды дифф-ма в $x_0$. Тогда $f''(x_0) = 0 $ \\
+\begin{proof}
+	В окр-ти $x_0$: \\
+	$ f(x) = f(x_0) + f'(x_0)(x-x_0) + \dfrac{f''(x_0)}{2} (x - x_0)^2 + o((x-x_0)^2) $ \\
+	Пусть $f''(x_0) \neq 0 $ напр $ f''(x_0) >0 $ \\
+	$ f(x) - f(x_0) -f'(x_0)(x-x_0) = (x - x_0)^2 (\dfrac{f''(x_0)}{2} + o(1)) \Rightarrow f(x) - f(x_0) - f'(x_0) (x- x_0) > 0 $ в нек проколотой окр. $ x_0 $ 
+\end{proof}
+Предл. (достаточное усл-е точки перегиба) \\
+Пусть f трижды дифф-ма в $ x_0 $, $f''(x_0) = 0, f'''(x_0) \neq 0 $ \\
+Тогда $ x_0 $ - тчк перегиба для f \\
+\begin{proof}
+	$ f(x) - f(x_0) - f'(x_0) (x - x_0) = \dfrac{f''(x_0)}{6}(x- x_0)^3 + o((x - x_0)^3) = (x - x_0)^3 (\dfrac{f''(x_0)}{6} + o(1)) $ 
+\end{proof}
+
+\Subsection{Классические неравенства}
+
+\begin{theorem}
+	Неравенство Йенсена \\
+	Пусть $ f <a,b> \rightarrow \R $ выпукл \\
+	$ \lambda_1 ... \lambda_n  \geq 0, \lambda_1 + ... + \lambda_n = 1 $ \\
+	Пусть $ x_1, ... x_n \in <a,b> $ \\
+	Тогда $ f(\lambda_1 x_1 + ... + x_nx_n) \leq \lambda_1f(x_1) + ... + \lambda_n f(x_n) $ \\
+	\begin{proof}
+		Индукция по n \\
+		$ n = 2 $ опр-е выпукл \\
+		$ \lambda_{n+1} \neq 1 $ \\
+		$ f(\lambda_1x_1 + ... + \lambda_n x_n + \lambda_{n+1} x_{n+1}) \leq (1 - \lambda_{n+1}) f(y) + \lambda_{n+1} f(x_{n+1}) $ \\
+		$ y \in <a,b> $ т.к. $ y = \dfrac{\lambda_1 x_1 + ... + \lambda_n x_n}{\lambda_1 + ... + \lambda_n} $ % pic2
+	\end{proof}
+\end{theorem}
+
+Сл. 1 Неравенство о средних \\
+Пусть $ x_1 ... x_n \geq 0 $ \\
+Тогда $ \dfrac{x_1 + ... + x_n}{n} \geq \sqrt[n]{x_1...x_n} $ \\
+\begin{proof}
+	$ x_i = 0 $ - тривиальный случай \\
+	Пусть $ x_1, ..., x_n > 0 $ \\
+	$ f(x) = \ln x $ - вогн\\
+	По нерав Йенсена для  $ \lambda_1 = .. = \lambda_n = \dfrac{1}{n} $ \\
+	$ \ln(\dfrac{x_1 + ... + x_n}{n}) \geq \dfrac{1}{n} \ln x_1 + ... + \dfrac{1}{n} \ln x_n \Rightarrow \dfrac{x_1 + ... + x_n}{n} \geq e $ 
+	%pic3
+\end{proof}
+Cл.2 (Нер-во между средними ?) \\
+Пусть $ a_1, ..., a_n > 0, p \leq q, p, q \in \R \setminus \{0\} $ \\
+Тогда $ (\dfrac{a_1^p + ... + a_n^p}{n})^{\frac{1}{p}} \leq  (\dfrac{a_1^q + ... + a_n^q}{n})^{\frac{1}{q}} $ \\
+\begin{proof}
+	%pic4
+\end{proof}
+Сл.3 Пусть $ a_1, ... a_n \geq 0 $ \\
+$ M_p \left\{ \begin{array}{cc}
+\left( \dfrac{q_1^p + ... + q_n^p}{n} \right)^{\frac{1}{p}} & p \neq 0  \\
+\sqrt[n]{a_1 ... a_n} & p = 0 
+\end{array} \right. $  \\
+Тогда $ M_p \leq M_q \forall p \leq q, (p, q \in \R) $ \\
+\begin{proof}
+	% pic5
+\end{proof}
+
+Предл. Неравенство Гёльдера \\
+$ (a_1, .. a_n), (b_1, b_n) \geq 0 $ \\
+$ p, q > 1, \dfrac{1}{p} + \dfrac{1}{q} = 1 $ \\
+Тогда $ a_1b_1 + ... + a_nb_n \leq (a_1^p + ... + a_n^p)^{\frac{1}{p}} (b_1^q + ... + b_n^q)^{\frac{1}{q}}  $ \\
+\begin{proof}
+	$ f(x)  = x^p $ \\$ x_k = \dfrac{a_k}{b^{\frac{q}{p}}_k} $ \\
+	$ \lambda_k = \dfrac{b_k^q}{b_1^q + ... + b_n^q} $  \\
+	$ \lambda_1 + .. + \lambda_n = 1 $ \\
+	$ \lambda_k x_k = \dfrac{a_kb_k}{b_1^q + ... + b_n^q}  $ \\
+	%pic6
+\end{proof}
+Сл. Пусть $ p, q > 1, \dfrac{1}{p} + \dfrac{1}{q} = 1, a_i, b_i \in \R, i = 1...n $ \\
+Тогда $ |a_1b_1 + ... + a_nb_n | \leq  (|a|^p) + ... + |a|^p)^{\frac{1}{p}}  (|b|^q) + ... + |b|^q)^{\frac{1}{q}} $ \\
+\begin{proof}
+	$ |a_1b_1| + ... + |a_nb_n| \leq |a_1| |b_1| + ... + |a_n||b_n|$
+\end{proof}
+Сл. Неравенство Коши-Буньковского (Шварца) \\ 
+Пусть $ a_i, b_i \in \R, i = 1, ..., n $ \\
+$ (a_1b_1 + ... + a_nb_n)^2 \leq (a_1^2 + ... + a_n^2)(b_1^2 + ... + b_n^2) $ \\
+$ p = q = 2 $ \\
+Предл. Неравенство Минковского \\
+Пусть $ a_1...a_n, b_1...b_n \geq 0, p \geq 1 $ \\
+$ \Rightarrow (a_1^p + ... a_n^p)^{\frac{1}{p}} +  (b_1^p + ... b_n^p)^{\frac{1}{p}} \geq  ((a_1+b_1)^p + ... (a_n+b_n)^p)^{\frac{1}{p}} $ \\
+\begin{proof}
+	$ p = 1 $ - тривиальный случай \\
+	$ p > 1 $ \\
+	$ q = \dfrac{p}{p-1} \Rightarrow  \dfrac{1}{p} + \dfrac{1}{q} = 1$ \\
+	$ (a_1 + b_1)^p + ... + (a_n + b_n)^p = (a_1 + b_1)(a_1 + b_1)^{p-1} + ... + (a_n + b_n)(a_n + b_n)^{p-1} = a_1 (a_1 + b_1)^{p-1} + ... + a_n ( a_n + b_n)^{p-1} + b_1 (a_1 + b_1)^{p - 1} + ... + b_n (a_n + ... + b_n)^{p-1}  $ \\
+	$ \leq (a_1^p + ... + a_n^p)^{\frac{1}{p}} ((a_1 + b_1)^p  + ... + (a_n + b_n)^{p})^{\frac{1}{q}} +  (b_1^p + ... + b_n^p)^{\frac{1}{p}} ((a_1 + b_1)^p  + ... + (a_n + b_n)^{p})^{\frac{1}{q}}  = ((a_1^p + ... + a_n^p)^{\frac{1}{p}} +  (b_1^p + ... + b_n^p)^{\frac{1}{p}}) ((a_1 + b_1)^p  + ... + (a_n + b_n)^{p})^{\frac{1}{q}} = 1 $
+\end{proof}
+Зам.1 При $ 0 < p < 1 $ получим нер-во с фикс знаком \\
+Зам.2 При $ p = 2 $ получим $ ||a|| + ||b|| \geq ||a + b || $ \\
+
+
+
+
+

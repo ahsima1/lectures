@@ -1,0 +1,180 @@
+\Subsection{Характеристика поля}
+K - поле \\
+$ 1+1+..+1, n \in \N$ \\
+1 случай - $ \forall n \in N, 1+1+...+1 \neq 0 $ \\
+В этом случае характеристика поля равна 0 \\
+2 cлучай - $ \exists n \in N, 1+...+1 = 0 $ \\
+Тогда хар-ка поля равна наименьшему такому n\\
+\begin{lemma}
+	Характеристика поля 0 или простое число \\
+	$ 1+...+1 = (1+...+1)(1+...+1) $ \\
+	$ n = ab $ \\
+	В силу минимальности характеристики n не может быть составным.
+\end{lemma}
+char K = 0 : $ \Q, \R, \CC $ \\
+char K = p : $ \Z / p\Z $ \\
+char K = 2 : $ \F_2 = \Z /2\Z $ \\
+K - поле, какое наименьшее подполе L содержит K \\
+char K = 0 \\
+$ 1 \in K \Rightarrow 1 \in L, 1+1+...+1 \in L $ \\
+$ - (1+...+1) \in L $ \\
+$ x \in K, n \in \N $ \\
+$ n \cdot x = x+x+x...+x $ \\
+$ \{ n\cdot 1, 0, -(n \cdot 1) \} \cong \Z  $ \\
+$ \forall n \in \Z, \dfrac{1}{n\cdot 1} \in \Z $ \\
+$ \forall m \in \Z, \forall n \in \Z \setminus 0, \dfrac{n\cdot 1}{n\cdot 1} \in L $ \\
+$ \dfrac{m\cdot 1}{n \cdot 1} \cdot \dfrac{m'\cdot 1}{n'\cdot 1} = \dfrac{(mm') \cdot 1}{(nn')\cdot 1} $ \\
+%pic1
+char k = p > 0 \\
+$ 0, 1, ..., (p-1)\cdot 1 $ \\
+$ a \neq 0, a \cdot 1, (a,p) = 1 $ \\
+$ (ab) \equiv 1 (p)$ \\
+$ \exists b,c, ab $ и $ pc  = 1$ \\
+$ b' $  -остаток от деления b на p \\
+$ ab' \equiv 1(p) $ \\
+$ (1+1+...+1)(1+1+...1)  =1+...+1 (1+pk) $ раз $ = 1 $ \\
+$ \Rightarrow $ любой элемент обратим \\
+char k = p \\
+Найдём подполе в k изоморфно $ \Z / p\Z $ \\
+$ n \cdot 1 \mapsto [n] $ \\
+Вывод - всякое поле содержит подполе, изоморфное $ \Q $ либо $ \Z /p\Z $ и это поле однозначно определено характеристикой \\
+\begin{definition}
+	Простые поля: $ \Q, \Z/p\Z$ 
+\end{definition}
+char k = p, $ a \in k $ \\
+$ pa = a+a+...+a = 0 $ \\
+$ a+...+a = a(1+...+1) = a \cdot 0 = 0$ 
+ 
+\Subsection{Производная многочлена}
+
+K - поле, K[x]  \\
+$ f = a_0+a_1x+...+a_nx^n $ \\
+$ f' = a_1 + 2a_2x+... + ka_kx^{k-1} +... + na_nx^{n-1} $\\
+$ f' = \sum_{k=1}^{n}k a_kx^{k-1} = \sum_{k=0}^{n} k a_k x^{k-1} $ \\
+Св-ва производной \\
+1. $ (f+g)' = f' + g' $ \\
+2. $ c \in K, (c \cdot f)' = c \cdot f' $ \\
+3. $ (fg)' = f'g + fg' $ \\
+4. char k = 0 $ f' = 0 \Leftrightarrow f = c \in K $\\
+char k = p >0 $ f'=0 \Leftrightarrow f \in K[x^p] $ \\
+\begin{proof}
+	1. $ f = \sum_{k=0}^{n} a_k x^{k} $ \\
+	$ g=  \sum_{k=0}^{n}b_k x^{k} $ \\ 
+	%pic2
+	3. Верно для мономов \\
+	Верно для монома и многочлена \\
+	Верно для 2-х многочленовт\\
+	%pic3-7
+\end{proof}
+
+\Subsection{Корни многочлена}
+K - поле, $ f \in K[x] $ \\
+$ c \in K$ \\
+$ f = \sum_{k=1}^{n} a_kx^k $ \\
+$ f(c) = \sum_{k=1}^{n} a_kc^k \in K $ \\
+Значение f в точке c \\
+\begin{definition}
+	c - корень f если $f(c) = 0$ \\
+\end{definition}
+\begin{theorem}
+	$ f(x) = (x-c)\cdot g(x) + f(c)$ \\
+	\begin{proof}
+		$ f(x) = (x-c) g(x) + r, r \in K $\\
+		$ f(c) = (c - c) \cdot g(c) + r $ \\
+		$ r= f(c)$
+	\end{proof}
+\end{theorem}
+Сл. (теорема Безу) \\
+$ c - $ корень из f $ \Leftrightarrow (x - c) | f $ \\
+$ \Leftarrow f(x) = (x-c' \cdot g(x)) \Rightarrow f(c) = 0 \Rightarrow c $ корень \\
+$ \Rightarrow f(x) = (x-c)\cdot g(x) + f(c)_{=0} = (x-c) \cdot g(x) $ \\
+\begin{definition}
+	c - корень из f кратности k \\
+	Если $ (x-c)^k|f, a (x-c)^{k+1} \centernot| f $ \\
+	%pic8
+\end{definition}
+Кратные множители \\
+Осн теорема арифметики для $K[x]$\\
+$ f \neq 0, f(x) = c \cdot \prod_{i} q_i $ \\
+$ f(x) = c \cdot \prod_{i=1}^{n} q_i^{d_i} $ \\
+$ q_i $ неприводимы, $ d_i $ - кратность многочлена $ q_i $\\
+$ q_i $ - множ кратн d \\
+$ q_i^{d_i} | f, q_i^{d_i+1} \centernot| f $ \\
+\begin{theorem}
+	q - непрерывн множитель f кратный d \\
+	Пусть выполнено одно из условий \\
+	1. char $K = 0$ \\
+	2. char $K = p > 0, p \centernot| d, q' \neq 0$  \\
+	Тогда q - множитель f' кратный $d-1$ \\
+	\begin{proof}
+		%pic9
+	\end{proof}
+\end{theorem}
+Сл. с - корень f кратн d т либо char K = 0 либо char $K = p > 0, p \centernot| d $ \\
+Тогда с - корень f' кратн d-1 \\
+Пример $ \Z / 2\Z  $ \\
+$ f(x) = x^2 + x^5 $ 0 - корень кратности 2 \\
+$ f' = x^4 $  0 - корень кратности 4 \\
+char $ K = 2 | d $ \\
+Замечание Существуют поля K, char K = p \\
+т.ч. $ \exists g \in K[x^n], $ по g неприводим \\
+(конечное не годится для этого примера) \\
+char K = 0 \\
+$ f \in K[x] $\\
+Найти g, мн-во неприводимых делителей f и g совпадают по g не имеют кратных множителей \\
+%pic10
+\Subsection{Число корней многочлена. Формальное функциональное равенство мночленов}
+
+\begin{theorem}
+	$ 0 \neq f \in K[x] $\\
+	Число корней f  с учётом их кратности $ \leq $ deg f \\
+	\begin{proof}
+		$ f = c \prod_{i=1}^{n} (x - c_i)^{d_i} \prod_{q \text{неприводим}, deg q_i \geq 2} q_j^{c_j} $ \\
+		$ d_1 + ... +d_m \leq deg f $ 
+	\end{proof} 
+\end{theorem}
+Сл. 1 $ f \in K[x] $ \\
+deg f = n \\
+$ \exists c_1 ... c_m, m > n $ \\
+$ f(c_1) = ... = f(c_m) = 0 $ \\
+$ \Rightarrow f = 0 $ \\
+
+$ f \in K[x]  $ \\
+$ \phi_f : K \rightarrow K $ \\
+$ c \mapsto f(c) $ \\
+\begin{definition}
+	f и g фукционально равны если $ \phi_f = \phi_g $ \\
+	$ f =o g $ \\
+\end{definition}
+Пример $ \F_2 $ \\
+$ f = 0, g = x^2 +x $ \\
+$ \forall x \in \{1,0\} $ \\
+$ \phi_f (x) = 0, \phi_g(0)= 0, \phi_g(1) = 0 $ \\
+\begin{theorem}
+	$ |K| > \max \{ \deg f, \deg g \} $ \\
+	Если $ f =o g$ то $ f = g $
+	\begin{proof}
+		$ f =o g, f - g =o 0 $ \\
+		$ \Rightarrow \forall c \in K, c $ - корень f - g \\
+		$ \Rightarrow \deg (f-g) \leq \max ( \deg f, \deg g ) $ \\
+		По сл. к теореме 1,$ f - g = 0, f = g $
+	\end{proof}
+\end{theorem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,161 @@
+\Subsection{Алгебраически замкнутые поля}
+K - поле, $ x-c \in K[x] $ - неприводим \\
+\begin{theorem}
+	K - поле, $K[x]$ \\
+	1. Всякий неприводимый $ f \in K[x] $ линейный \\
+	2. Всякий $ f \in K[x], \deg f \geq 1$ , делится на линейный \\
+	3. Всякий $ f \in K[x], \deg f \geq 1$ полностью раскладывается в произведение сомножителей \\
+	4. Всякий $ f \in K[x], \deg f \geq 1 $ имеет в K хотя бы 1 корень \\
+	5. Всякий $ f \in K[x], \deg f = n \geq 1 $ имеет в K ровно n корней с учётом кратных \\
+	\begin{definition}
+		Пусть для K выполняется любое из равносильных условий теоремы. Такое поле K называется алгебраически замкнутым.
+	\end{definition}
+	\begin{proof}
+		$ 1 \Rightarrow 3 $ - т-ма о разложении на множители \\
+		$ 3 \Rightarrow 1 $ - $ \deg f \geq 2 \Rightarrow f - $ составной \\
+		$ 3 \Rightarrow 2 $ очевидно \\
+		$ 5 \Rightarrow 4 $ очевидно \\
+		$ 3 \Rightarrow 5 - f(x) = c \prod_i (x-a)^{d_i}, \sum d_i = n = \deg f$ \\
+		$ 4 \Rightarrow 2 $ - Теорема Безу \\
+		$  2 \Rightarrow 3 $ Индукция по $ n = \deg f $ \\
+		База: $n = 1 \ \ f = a(x-c) $ \\
+		Переход: $ n, \deg f = n, n > 1 $ \\
+		$ f(x) = (x-c) g(x)  \ \deg g = n - 1 \geq 1 $ \\
+		$ g(x) a \prod (x - c_i)^{d_i} $ \\
+		$ f(x) = a (x-c) \prod_i (x - c_i)^{d_i} $ 
+	\end{proof}
+\end{theorem}
+\begin{theorem} (без док-ва) \\
+	$ \CC $  - алгебраически замкнутое
+\end{theorem}
+
+\Subsection{Неприводимые многочлены над полем вещественных чисел} 
+
+\begin{lemma}
+	$ f \in \R [x] \subset \CC[x] $ \\
+	$ z \in \CC \setminus \R $, z - корень f \\
+	$ \Rightarrow \bar{z} $ - корень из z \\
+	\begin{proof}
+		$f(x) =  a_0 + a_1 x + ... + a_n x^n , a_i \in \R $ \\
+		$ 0 =  a_0 + a_1 z + ... + a_n z^n , = f(x) $ \\
+		$ 0 = \bar{0} = \overline{ a_0 + a_1 z + ... + a_n z^n } =  \bar{a}_0 + \bar{a}_1 \bar{z} + ... + \bar{a}_n (\bar{z})^n =  a_0 + a_1 \bar{z} + ... + a_n (\bar{z})^n  = f(\bar{z}) $ \\
+		$ \bar{z} $ - корень f 
+	\end{proof}
+\end{lemma}
+\begin{lemma}
+	$ f \in \R [x], \deg f \geq 1 $ \\
+	$ \Rightarrow f $ делится либо на линейный $ \in \R[x]$ либо на квадратичный $ \in \R[x] $, с $ D < 0 $ \\
+	\begin{proof}
+		$ f \in \CC[x] $ \\
+		$ \exists $ комплексный корень z, $ f(z) = 0 $ \\
+		1 сл. $ z \in \R $ \\
+		По т-ме Безу $ f(x) = (x-z) \cdot g(x) $\\
+		2 сл. $ z \in \CC \setminus \R $ \\
+		%pic1,2
+		Осталось показать, что $ g(x) \in \R[x] $ \\
+		$ f(x) = h(x) \cdot g(x) $ \\
+		Поделим f с остатком в $ R[x] $\\
+		$ f(x) = h(x) \cdot \tilde{g}(x) + r(x) , \tilde{g}, r \in \R[x], \deg r \leq  1 $ \\
+		$ f(x) = h(x) g(X) + r(x) $ в $ \CC[x] $\\
+		По теореме о делении с остатком в $ \CC[x], g = \tilde{g}, r = 0, g \in \R[x] $
+		%pic3 - единственность g 
+	\end{proof}
+\end{lemma}
+\begin{theorem}
+	Неприводимые в $ \R[x] $ это в точности  (до ассоцир) \\
+	$ (x - c) $ и $ x^2 + ax + b, a^2 - 4b < 0 $ \\
+	\begin{proof}
+		1) Лин неприводим \\
+		$ x^2 + ax + b, a^2 - 4b < 0 \Rightarrow $ нет веществ корней $ \Rightarrow $ нет веществ. линейных делителей $ \Rightarrow $ неприводим \\
+		2) Пусть f не линейный и не отриц дискрим. \\
+		По лемме 2 делится на линейный, либо на квадратичн с отриц. дискриминантом 
+	\end{proof}
+\end{theorem}
+%pic 4,5,6
+\Subsection{Ещё одна конструкция поля комплексных чисел}
+
+$ \R[x]$ \\
+$ x^2 + 1 $ неприводим в $ \R[x] $ \\
+$ (x^2 + 1 )$ - максимальный идеал в $ \R[x] $\\
+$ (x^2 + 1) \subseteq I \subseteq \R[x] $ \\
+$ g | (x^2 + 1) \Rightarrow g = const \Rightarrow (g) = \R[x], g \sim x^2 + 1, \Rightarrow (g) = (x^2 + 1 ) $ \\
+$ \R[x] / (x^2 + 1) $ - поле \\
+$ [f] $ В каждом классе сравнимости есть единственн f, $ \deg r \leq 1 $ \\
+$ f(x) = (x^2 + 1)g(x) + r(x), \deg r \leq 1  $ \\
+$ [r] = [r_1], \deg r, \deg r_1 \leq 1 $ \
+$ [r - r_1] = [0], (x^2 + 1) | (r - r_1) \Rightarrow r = r_1 $ \\
+$  \R[x] / (x^2 + 1)  = \{ [bx + a] | a,b \in \R \} $ \\
+$ [bx + a] + [dx + c] = [(b+d)x + (a+c) ] $ \\
+$ [bx + a][dx+c] = [bdx^2 + (bc+ad)x+ac] = [bdx^2 + bd - bd + (bc+ad)x + ac]  = [bd(x^2+1) + (bc-ad)x + ac - bd] = [(ad - bc) x + ac - bd] $ \\
+$ \CC \ \ \ \ \ \R[x] / (x^2 + 1) $ \\
+$ x = a + bi \mapsto [a+bx] $ \\
+$ \CC \cong \R[x] / (x^2 + 1) $ \\
+$ i \mapsto [x] $ \\
+
+Упр. $ x^2 + Ax + B, A^2 - 4B < 0 $ \\
+$ \R[x] / (x^2 + Ax+B) \cong \CC $ \\
+
+\Subsection{Интерполяционная задача}
+$ K, x_1, ..., x_n \in K $ \\
+$ y_1, ..., y_n \in K $ \\
+Интерполяционная задача \\
+Найти многочлен степени $ f \in K[x] $ \\
+$ f(x_i) = y_i, i = 1, ..., n $ \\
+Найти многочлен степени $ \leq n - 1 $ \\
+Обобщённая интерполяционная задача \\
+$ x_1, ..., x_n \in K $ \\
+$ d_1, ..., d_n \in \N $ \\
+$ d_i $ - количество условий(производных)\\
+%pic7, 8
+Зам. $ f \in K[x], char K = p $ \\
+$ k \geq p, f^{(k)} = \sum_l \underbrace{l(l-1)...(l-k+1) }_{p \text{если } k \geq p}a_l x^{l-k} $ \\
+Если char K = p,$ k \geq p $\\
+$ f^{(k)}s = 0 $ \\
+%pic&
+
+%-------
+
+1. Метод Лагранжа \\
+$ \begin{array}{c|ccccc}
+x & x_1 & x_{i-1} & x_i & x_{i+1} & x_n \\
+\hline
+0 & 0 & 0 & 1 & 0 & 0 
+\end{array} $\\
+$ L_i (x) = \dfrac{(x - x_i) (x - x_{i-1} ) (x - x_{i+1}) ... (x - x_n)}{ (x_i - x_1)...(x_i - x_{i-1}) (x_i - x_{i+1}) (x_i - x_n)} $ \\
+$ f(x) = \sum_{i=1}^n y_i L_i = \sum_{i=1}^n f(x_i) L_i (x) $ \\
+2. Метод Ньютона \\
+Предполагаем, что знаем решение с k точками и добавляем ещё одну точку \\
+$ \begin{array}{c|c}
+x & x_1 \\
+\hline 
+f(x) & y_1
+\end{array} \ \ \ f_1(x) = y_1 $ \\
+$ \begin{array}{c|c}
+x & x_1...x_k \\
+\hline 
+f(x) & y_1...y_k
+\end{array} \ \ \ f_k (x) $ \\
+$ \begin{array}{c|c}
+x & x_1...x_{k+1} \\
+\hline 
+f(x) & y_1...y_{k+1}
+\end{array} $ \\
+$ f_{k+1} (x) = f_k(x) + a_k(x - x_1) ... (x - x_k) $ \\
+$ y_{k+1} = f_{k+1} (x_{k+1}) = f_k(x_{k+1}) +  a_k(x_{k+1} - x_1) ... (x_{k+1} - x_k) $ \\
+$ a_k = \dfrac{y_{k+1} - f_k(x_{k+1})}{(x_{k+1} - x_1) ... (x_{k+1} - x_k)} $ \\
+$ \deg f_{k+1} \leq \max(\deg f_{k}, k) \leq \max (k-1, k) = k $ \\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

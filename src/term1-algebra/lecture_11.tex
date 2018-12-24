@@ -141,7 +141,7 @@ $ a + bi, a, b \in \Z /p\Z $
 
 (*) $ \left\{\begin{array}{cc}
 x \equiv a_1 (\mod n_1) \\
-...
+... \\
 x \equiv a_k (\mod n_k) \\
 \end{array}  \right. $ \\
 Вопрос: когда (*) - разрешимо? Как выглядят решения? \\
@@ -161,7 +161,7 @@ x \equiv a_k (\mod n_k) \\
 		%pic 7,8
 		$(*) =  \left\{\begin{array}{cc}
 		x \equiv a_1 (\mod n_1) \\
-		...
+		... \\
 		x \equiv a_k (\mod n_k) \\
 		\end{array}  \right. $ \\
 		$(*^i) $ \\
@@ -171,6 +171,152 @@ x \equiv a_k (\mod n_k) \\
 		$ s \neq i, x^{(s)} \equiv 0(n_i) $ \\
  	\end{proof}
 \end{theorem}
+
+$ m,n \in R $ вз просты \\
+$ \left\{ \begin{array}{cc}
+x \equiv a (m) \\
+x \equiv b (n) 
+\end{array} \right. $ \\
+$ S_{mn} $ мн-во представителей по одному из каждого класса сравнимости по модулю (мн-во остатков) \\
+$ S_n, S_m $ - аналогично \\
+$ r \in S_{mn} \begin{array}{cc}
+\exists x \in S_n \ r \equiv a (n) \\
+\exists b \in S_n \ r \equiv b (m) 
+\end{array} $ \\
+$ S_{mn} \rightarrow S_n \times S_m $ \\
+$ r \mapsto (a, b) $ \\
+К.Т.О. говорит, что это обратимо - биекция \\
+То же самое на языке факторколец \\
+$ R / (mn) \ \ R / (n) \times R / (m) $ \\
+$ R / (n) \times R / (m) $ можно превратить в кольцо \\
+$ ([a],  [b]) + ([c], [d]) = ([a+c], [b+d]) $ \\
+$ ([a],  [b]) * ([c], [d]) = ([a*c], [b*d]) $ \\
+Прямое произведение колец \\
+$ R / (mn) \rightarrow R / (n) \times R / (m) $ \\
+$ [r] \rightarrow ([a], [b]) $\\
+К.Т.О. - означает, что это биекция \\
+$ a \equiv r(n) $ \\
+$ b \equiv r(m) $ \\
+$ r_1 \equiv a_1(n) $ \\
+$ r_1 \equiv b_1(m) $ \\
+$ r + r_1 \equiv a + a_1 (n) $ \\
+$ r + r_1 \equiv b + b_1 (m) $ \\
+$ r r_1 \equiv aa_1 (n) $ \\
+$ r r_1 \equiv bb_1(m) $ \\
+Гомоморфизм колец - изоморфизм колец \\
+$ R /(mn) \cong R /(n) \times R(m) $ \\
+%pic1
+\Subsection{Функция Эйлера}
+$ \Z, n \in \N $ \\
+$ \phi(n) = |\{ x : 1 \leq x \leq n, GCD(x, n) = 1 \} | = |\{ x : 0 \leq x < n, GCD(x, n) = 1 \} | $ \\
+$ \phi(n) = | (\Z / n\Z ) | $ \\
+$ \phi(1) = 1, \phi(2) = 1, \phi(3) = 2, \phi(4) = 2, \phi(5) = 4, \phi(6) = 2 $ \\
+$ \phi $ - Функция Эйлера \\
+\begin{theorem}
+	$ n = p_1^{a_1} ... p_k^{a_k} $ \\
+	$ p_i $ - простые, $ a_i \geq 1 $ \\
+	$ \phi(n) = \prod_{i=1}^{k} (p_i^{a_i} - p_i^{a_i-1}) = n \cdot \prod_{i=1}^k (1 - \dfrac{1}{p_i}) $ 
+	\begin{lemma}
+		n, m взаимно просты $ \Rightarrow \phi(mn) = \phi(m)\phi(n) $ \\
+		\begin{definition}
+			$ \alpha $ - мультипликативна, если \\
+			$ \forall n,m (GCD(n,m) = 1 \Rightarrow \alpha(nm) = \alpha(n)\alpha(m)) $ 
+		\end{definition}
+		\begin{proof}
+			$ GCD(r, nm) = 1 \Rightarrow GCD(r, n) = 1, GCD(r, m) = 1 $ \\ 
+			$ r \equiv a(n) \Rightarrow GCD(a, n) = 1 $ \\
+			$ r \equiv b(m) \Rightarrow GCD(b,m) = 1 $ \\
+			
+			$ GCD(r, nm) > 1 \Rightarrow GCD(r, n) > 1, GCD(r, m) > 1 $ \\
+			$ \Rightarrow $ хотя бы 1 выполнено \\
+			$ a $ не вз просто с n \\
+			b не вз просто с m \\
+			$ I_{nm} = \{ 0 \leq x \leq nm | GCD(x, nm) = 1 \} $ \\
+			$ I_{n} = \{ 0 \leq x \leq n | GCD(x, n) = 1 \} $ \\
+			$ I_{m} = \{ 0 \leq x \leq m | GCD(x, m) = 1 \} $ \\
+			$ S_{nm} = \{ 0, ..., nm-1 \} $ \\
+			$ S_n = \{0, ..., n-1 \} $ \\
+			$ S_m = \{ 0, ..., m-1 \}$ \\
+			$ S_{nm} \rightarrowtail S_n \times S_m $ \\
+			$ I_{nm} \ \ \ \ \ I_n \times  I_m $ \\
+			% pic2
+		\end{proof}
+	\end{lemma}
+	Cл. $ n = p_1^{a_1} ... p_k^{a_k} $ \\
+	$ \phi(p_1^{a_1} ... p_k^{a_k}) = \phi(p_1^{a_1}) ... \phi(p_k^{a_k}) $ \\
+	\begin{lemma}
+		$ \phi(p^a) = p^a - p^{a-1} $ \\
+		\begin{proof}
+			$ 0, 1, ..., p^a - 1 $ \\
+			$ 0, ... p ... 2p ... p(p^{a-1} - 1) $ \\
+			Не вз простых с $ p^{a-1} $ 
+		\end{proof}
+	\end{lemma}
+	\begin{proof}
+		Применить сл-вие из леммы 1 и лемму 2 
+	\end{proof}
+\end{theorem} 
+\subsection{Теорема Эйлера и Малая теорема Ферма} 
+$ n \in \N, (\Z / n\Z)^* $ \\
+$ [a] \in  (\Z / n\Z)^*, [a]^k = [a]^l $ \\
+$ [a], [a]^2, ... [a]^{k-l} = [1] $ \\
+\begin{theorem}
+	$ [a] \in (\Z / n\Z)^* \Rightarrow [a]^{\phi(n)} = [1] $ \\
+	\begin{proof}
+		$ (\Z / n\Z)^* = \{ [b_1], [b_2], ..., [b_{\phi(n)}]  \} $ \\
+		$  (\Z / n\Z)^* \rightarrow  (\Z / n\Z)^* $ \\
+		$ [b] \mapsto [a][b] = [c] $ \\
+		$ [a]^{-1} [c] \leftarrow [c] $ \\
+		Рассмотрим \\
+		$ [a][b_1] , ..., [a][b_{\phi(n)}] $ \\
+		Получим перестановку
+		$ [b_1] , ..., [b_{\phi(n)}] $ \\
+		$ = $ \\
+		$ [a]^{\phi(n)} [b_1] , ..., [b_{\phi(n)}] $ \\
+		Домножим на  $ [b_1]^{-1} , ..., [b_{\phi(n)}]^{-1} $ \\
+		$ [a]^{\phi(n)} = [1] $ \\
+		% pic3
+	\end{proof}
+\end{theorem}
+Следствие (Малая теорема Ферма)\\
+p - простое, $GCD(a, p) = 1$ \\
+в $ \Z / p\Z, [a]^{p-1} = 1  $ 
+\begin{proof}
+	$ \phi(p) = p -1 $ \\
+	Переформулируем \\
+	p - простое, $ p \centernot| a $ \\
+	$ a^{p-1} \equiv 1 (p) $ \\
+	Замечание \\
+	Если $ p \centernot| a \ \ a^p \equiv a(p)$ \\
+	$ p | a \ \ a^p \equiv a(p)$ \\
+	$ \forall a \in \Z, a^p \equiv a (p) $ \\
+	
+\end{proof} 
+
+\begin{theorem}
+	Теорема Вильсона \\
+	p - простое $ \Leftrightarrow (p-1)! \equiv -1 (\mod p) $ \\
+	\begin{proof}
+		$ \Rightarrow  \ \ p = 2, 1! = 1 \equiv - 1(2) $ \\
+		$ p > 2 $ \\
+		$ x^2 \equiv 1 (\mod p) $ \\
+		$ p | (x^2 - 1)  \ \ p | (x+1)(x-1) $ \\
+		$ \Rightarrow x \equiv 1 (p) $ или $ x \equiv p-1 (\mod p) $ \\
+		$ 1_!, 2, ..., p-2, p-1_! $ \\
+		Все остальные разбиваются на пары взаимно обратных по $ (\mod p) $ \\
+		$ a \neq b, a\cdot b \equiv 1 (p) $ \\
+		$ (p-1)! = 1 \cdot 2 \cdot ... (p-2) (p-1) $ \\
+		$ 1, a_1b_1, a_2b_2, ... , a_{\frac{p-3}{2}}  b_{\frac{p-3}{2}} (p-1) = 1 \cdot 1 \cdot ... (p-1) \equiv -1 (\mod p) $ \\
+		$ \Leftarrow $ Если p составное, то $ (p-1)! $ не вз просто с p\\
+		$ q | p, q -$ простое $ q < p $ \\
+		$ q \leq p-1 $ \\
+		$ 1...(p-1) $\\
+		$ q | (p-1)! $ \\		
+	\end{proof}
+\end{theorem}
+
+
+
 
 
 
