@@ -96,8 +96,9 @@ $ R^* = \{ a \in R : a | 1 \} = \{ a \in R : \exists b, ab=1 \} $ - мн-во о
 $ R^*m \cdot $ - группа \\
 $ R^* - $ мультипликативная группа кольца \\
 $ R^* \times R^* \rightarrow R^* $\\
-%pic5
 $ a \in R^* \exists b ab=1 \Rightarrow ab = ba = 1 \Rightarrow b \in R^* $\\
+$ c \in R^* \exists d \in R cd = 1 $ \\
+$ (ac)(db) = a (cd) b = ab = 1 \Rightarrow ac \in R^* $ 
 Примеры: $ \Z^* = \{\pm 1\} $ \\
 K - поле $ K^* = K \setminus \{0\} $\\
 К - поле $ (k[x])^* = K^* $ \\
@@ -110,7 +111,8 @@ $ \Z[\sqrt{d}] \subseteq \mathbb{C} $ если $ d < 0 $ \\
 $ \hspace*{12mm} \subseteq \R $ если $ d > 0 $ \\
 $ \Z[\sqrt{d}] = \{ a + b\sqrt{d} | a, b \in \Z  \} $ \\
 Каждый эл-т из $ \Z[\sqrt{d}] $ единственным образом представляется в виде $ a + b\sqrt{d}, a,b \in \Z $ \\
-5. Д-те, что $ (\Z[\sqrt{2}])^*, (Z[\sqrt{3}])^*, (\Z[\sqrt{5}])^*, (\Z[\sqrt{6}])^* $ - бесконечны \\ % pic6
+5. Д-те, что $ (\Z[\sqrt{2}])^*, (Z[\sqrt{3}])^*, (\Z[\sqrt{5}])^*, (\Z[\sqrt{6}])^* $ - бесконечны \\ 
+В общем случае связано с тем, что $ x^2 - dy^2 = \pm 1$ имеет бесконечно много решений в целых, если $ d \geq 0 $ полный квадрат.
 
 \Subsection{Ассоцированность} 
 
@@ -122,7 +124,9 @@ $ \sim $ - отнош эквивалентности \\
 	1. Если $ \varepsilon \in R^* $, то $ a \sim a\eps $\\
 	2. Если R - область целостности, $ a \sim b \Rightarrow \exists \eps \in R^*, b = a\eps $
 	\begin{proof}
-		1. %pic
+		1. $ \eps \in R^*, \exists \mu \in R : \eps \mu = 1 $ \\
+		$ a \eps = a \cdot \eps  \ \ \ \ a | a\eps $ \\
+		$ a = a \cdot 1 = a \cdot \eps \cdot \mu  \ \  \ \ a\eps | a \Rightarrow a \sim a \eps $\\
 		2. $ a | b \& b | a $ \\
 		$ a = 0 \Rightarrow b = 0, 0 = 0 \cdot 1 \Rightarrow \eps = 1	$ \\
 		$ a \neq 0, a | b \ \exists \eps \in R, b = a\eps $ \\
@@ -140,7 +144,13 @@ $ K[X], K - $ поле $ \{0\} $ \\
 
 \Subsection{Идеал в кольце}
 
-R - произвольное кольцо\\ %pic
+R - произвольное кольцо (коммут)\\ %pic@
+$ \emptyset \neq I \subseteq R$ \\
+$ I $ - идеал в R, если \\
+1. $ \forall a,b \in I \ \ \ a \pm b \in I $ \\
+2. $ \forall a \in I, \forall r \in R  \ \ \ ra \in I $ 
+Пример. 1) $ \Z, I $ - мн-во чётных чисел \\
+2) $ \Z, n \in \N, I = n\Z = \{ na | a \in \Z  \} $ \\
 $I = R$ \\
 $ I = \{0\} $ - идеалы \\ 
 Для некомм колец различают левые и правые идеалы \\

@@ -1,4 +1,4 @@
-\Section{Элементарные функции} 
+Section{Элементарные функции} 
 
 \begin{definition}
 $ f(x) = x^r $\\
@@ -19,8 +19,13 @@ $ r = \dfrac{p}{q}, $ q неч,  $ p \geq 0 $ \\
 $ \Rightarrow x^r $ опр на $ \R $ \\
 
 Зафиксируем $ a > 0 $ \\
-$ a^r, \forall r \in \Q $\\
-% pic1
+$ a^r, \forall r \in \Q $ - опр-но\\
+\begin{properties}
+	1. $ r < s, a > 1 \Rightarrow a^r < a^s $ \\
+	2. $ a^{r+s} = a^r \cdot a^s $ \\
+	3. $ (a^r)^s = a^{rs}$ \\
+	4. $ (ab)^r = a^rb^r $
+\end{properties}
 
 \begin{lemma}
 	$ \lim\limits_{n \rightarrow \infty} a^{\frac{1}{n}} = 1$
@@ -35,7 +40,7 @@ $ a^r, \forall r \in \Q $\\
 \end{lemma}
 \begin{theorem}
 	$ a > 0, x \in \R, x_n \rightarrow x, , x_n \in \Q $ \\
-	Тогда $ \exists \lim a^{x_n} $ и он не зависит от выбора $x_n$\\
+	Тогда $ \exists \lim a^{x_n} $ и он не зависит от выбора $x_n$
 	\begin{proof}
 		$ a > 1$ ( Для $ a < 1 $ аналогичн) \\
 		$ x_n \rightarrow x $ \\
@@ -45,17 +50,26 @@ $ a^r, \forall r \in \Q $\\
 		$ \exists K, |x_n - x_k | \leq \dfrac{1}{n} $ если $ n, k \geq K $ \\
 		$ a^{x_n - x_k } - 1 < a^{\frac{1}{n}} - 1 < \dfrac{\eps}{a^M} $ \\
 		$ \Rightarrow |a^{x_n} - a^{x_k} | \leq a^M \cdot \dfrac{\eps}{a^M} \equiv \eps $ \\
-		% pic2
+		То $ \exists \lim a^{x_n} $ Если  $ \begin{array}{c} x_n \rightarrow x \\ x_n' \rightarrow x \end{array}$ \\
+		$ \tilde{x_n} = \left\{ \begin{array}{l}
+			x_{\frac{n+1}{2}}, n \text{нечётн} \\
+			x_{\frac{n}{2}}, n \text{чётн}
+		\end{array} \right. $ \\
+		$ \tilde{x_n} \rightarrow x $ \\
+		$ \Rightarrow \exists \lim a^{\tilde{x_n}} \Rightarrow \lim a^{x_n} = \lim a^{x_n'} $
 	\end{proof}
 \end{theorem}
 \begin{definition}
-$ a^x = \lim\limits_{n \rightarrow \infty} a^{x_n}, x_n \in \Q, x_n \rightarrow x $\\
+$ a^x = \lim\limits_{n \rightarrow \infty} a^{x_n}, x_n \in \Q, x_n \rightarrow x $
 \end{definition}
 \begin{properties}
 	1. Для $ x \in \Q $ новое опред эквив старому \\
 	2. $ a^xa^y= a^{x+y} $\\
+	$ x_n \rightarrow x $ \\
+	$ y_n \rightarrow y $ \\
+	$ x_n + y_n \rightarrow x+y $ \\
+	$ a^{x+y} = \lim a^{x_n+y_n} = \lim (a^{x_n} a^{y_n}) = \lim a^{x_n} \lim a^{y_n} = a^xa^y $ \\
 	3. $ (a^x)^y = a^{xy} $ \\
-	%pic3
 	4. $ a^x b^x = (ab)^x $ \\
 	5. $ a < b, x > 0, a^x < b^x $ 
  	

@@ -31,7 +31,8 @@ $ f'(x_0) = \phi(x_0) $\\
 	\end{array} \right. $ \\
 	Опр. 2 $ \phi(x) \rightarrow_{x - x_0} f'(x_0) = \phi(x_0) $\\
 	То $\phi$ непрерывна в $x_0$ \\
-	$\Leftarrow \phi$ непрерывна в $ x_0 \Leftrightarrow \phi(x) \rightarrow_{x - x_0} \phi(x_0) \Leftrightarrow \phi(x)  = \phi(x_0) + o(1)_{\text{при} \ x \rightarrow x_0} $ \\
+	$\Leftarrow \phi$ непрерывна в $ x_0 \begin{array}{l} \Leftrightarrow \phi(x) \xrightarrow[{x - x_0}]{} \phi(x_0) \\
+	\Leftrightarrow \phi(x)  = \phi(x_0) + o(1)_{\text{при} \ x \rightarrow x_0} \end{array} $ \\
 	$ f(x) - f(x_0) = \phi(x_0) (x - x_0) + o(x-x_0) \Rightarrow f $ дифференци в $ x_0 $ и $phi(x_0) = f'(x_0) $    
 \end{proof} 
 
@@ -51,9 +52,11 @@ $ f'(x_0) = \phi(x_0) $\\
 	$ f_-' (x_0) = \lim\limits_{x \rightarrow x_0-} \dfrac{f(x) - f(x_0)}{x - x_0} $ - левая производная \\
 \end{definition}
 
-Очевидно, пусть $ x_0 \in (a, b) $ \\ %pic1
+Очевидно, пусть $ x_0 \in (a, b) $ \\ %pic1@
 Тогда  $ \exists f'(x_0) \Leftrightarrow \left\{ \begin{array}{ll}
-	
+	\exists f_+' (x_0) \\
+	\exists f_-' (x_0) \\
+	f_+' (x_0) = f_-' (x_0) 
 \end{array} \right. $
 \begin{example}
 	1. $ f(x) = x^2 $ \\
@@ -84,7 +87,11 @@ $ f'(x_0) = \phi(x_0) $\\
 $ x = f(t) $ \\
 $ \dfrac{f(t) - f(t_0)}{t - t_0} $ - средняя скорость \\
 $ \lim\limits_{x \rightarrow x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = v(t_0) = f'(t_0) $ \\
-%pic2
+\begin{center}
+	\includegraphics[width=0.9\linewidth]{IMG_20181119_124128}
+\end{center}
+
+%pic2@
 
 \Subsection{Вычисление производных}
 
@@ -113,7 +120,7 @@ $ \lim\limits_{x \rightarrow x_0} \dfrac{f(x) - f(x_0)}{x - x_0} = v(t_0) = f'(t
 Пусть $ f : <a,b> \rightarrow \R, g : <c, d> \rightarrow \R $ \\
 $ f $ дифф-ма в $ x_0 \in <a,b> $ \\
 $ f(<a,b>) \in <c,d> $ \\
-$ g \text{дифф-ма в} f(x_0) $ \\
+$ g \ \ \text{дифф-ма в} f(x_0) $ \\
 Тогда $ g \circ f $ дифф-ма в $ x_0 $ \\
 $ (g \circ f)' (x_0) = g'(f(x_0)) \cdot f'(x_0) $ \\
 $ f(x) - f(x_0) =(x-x_0) \cdot \phi(x), \phi $ непрерывн в $x_0$ \\
@@ -124,9 +131,11 @@ $ \psi(f(x)) $ непр в x \\
 $ g \circ f $ дифф в $ x_0$ \\
 $ (g \circ f)'(x_0) = \phi(x_0) \cdot \psi(f(x_0)) = f'(x_0) \cdot g'(f(x_0)) $ \\
 
-$ (\sin(x^2)) = \cos(x^2) \cdot 2x $
+$ (\sin(x^2))' = \cos(x^2) \cdot 2x $
 
-% pic3 
+\begin{center}
+	\includegraphics[width=0.9\linewidth]{IMG_20181119_133702}
+\end{center}
 
 $ f^{-1} = g $ \\
 $ g \circ f = id $ \\

@@ -41,15 +41,14 @@ $ f(x) \rightarrow \infty \Leftrightarrow |f(x)| \rightarrow +\infty $\\
 	$ \Rightarrow f(a) \in U' \Rightarrow a \in f^{-1}( U' ) $ \\
 	$ \{a\} = U_{\delta} (a) \cap E $ при нек $ \delta > 0 $ $\Rightarrow \{a\} - $ окр-ть а в Е \\
 	$ \Rightarrow  f^{-1}(U') = $\\
-	4. $ x_n \rightarrow a, x_n \in E \Rightarrow \exists N, \forall n \geq N : x_n = a $ \\
-	$ $% pic1
-	
+	4. $ x_n \rightarrow a, x_n \in E \Rightarrow \exists N, \forall n \geq N : x_n = a \Rightarrow f(x_n) \rightarrow f(a) $ \\ %pic1@
 	Пусть а - предельная точка \\
 	 $ 1 \Rightarrow 2 $ 
 	 $ \forall \eps > 0, \exists \delta > 0, x\in \dot{U}_{\delta} (a) \Rightarrow f(x) \in U_{\eps} (f(a)) $ \\
 	 Кроме того $ f(a) \in U_{\eps}(f(a)) \Rightarrow \forall \eps > 0, \exists \delta > 0 : x \in U_{\delta} (a) \Rightarrow f(x) \in U_{\eps} (f(a)) $
 	 $ 2 \Rightarrow 1 $ т.е. $ \lim\limits_{x \rightarrow a} f(x) = f(a) $\\
-	 $ 1 \Rightarrow 3 $ % pic2
+	 $ 1 \Rightarrow 3  \ \  U(f(a)) \supset U_{\eps} (f(a)) (\eps > 0) \supset f(U_{\delta}(a)) $ (при нек $delta > 0$ ) \\ % pic2@
+	 $ U_{\delta}(a) \subset f^{-1} (U(f(a))) \Rightarrow f^{-1} (U(f(a))) \supset U_{\delta} (a) \cap E \Rightarrow $ окр-ть а в E \\
 	 $ 3 \Rightarrow 2 \ \ \eps > 0, f'(U_{\eps} (f(a))) \supset U_E(a) =U_{\R}  \cap E \supset U_{\delta} (a) \cap E, \delta > 0 $ \\
 	 Тогда $ x \in U_{\delta} (a) \cap E \Rightarrow f(x) \in U_{\eps} (f(a)) $ \\
 	 
@@ -83,34 +82,35 @@ $ f(x) \rightarrow \infty \Leftrightarrow |f(x)| \rightarrow +\infty $\\
 	 $ f, g $ - непрерывны в а. Тогда \\
 	 \begin{enumerate}
 	 	\item $ f \pm g $ непр. в а
-	 	\item $ fg $ непр в a 
+	 	\item $ fg $ непр. в a 
 	 	\item Если  $ g(a) \neq 0, \dfrac{f}{g} $ непр.
-	 	\item $|f|$ непр. 
+	 	\item $|f|$ непр. в $a$
 	 \end{enumerate}
- 	\begin{proof}
+% 	\begin{proof}
  		% pic4
- 	\end{proof}
-	Многочлены непрерывны
+% 	\end{proof}
+ 	Многочлены непрерывны 
 	\begin{consequence}
-		Пусть $ g_1 h \in \R[x] $ \\
+		Пусть $ g_1, \ h \in \R[x] $ \\
 		$ E = \{ x | h(x) \neq 0 \} $ \\
 		$ f : E \rightarrow \R $ \\
 		$ x \mapsto \dfrac{g(x)}{h(x)} $ \\
 		Тогда f непрерывна во всех точках Е \\
 		
  	\end{consequence}
- Предложение \\
- $ f : E_1 \rightarrow \R , g : E_2 \rightarrow \R$ \\
- $ f(E_1) \subset E_2 $ \\
- f непр в a  $ \in E_1 $ g непр  в $ f(a)$\\
- Тогда $ g \circ f $ непр в $ a $ \\
- \begin{proof}
- 	$ x_n \rightarrow a, x_n \in E_1 $ \\
- 	$ \Rightarrow f(x_n) \rightarrow f(a), f(x_n) \in E_2 $\\
- 	$ \Rightarrow g(f(x_n))  \rightarrow g(f(a))$ \\
- 	$ (g\circ f) (x_n) $\\
- 	$ g \circ f $ непр. в а 	
- \end{proof}
+ \begin{predl}
+ 	 $ f : E_1 \rightarrow \R , g : E_2 \rightarrow \R$ \\
+ 	$ f(E_1) \subset E_2 $ \\
+ 	f непр в a  $ \in E_1 $ g непр  в $ f(a)$\\
+ 	Тогда $ g \circ f $ непр в $ a $ 
+ 	\begin{proof}
+ 		$ x_n \rightarrow a, x_n \in E_1 $ \\
+ 		$ \Rightarrow f(x_n) \rightarrow f(a), f(x_n) \in E_2 $\\
+ 		$ \Rightarrow g(f(x_n))  \rightarrow g(f(a))$ \\
+ 		$ (g\circ f) (x_n) $\\
+ 		$ g \circ f $ непр. в а 	
+ 	\end{proof}
+ \end{predl}
   \begin{theorem}
   	Теорема о стабилизации знака \\
   	Пусть $ f : E \rightarrow \R  $ непр. в тчк. а, $ f(a) > 0$\\
@@ -122,7 +122,7 @@ $ f(x) \rightarrow \infty \Leftrightarrow |f(x)| \rightarrow +\infty $\\
 
 \begin{lemma}
 	Пусть $ 0 < x < \dfrac{\pi}{2} $ Тогда $ \sin x < x < \tan x $\\
-	% pic5
+	\includegraphics[width=0.9\linewidth]{IMG_20181015_142326}
 \end{lemma}
 \begin{consequence}
 	\begin{enumerate}
@@ -142,7 +142,7 @@ $ f(x) \rightarrow \infty \Leftrightarrow |f(x)| \rightarrow +\infty $\\
 
 \begin{theorem}
 	Теорема Вейерштрасса\\
-	Пусть f непрерывна на $[a, b] $. Тогда f достигает наибольшего и наименьшего значения на $ [a,b]$ \\
+	Пусть f непрерывна на $[a, b] $. Тогда f достигает наибольшего и наименьшего значения на $ [a,b]$ 
 	\begin{proof}
 		1. Докажем, что  f ограниченная на $[a, b] $ \\
 		Предположим, что f не ограничеа сверху\\
@@ -163,7 +163,7 @@ $ f(x) \rightarrow \infty \Leftrightarrow |f(x)| \rightarrow +\infty $\\
 \begin{consequence}
 	$ [a, b] = [b,a] $ если $ a > b $
 	\begin{enumerate}
-		\item (Принцип Больцано-Коши) f непрерывн. на $[a, b] $, y - число на $ [f(a), f(b)] $ Тогда $ \exists c \in [a, b]  : f(c) = y$\\%pic6
+		\item (Принцип Больцано-Коши) f непрерывн. на $[a, b] $, y - число на $ [f(a), f(b)] $ Тогда $ \exists c \in [a, b]  : f(c) = y$ %pic6
 		\begin{proof}
 			Пусть для опред. $ f(a) \leq f(b) $\\
 			$ M = \{ x \in [a, b] | f(x) \leq y \} $\\
@@ -173,8 +173,8 @@ $ f(x) \rightarrow \infty \Leftrightarrow |f(x)| \rightarrow +\infty $\\
 			$ \forall n \in \N $ пусть $ x_n \in M $ таково, что $x_n> x_0 - \dfrac{1}{n} $  \\
 			$ x_n \rightarrow x_0 $ \\
 			$ f(x_n) \rightarrow f(x_0), f(x_n) \leq y_0 $\\
-			$ \Rightarrow f(x_0) \leq y_0 $%pic7
-			
+			$ \Rightarrow f(x_0) \leq y_0 $%pic7@
+			$ \exists \delta > 0  \ \ f(x) in (-\infty, y) $ при $x \in U_{\delta} (x_0) \Rightarrow U_\delta (x_0) \subset M \subset [a, x_0] $ 			
 		\end{proof}
 		\item $ f: [a, b]  \rightarrow \R $ f - непрерывна \\
 		Тогда $ f([a, b] ) $ - отрезок \\
@@ -221,14 +221,18 @@ $ g \circ f = id_x, f \circ g = id_y $
 	Образ отображения $ <m, M> $ \\ 
 	1. f обратима $ f^{-1} : <m, M> \rightarrow I $ \\
 	2. $ f^{-1} $ строго возрастает/убывает,если f cтрого возр/убыв \\
-	3. $ f^{-1} $ непр на $ <m, M> $\\
+	3. $ f^{-1} $ непр на $ <m, M> $
 	\begin{proof}
-		1. $ f(I) \rightarrow <m, M>, y_1 < y_2 $ \\
+		1. $ f(I) \rightarrow <m, M>$\\
+		$ y_1, y_2 \in <m, M> , y_1 < y_2 $ \\
 		$ y_1 = f ( x_1 ) , y_2 = f(x_2) $ \\
-		$ x_1 \geq x_2 \Rightarrow f(x_1) \geq f(x_2) $ %pic8
+		$ x_1 = f^{-1} (y_1), x_2 = f^{-1} (y_2) $ \\
+		Пусть $f$ строго возрастает \\
+		Тогда $ x_1 \geq x_2 \Rightarrow f(x_1) \geq f(x_2) $ не может быть \\ %pic8@
+		$ \Rightarrow x_1 < x_2 \Rightarrow f^{-1} (y_1) < f^{-1} (y_2) $\\		
+		$f^{-1}$ - строго возраст (строго убыв аналогично)\\
 		3. $ y \in <m, M> $ Докажем непрерывность $ f^{-1} $ в y \\
 		$ y = f(x), x \in I $ \\
-		f - строго возраст (строго убыв аналогично)\\
 		Можно считать $ I = [a, b] $ \\
 		$ I = (a, ...) \Rightarrow x > a I' = [a', ...>, a < a' < x $ \\
 		$f(a') < f(x) = y $ \\
